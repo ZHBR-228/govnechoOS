@@ -1,0 +1,6 @@
+# <file system>  <mount point>  <type>     <options>        <dump> <pass>
+devtmpfs         /dev           devtmpfs   defaults         0      0
+proc             /proc          proc       defaults         0      0
+sysfs            /sys           sysfs      defaults         0      0
+tmpfs            /run           tmpfs      nosuid,nodev     0      0
+tmpfs            /tmp           tmpfs      nosuid,nodev     0      0

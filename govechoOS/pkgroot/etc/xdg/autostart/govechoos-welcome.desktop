@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=govechoOS Welcome
+Comment=Стартовое приветствие govechoOS при входе в сессию
+Exec=/usr/local/bin/govwelcome
+Icon=system-log-out
+Type=Application
+Categories=Utility;
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-Enabled=true
+X-GNOME-Autostart-Delay=2

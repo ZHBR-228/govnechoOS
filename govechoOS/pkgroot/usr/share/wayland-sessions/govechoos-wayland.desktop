@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=govechoOS GNOME (Wayland)
+Comment=This session logs you into govechoOS with GNOME Shell
+Exec=/usr/bin/gnome-shell
+TryExec=/usr/bin/gnome-shell
+Icon=
+Type=Application
+DesktopNames=GNOME
+X-GDM-SessionRegisters=true
