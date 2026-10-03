@@ -1,0 +1,5 @@
+# govechoOS — базовая система Debian 12 (bookworm)
+# Автор: ZHBR-228 | Лицензия: MIT
+deb http://deb.debian.org/debian bookworm main
+deb http://deb.debian.org/debian bookworm-updates main
+deb http://security.debian.org/debian-security bookworm-security main

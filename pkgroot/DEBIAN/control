@@ -1,0 +1,22 @@
+Package: govechoos-gnome
+Version: 1.0.0
+Section: x11
+Priority: optional
+Architecture: amd64
+Depends: gnome-shell, gnome-session-bin, mutter, gdm3, dbus, dconf-cli, mesa-utils
+Recommends: gnome-control-center, nautilus, gnome-terminal, gnome-text-editor, gnome-calculator, gnome-system-monitor, firefox-esr | firefox | epiphany-browser
+Maintainer: ZHBR-228 <team@govechoos.org>
+Homepage: https://govechoos.org
+Description: govechoOS GNOME Edition — интеграция GNOME Shell для govechoOS
+ Пакет добавляет в GNOME сессию govechoOS фирменные компоненты:
+ .
+  * govecho — echo-утилита govechoOS (/usr/local/bin/govecho)
+  * govinit — init-система govechoOS (/sbin/govinit)
+  * Сессия входа "govechoOS GNOME" (GNOME failsafe под капотом)
+  * Конфигурация dconf: баннер логина, тёмная тема, рабочий стол
+  * Приложение "About govechoOS" (.desktop)
+  * Ряд стартовых программ (XDG Autostart): govwelcome + govstartapps —
+    при входе в сессию автоматически запускаются Файлы, Терминал,
+    Текстовый редактор, Калькулятор, Системный монитор и браузер
+ .
+ Установка: sudo dpkg -i govechoos-gnome_1.0.0_amd64.deb && sudo apt -f install

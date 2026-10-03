@@ -1,0 +1,4 @@
+{
+    "name": "MESA",
+    "library_path": "libEGL_mesa.so.0"
+}

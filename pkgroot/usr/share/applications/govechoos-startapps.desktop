@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=govechoOS Starter Apps
+Comment=Запустить ряд стартовых программ govechoOS
+Exec=/usr/local/bin/govstartapps
+Icon=system-run
+Type=Application
+Categories=Utility;System;
+Terminal=false

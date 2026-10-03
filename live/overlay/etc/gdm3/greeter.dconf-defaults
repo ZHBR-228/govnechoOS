@@ -1,0 +1,5 @@
+[daemon]
+InitialSetupEnabled=false
+
+[security]
+AllowRootLogin=false
