@@ -1,0 +1,2 @@
+# govnechoOS
+Создание дистрибутива govechoOS
