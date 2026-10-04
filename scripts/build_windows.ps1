@@ -1,4 +1,4 @@
-?#Requires -Version 5.0
+﻿?#Requires -Version 5.0
 <#
 .SYNOPSIS
     GovechoOS ? sborka modifitsirovannogo ISO (Ubuntu/Debian) na Windows 10/11.

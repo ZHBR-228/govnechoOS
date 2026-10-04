@@ -1,4 +1,4 @@
-#Requires -Version 5.0
+﻿#Requires -Version 5.0
 # ============================================================
 # Govecho Builder GUI (ASCII-safe) - mini app with progress bar.
 # Self-reencoding launcher: if this .ps1 was saved WITHOUT UTF-8 BOM,
