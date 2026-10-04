@@ -1,1 +1,240 @@
-I1JlcXVpcmVzIC1WZXJzaW9uIDUuMA0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiMgR292ZWNobyBCdWlsZGVyIEdVSSAoQVNDSUktc2FmZSkgLSBtaW5pIGFwcCB3aXRoIHByb2dyZXNzIGJhci4NCiMgU2VsZi1yZWVuY29kaW5nIGxhdW5jaGVyOiBpZiB0aGlzIC5wczEgd2FzIHNhdmVkIFdJVEhPVVQgVVRGLTggQk9NLA0KIyBXaW5kb3dzIFBvd2VyU2hlbGwgNS4xIHdvdWxkIHJlYWQgaXQgYXMgQU5TSShjcDEyNTEpIGFuZCBwYXJzaW5nIG1heQ0KIyBicmVhayAtPiBvbiBmaXJzdCBydW4gdGhlIGZpbGUgcmV3cml0ZXMgaXRzZWxmIHdpdGggQk9NIGFuZCByZWxhdW5jaGVzLg0KaWYgKCRhcmdzWzBdIC1uZSAnLVJlbGF1bmNoZWQnKSB7DQogICAgJGYgPSAkTXlJbnZvY2F0aW9uLk15Q29tbWFuZC5QYXRoDQogICAgaWYgKC1ub3QgJGYpIHsgJGYgPSAoUmVzb2x2ZS1QYXRoICcuXGJ1aWxkX2d1aS5wczEnKS5QYXRoIH0NCiAgICAkYnl0ZXMgPSBbSU8uRmlsZV06OlJlYWRBbGxCeXRlcygkZikNCiAgICBpZiAoLW5vdCAoJGJ5dGVzLkxlbmd0aCAtZ2UgMyAtYW5kICRieXRlc1swXSAtZXEgMHhFRiAtYW5kICRieXRlc1sxXSAtZXEgMHhCQiAtYW5kICRieXRlc1syXSAtZXEgMHhCRikpIHsNCiAgICAgICAgJHRleHQgPSBbVGV4dC5FbmNvZGluZ106OlVURjguR2V0U3RyaW5nKCRieXRlcykNCiAgICAgICAgW0lPLkZpbGVdOjpXcml0ZUFsbEJ5dGVzKCRmLCBbYnl0ZVtdXSgweEVGLDB4QkIsMHhCRikgKyBbVGV4dC5FbmNvZGluZ106OlVURjguR2V0Qnl0ZXMoJHRleHQpKQ0KICAgICAgICAkZXhlID0gaWYgKEdldC1Db21tYW5kIHB3c2ggLUVBIFNpbGVudGx5Q29udGludWUpIHsgJ3B3c2gnIH0gZWxzZSB7ICdwb3dlcnNoZWxsJyB9DQogICAgICAgIFN0YXJ0LVByb2Nlc3MgLUZpbGVQYXRoICRleGUgLUFyZ3VtZW50TGlzdCBAKCctTm9Qcm9maWxlJywnLUV4ZWN1dGlvblBvbGljeScsJ0J5cGFzcycsJy1GaWxlJywgImAiJGZgIiIsICctUmVsYXVuY2hlZCcpDQogICAgICAgIGV4aXQgMA0KICAgIH0NCn0NCjwjDQouU1lOT1BTSVMNCiAgICBHb3ZlY2hvIEJ1aWxkZXIgR1VJIC0gc2hvd3MgYnVpbGQgcHJvZ3Jlc3MgaW4gYSB3aW5kb3cgKFdQRikuDQouREVTQ1JJUFRJT04NCiAgICBCaWcgcGVyY2VudCArIHByb2dyZXNzIGJhciwgY3VycmVudCBwaGFzZSwgbGl2ZSBsb2csDQogICAgYnV0dG9ucyBSdW4gLyBDYW5jZWwgLyBPcGVuIElTTyBmb2xkZXIsIGJhc2Ugc2VsZWN0b3IgdWJ1bnR1L2RlYmlhbi4NCiAgICBUYWxrcyB0byBidWlsZF93aW5kb3dzLnBzMSB2aWEgLUd1aVByb3RvY29sIGxpbmVzICJQUk9HUkVTU3w8MC0xMDA+fDxwaGFzZT4iLg0KICAgIEF1dGhvcjogWkhCUi0yMjggfCBMaWNlbnNlOiBNSVQgfCBnaXRodWIuY29tL1pIQlItMjI4L2dvdm5lY2hvT1MNCi5OT1RFUw0KICAgIEFsbCBVSSB0ZXh0IGlzIGRlZmluZWQgYmVsb3cgaW4gYSBsYW5ndWFnZSB0YWJsZTsgUnVzc2lhbiBzdHJpbmdzIGFyZQ0KICAgIGRlY29kZWQgZnJvbSBVbmljb2RlIGVzY2FwZXMgc28gdGhpcyBmaWxlIHN0YXlzIDEwMCUgQVNDSUkgYW5kIGNhbiBuZXZlcg0KICAgIGJlIGJyb2tlbiBieSBlbmNvZGluZyBpc3N1ZXMuDQojPg0KcGFyYW0oDQogICAgW3N0cmluZ10kQnVpbGRlciA9ICcnLA0KICAgIFtWYWxpZGF0ZVNldCgndWJ1bnR1JywnZGViaWFuJyldW3N0cmluZ10kQmFzZSA9ICd1YnVudHUnLA0KICAgIFtzd2l0Y2hdJEF1dG9JbnN0YWxsDQopDQokRXJyb3JBY3Rpb25QcmVmZXJlbmNlID0gJ1N0b3AnDQoNCiMgLS0tLSBsYW5ndWFnZSB0YWJsZTogcHVyZSBBU0NJSSBsYWJlbHMgKGVuY29kaW5nLXByb29mKSAtLS0tDQokTCA9IEB7DQogICAgVGl0bGUgICAgPSAnR292ZWNobyBCdWlsZGVyJw0KICAgIFN1YiAgICAgID0gJ0dvdmVjaG9PUyB2Mi4yIC0gc2JvcmthIElTTyBkbGphIFdpbmRvd3MnDQogICAgQmFzZSAgICAgPSAnQmF6YTonDQogICAgQXV0byAgICAgPSAnUmV6aGltIEF1dG9JbnN0YWxsIChiZXoga29udHJvbGl5YSknDQogICAgUnVuICAgICAgPSAnU09CUkFUJw0KICAgIENhbmNlbCAgID0gJ09UTUVOQScNCiAgICBPcGVuICAgICA9ICdPVEtSWVQnDQogICAgUGN0MCAgICAgPSAnMCUnDQogICAgSWRsZSAgICAgPSAnR290b3YgayB6YXB1c2t1Jw0KICAgIFN0YXJ0aW5nID0gJ1phcHVzay4uLicNCiAgICBSdW5uaW5nICA9ICdJZGV0IHNib3JrYS4uLicNCiAgICBEb25lICAgICA9ICdTQk9SS0EgWmF2ZXJzaGVuYSEnDQogICAgRmFpbGVkICAgPSAnT3NoaWJrYSBzYm9ya2knDQogICAgU3RvcHBlZCAgPSAnT3N0YW5vdmxlbm8gcG9sJyd6b3ZhdGVsZW0nDQogICAgSGVscCAgICAgPSAnTmF6aG1pdCBTT0JSQVQ6IHNraGFldCBiYXpvdnlqIElTTywgdmluYWV0IEdvdmVjaG8tc2xvaiwgcGVyZXNvYmVyZXQgb2JyYXouIElTTyBuZSB6YXBpc3l2YWV0c3lhIG5hIGRpc2sgYXZ0b21hdGljaGVza2kuJw0KICAgIEVyclRpdGxlID0gJ09zaGlia2EgR292ZWNobyBCdWlsZGVyJw0KICAgIEVyckhpbnQgID0gJ1phcHVzdGl0ZSB2cnVjaG51eXVqdSBpeiBQb3dlclNoZWxsOicNCn0NCg0KdHJhcCB7DQogICAgQWRkLVR5cGUgLUFzc2VtYmx5TmFtZSBTeXN0ZW0uV2luZG93cy5Gb3Jtcw0KICAgICRtc2cgPSAoJEwuRXJyVGl0bGUgKyBbRW52aXJvbm1lbnRdOjpOZXdMaW5lICsgJF8uRXhjZXB0aW9uLk1lc3NhZ2UgKyBbRW52aXJvbm1lbnRdOjpOZXdMaW5lICsNCiAgICAgICAgICAgIFtFbnZpcm9ubWVudF06Ok5ld0xpbmUgKyAkTC5FcnJIaW50ICsgW0Vudmlyb25tZW50XTo6TmV3TGluZSArDQogICAgICAgICAgICAncG93ZXJzaGVsbCAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlICInICsgJE15SW52b2NhdGlvbi5NeUNvbW1hbmQuUGF0aCArICciJykNCiAgICBbdm9pZF1bU3lzdGVtLldpbmRvd3MuRm9ybXMuTWVzc2FnZUJveF06OlNob3coJG1zZywgJ0dvdmVjaG8gQnVpbGRlcicsICdPSycsICdFcnJvcicpDQogICAgZXhpdCAxDQp9DQoNCkFkZC1UeXBlIC1Bc3NlbWJseU5hbWUgUHJlc2VudGF0aW9uRnJhbWV3b3JrLCBQcmVzZW50YXRpb25Db3JlLCBXaW5kb3dzQmFzZQ0KDQppZiAoLW5vdCAkQnVpbGRlcikgeyAkQnVpbGRlciA9IEpvaW4tUGF0aCAkUFNTY3JpcHRSb290ICdidWlsZF93aW5kb3dzLnBzMScgfQ0KJFdvcmtEaXIgPSBKb2luLVBhdGggJGVudjpVU0VSUFJPRklMRSAnZ292ZWNob19idWlsZCcNCg0KIyAtLS0tIFhBTUwgYnVpbHQgZnJvbSBwdXJlLUFTQ0lJIHN0cmluZyAobm8gQ3lyaWxsaWMgYXQgYWxsKSAtLS0tDQpbeG1sXSR4YW1sID0gQCINCjxXaW5kb3cgeG1sbnM9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd2luZngvMjAwNi94YW1sL3ByZXNlbnRhdGlvbiINCiAgICAgICAgVGl0bGU9IkdvdmVjaG8gQnVpbGRlciIgSGVpZ2h0PSI1NjAiIFdpZHRoPSI3NjAiIFdpbmRvd1N0YXJ0dXBMb2NhdGlvbj0iQ2VudGVyU2NyZWVuIj4NCiAgPEdyaWQgTWFyZ2luPSIxNCI+DQogICAgPEdyaWQuUm93RGVmaW5pdGlvbnM+DQogICAgICA8Um93RGVmaW5pdGlvbiBIZWlnaHQ9IkF1dG8iLz4NCiAgICAgIDxSb3dEZWZpbml0aW9uIEhlaWdodD0iQXV0byIvPg0KICAgICAgPFJvd0RlZmluaXRpb24gSGVpZ2h0PSJBdXRvIi8+DQogICAgICA8Um93RGVmaW5pdGlvbiBIZWlnaHQ9IkF1dG8iLz4NCiAgICAgIDxSb3dEZWZpbml0aW9uIEhlaWdodD0iKiIvPg0KICAgICAgPFJvd0RlZmluaXRpb24gSGVpZ2h0PSJBdXRvIi8+DQogICAgPC9HcmlkLlJvd0RlZmluaXRpb25zPg0KICAgIDxTdGFja1BhbmVsIEdyaWQuUm93PSIwIj4NCiAgICAgIDxUZXh0QmxvY2sgVGV4dD0iR292ZWNobyBCdWlsZGVyIiBGb250U2l6ZT0iMjQiIEZvbnRXZWlnaHQ9IkJvbGQiLz4NCiAgICAgIDxUZXh0QmxvY2sgeDpOYW1lPSJUeHRTdWIiIEZvcmVncm91bmQ9IkdyYXkiIE1hcmdpbj0iMCwyLDAsMTAiLz4NCiAgICA8L1N0YWNrUGFuZWw+DQogICAgPFN0YWNrUGFuZWwgR3JpZC5Sb3c9IjEiIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBNYXJnaW49IjAsMCwwLDgiPg0KICAgICAgPFRleHRCbG9jayB4Ok5hbWU9IkxibEJhc2UiIFZlcnRpY2FsQWxpZ25tZW50PSJDZW50ZXIiIE1hcmdpbj0iMCwwLDYsMCIvPg0KICAgICAgPENvbWJvQm94IHg6TmFtZT0iQ21iQmFzZSIgV2lkdGg9IjExMCIgU2VsZWN0ZWRJbmRleD0iMCI+DQogICAgICAgIDxDb21ib0JveEl0ZW0gQ29udGVudD0idWJ1bnR1Ii8+DQogICAgICAgIDxDb21ib0JveEl0ZW0gQ29udGVudD0iZGViaWFuIi8+DQogICAgICA8L0NvbWJvQm94Pg0KICAgICAgPENoZWNrQm94IHg6TmFtZT0iQ2hrQXV0byIgQ29udGVudD0iIiBNYXJnaW49IjE2LDAsMCwwIiBWZXJ0aWNhbEFsaWdubWVudD0iQ2VudGVyIi8+DQogICAgPC9TdGFja1BhbmVsPg0KICAgIDxEb2NrUGFuZWwgR3JpZC5Sb3c9IjIiIE1hcmdpbj0iMCwwLDAsNiI+DQogICAgICA8VGV4dEJsb2NrIHg6TmFtZT0iVHh0UGN0IiBEb2NrUGFuZWwuRG9jaz0iUmlnaHQiIEZvbnRTaXplPSIzMCIgRm9udFdlaWdodD0iQm9sZCIgV2lkdGg9IjExMCIgVGV4dEFsaWdubWVudD0iUmlnaHQiLz4NCiAgICAgIDxQcm9ncmVzc0JhciB4Ok5hbWU9IkJhciIgSGVpZ2h0PSIyNiIgTWluaW11bT0iMCIgTWF4aW11bT0iMTAwIiBWYWx1ZT0iMCIvPg0KICAgIDwvRG9ja1BhbmVsPg0KICAgIDxUZXh0QmxvY2sgeDpOYW1lPSJUeHRQaGFzZSIgR3JpZC5Sb3c9IjMiIEZvbnRTaXplPSIxNCIgTWFyZ2luPSIwLDAsMCw4IiBUZXh0V3JhcHBpbmc9IldyYXAiLz4NCiAgICA8VGV4dEJveCB4Ok5hbWU9IlR4dExvZyIgR3JpZC5Sb3c9IjQiIElzUmVhZE9ubHk9IlRydWUiIFZlcnRpY2FsU2Nyb2xsQmFyVmlzaWJpbGl0eT0iQXV0byINCiAgICAgICAgICAgICBGb250RmFtaWx5PSJDb25zb2xhcyIgRm9udFNpemU9IjEyIiBBY2NlcHRzUmV0dXJuPSJUcnVlIiBUZXh0V3JhcHBpbmc9Ik5vV3JhcCIvPg0KICAgIDxTdGFja1BhbmVsIEdyaWQuUm93PSI1IiBPcmllbnRhdGlvbj0iSG9yaXpvbnRhbCIgTWFyZ2luPSIwLDEwLDAsMCI+DQogICAgICA8QnV0dG9uIHg6TmFtZT0iQnRuUnVuIiBDb250ZW50PSIiIFdpZHRoPSIxMzAiIEhlaWdodD0iMzQiIEZvbnRXZWlnaHQ9IkJvbGQiLz4NCiAgICAgIDxCdXR0b24geDpOYW1lPSJCdG5DYW5jZWwiIENvbnRlbnQ9IiIgV2lkdGg9IjExMCIgSGVpZ2h0PSIzNCIgTWFyZ2luPSIxMCwwLDAsMCIgSXNFbmFibGVkPSJGYWxzZSIvPg0KICAgICAgPEJ1dHRvbiB4Ok5hbWU9IkJ0bk9wZW4iIENvbnRlbnQ9IiIgV2lkdGg9IjE3MCIgSGVpZ2h0PSIzNCIgTWFyZ2luPSIxMCwwLDAsMCIvPg0KICAgIDwvU3RhY2tQYW5lbD4NCiAgPC9HcmlkPg0KPC9XaW5kb3c+DQoiQA0KDQokd2luID0gW1dpbmRvd3MuTWFya3VwLlhhbWxSZWFkZXJdOjpMb2FkKChOZXctT2JqZWN0IFN5c3RlbS5YbWwuWG1sTm9kZVJlYWRlciAkeGFtbCkpDQoNCiRUeHRTdWIgICA9ICR3aW4uRmluZE5hbWUoJ1R4dFN1YicpOyAgICAgJFR4dFBoYXNlID0gJHdpbi5GaW5kTmFtZSgnVHh0UGhhc2UnKQ0KJFR4dFBjdCAgID0gJHdpbi5GaW5kTmFtZSgnVHh0UGN0Jyk7ICAgICAkQmFyICAgICAgPSAkd2luLkZpbmROYW1lKCdCYXInKQ0KJFR4dEhpbnQgID0gJG51bGwNCiRUeHRMb2cgICA9ICR3aW4uRmluZE5hbWUoJ1R4dExvZycpOyAgICAgJEJ0blJ1biAgID0gJHdpbi5GaW5kTmFtZSgnQnRuUnVuJykNCiRCdG5DYW5jZWw9ICR3aW4uRmluZE5hbWUoJ0J0bkNhbmNlbCcpOyAgJEJ0bk9wZW4gID0gJHdpbi5GaW5kTmFtZSgnQnRuT3BlbicpDQokQ21iQmFzZSAgPSAkd2luLkZpbmROYW1lKCdDbWJCYXNlJyk7ICAgICRDaGtBdXRvICA9ICR3aW4uRmluZE5hbWUoJ0Noa0F1dG8nKQ0KJExibEJhc2UgID0gJHdpbi5GaW5kTmFtZSgnTGJsQmFzZScpDQoNCiMgYXBwbHkgbG9jYWxpemVkIHRleHRzDQokVHh0U3ViLlRleHQgICAgPSAkTC5TdWINCiRMYmxCYXNlLlRleHQgICA9ICRMLkJhc2UNCiRDaGtBdXRvLkNvbnRlbnQ9ICRMLkF1dG8NCiRCdG5SdW4uQ29udGVudCA9ICRMLlJ1bg0KJEJ0bkNhbmNlbC5Db250ZW50ID0gJEwuQ2FuY2VsDQokQnRuT3Blbi5Db250ZW50ICAgPSAkTC5PcGVuDQokVHh0UGN0LlRleHQgICAgPSAkTC5QY3QwDQokVHh0UGhhc2UuVGV4dCAgPSAkTC5JZGxlICsgJyAgfCAgJyArICRMLkhlbHANCg0KZnVuY3Rpb24gU2V0LVByb2dyZXNzKFtkb3VibGVdJHBjdCwgW3N0cmluZ10kcGhhc2UpIHsNCiAgICBpZiAoJHBjdCAtbHQgMCkgeyAkcGN0ID0gMCB9OyBpZiAoJHBjdCAtZ3QgMTAwKSB7ICRwY3QgPSAxMDAgfQ0KICAgICRCYXIuVmFsdWUgPSAkcGN0DQogICAgJFR4dFBjdC5UZXh0ID0gKFttYXRoXTo6Um91bmQoJHBjdCkpLlRvU3RyaW5nKCkgKyAnJScNCiAgICBpZiAoJHBoYXNlKSB7ICRUeHRQaGFzZS5UZXh0ID0gJHBoYXNlIH0NCn0NCmZ1bmN0aW9uIEFkZC1Mb2coW3N0cmluZ10kcykgew0KICAgIGlmICgkbnVsbCAtZXEgJHMgLW9yICRzIC1lcSAnJykgeyByZXR1cm4gfQ0KICAgICRUeHRMb2cuQXBwZW5kVGV4dCgkcyArICJgcmBuIikNCiAgICAkVHh0TG9nLlNjcm9sbFRvRW5kKCkNCn0NCg0KJHN5bmMgPSAkbnVsbA0KJHBzID0gJG51bGwNCiRydW5zcGFjZSA9ICRudWxsDQoNCiR0aW1lciA9IE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuVGhyZWFkaW5nLkRpc3BhdGNoZXJUaW1lcg0KJHRpbWVyLkludGVydmFsID0gW1RpbWVTcGFuXTo6RnJvbU1pbGxpc2Vjb25kcygyMDApDQokdGltZXIuQWRkX1RpY2soew0KICAgIGlmICgtbm90ICRzY3JpcHQ6c3luYykgeyByZXR1cm4gfQ0KICAgIHdoaWxlICgkc2NyaXB0OnN5bmMuSXNDb21wbGV0ZWQgLW9yICR0cnVlKSB7DQogICAgICAgICRpdGVtID0gJG51bGwNCiAgICAgICAgaWYgKC1ub3QgJHNjcmlwdDpzeW5jLlRyeVRha2UoW3JlZl0kaXRlbSkpIHsgYnJlYWsgfQ0KICAgICAgICAkcyA9IFtzdHJpbmddJGl0ZW0NCiAgICAgICAgaWYgKCRzLlN0YXJ0c1dpdGgoJ1BST0dSRVNTfCcpKSB7DQogICAgICAgICAgICAkcGFydHMgPSAkcy5TcGxpdCgnfCcpDQogICAgICAgICAgICAkcCA9IDAuMA0KICAgICAgICAgICAgaWYgKFtkb3VibGVdOjpUcnlQYXJzZSgkcGFydHNbMV0sIFtyZWZdJHApKSB7IFNldC1Qcm9ncmVzcyAkcCAkcGFydHNbMl0gfQ0KICAgICAgICB9IGVsc2VpZiAoJHMuU3RhcnRzV2l0aCgnRVJSVEVYVHwnKSkgew0KICAgICAgICAgICAgQWRkLUxvZyAoJ1NUREVSUjogJyArICRzLlN1YnN0cmluZyg4KSkNCiAgICAgICAgfSBlbHNlaWYgKCRzLlN0YXJ0c1dpdGgoJ0VYSVRDT0RFfCcpKSB7DQogICAgICAgICAgICAkY29kZSA9IFtpbnRdKCRzLlNwbGl0KCd8JylbMV0pDQogICAgICAgICAgICBpZiAoJGNvZGUgLWVxIDApIHsgU2V0LVByb2dyZXNzIDEwMCAkTC5Eb25lOyBBZGQtTG9nICgnPT0gJyArICRMLkRvbmUgKyAnID09JykgfQ0KICAgICAgICAgICAgZWxzZSB7IFNldC1Qcm9ncmVzcyAwICRMLkZhaWxlZDsgQWRkLUxvZyAoJz09ICcgKyAkTC5GYWlsZWQgKyAnIChjb2RlICcgKyAkY29kZSArICcpID09JykgfQ0KICAgICAgICAgICAgJHRpbWVyLlN0b3AoKTsgJEJ0blJ1bi5Jc0VuYWJsZWQgPSAkdHJ1ZTsgJEJ0bkNhbmNlbC5Jc0VuYWJsZWQgPSAkZmFsc2UNCiAgICAgICAgICAgIGlmICgkc2NyaXB0OnJ1bnNwYWNlKSB7ICRzY3JpcHQ6cnVuc3BhY2UuRGlzcG9zZSgpOyAkc2NyaXB0OnJ1bnNwYWNlID0gJG51bGwgfQ0KICAgICAgICAgICAgJHNjcmlwdDpzeW5jID0gJG51bGwNCiAgICAgICAgfSBlbHNlIHsNCiAgICAgICAgICAgIEFkZC1Mb2cgJHMNCiAgICAgICAgfQ0KICAgIH0NCn0pDQoNCiRCdG5SdW4uQWRkX0NsaWNrKHsNCiAgICBpZiAoJHNjcmlwdDpzeW5jKSB7IHJldHVybiB9DQogICAgQWRkLUxvZyAoJz09ICcgKyAkTC5SdW5uaW5nICsgJyA9PScpDQogICAgU2V0LVByb2dyZXNzIDEgJEwuU3RhcnRpbmcNCiAgICAkQnRuUnVuLklzRW5hYmxlZCA9ICRmYWxzZTsgJEJ0bkNhbmNlbC5Jc0VuYWJsZWQgPSAkdHJ1ZQ0KICAgICRiYXNlU2VsID0gJENtYkJhc2UuU2VsZWN0ZWRJdGVtLkNvbnRlbnQNCiAgICAkYmFyZ3MgPSBAKCctTm9Qcm9maWxlJywnLUV4ZWN1dGlvblBvbGljeScsJ0J5cGFzcycsJy1GaWxlJywgJEJ1aWxkZXIsICctR3VpUHJvdG9jb2wnLCAnLUJhc2UnLCAkYmFzZVNlbCkNCiAgICBpZiAoJENoa0F1dG8uSXNDaGVja2VkKSB7ICRiYXJncyArPSAnLUF1dG9JbnN0YWxsJyB9DQogICAgIyBzeW5jaHJvbml6ZWQgcXVldWUgKyBpbmxpbmUgcnVuc3BhY2U6IG5vIGJhY2tncm91bmQgam9icyAvIFdpblJNIG5lZWRlZA0KICAgICRzY3JpcHQ6c3luYyA9IFtTeXN0ZW0uQ29sbGVjdGlvbnMuQ29uY3VycmVudC5Db25jdXJyZW50UXVldWVbc3RyaW5nXV06Om5ldygpDQogICAgJHJzID0gW1J1bnNwYWNlRmFjdG9yeV06OkNyZWF0ZVJ1bnNwYWNlKCkNCiAgICAkcnMuQXBhcnRtZW50U3RhdGUgPSAnU1RBJw0KICAgICRycy5UaHJlYWRPcHRpb25zID0gJ1JldXNlVGhyZWFkJw0KICAgICRycy5PcGVuKCkNCiAgICAkcHMgPSBbUG93ZXJTaGVsbF06OkNyZWF0ZSgpDQogICAgJHBzLlJ1bnNwYWNlID0gJHJzDQogICAgW3ZvaWRdJHBzLkFkZFNjcmlwdCh7DQogICAgICAgIHBhcmFtKCRiLCAkYSwgJHEpDQogICAgICAgIHRyeSB7DQogICAgICAgICAgICAkZXhlID0gaWYgKEdldC1Db21tYW5kIHB3c2ggLUVBIFNpbGVudGx5Q29udGludWUpIHsgJ3B3c2gnIH0gZWxzZSB7ICdwb3dlcnNoZWxsJyB9DQogICAgICAgICAgICAkcHNpID0gTmV3LU9iamVjdCBTeXN0ZW0uRGlhZ25vc3RpY3MuUHJvY2Vzc1N0YXJ0SW5mbw0KICAgICAgICAgICAgJHBzaS5GaWxlTmFtZSA9ICRleGUNCiAgICAgICAgICAgICRwc2kuQXJndW1lbnRzID0gKCgkYSB8IEZvckVhY2gtT2JqZWN0IHsgaWYgKCRfIC1tYXRjaCAnXHMnKSB7ICciJyArICRfICsgJyInIH0gZWxzZSB7ICRfIH0gfSkgLWpvaW4gJyAnKQ0KICAgICAgICAgICAgJHBzaS5SZWRpcmVjdFN0YW5kYXJkT3V0cHV0ID0gJHRydWUNCiAgICAgICAgICAgICRwc2kuUmVkaXJlY3RTdGFuZGFyZEVycm9yID0gJHRydWUNCiAgICAgICAgICAgICRwc2kuVXNlU2hlbGxFeGVjdXRlID0gJGZhbHNlDQogICAgICAgICAgICAkcHNpLldvcmtpbmdEaXJlY3RvcnkgPSBTcGxpdC1QYXRoICRiDQogICAgICAgICAgICAkcHJvYyA9IFtTeXN0ZW0uRGlhZ25vc3RpY3MuUHJvY2Vzc106OlN0YXJ0KCRwc2kpDQogICAgICAgICAgICB3aGlsZSAoJG51bGwgLW5lICgkbGluZSA9ICRwcm9jLlN0YW5kYXJkT3V0cHV0LlJlYWRMaW5lKCkpKSB7IFt2b2lkXSRxLkVucXVldWUoJGxpbmUpIH0NCiAgICAgICAgICAgICRlcnJ0ID0gJHByb2MuU3RhbmRhcmRFcnJvci5SZWFkVG9FbmQoKQ0KICAgICAgICAgICAgJHByb2MuV2FpdEZvckV4aXQoKQ0KICAgICAgICAgICAgaWYgKCRlcnJ0KSB7IFt2b2lkXSRxLkVucXVldWUoKCdFUlJURVhUfCcgKyAkZXJydCkpIH0NCiAgICAgICAgICAgIFt2b2lkXSRxLkVucXVldWUoKCdFWElUQ09ERXwnICsgJHByb2MuRXhpdENvZGUpKQ0KICAgICAgICB9IGNhdGNoIHsNCiAgICAgICAgICAgIFt2b2lkXSRxLkVucXVldWUoKCdFUlJURVhUfCcgKyAkXy5FeGNlcHRpb24uTWVzc2FnZSkpDQogICAgICAgICAgICBbdm9pZF0kcS5FbnF1ZXVlKCdFWElUQ09ERXwxJykNCiAgICAgICAgfQ0KICAgIH0pLkFkZEFyZ3VtZW50KCRCdWlsZGVyKS5BZGRBcmd1bWVudCgkYmFyZ3MpLkFkZEFyZ3VtZW50KCRzY3JpcHQ6c3luYykNCiAgICAkYXN5bmNSZXN1bHQgPSAkcHMuQmVnaW5JbnZva2UoKQ0KICAgICRzY3JpcHQ6cnVuc3BhY2UgPSAkcnMNCiAgICAkdGltZXIuU3RhcnQoKQ0KfSkNCg0KJEJ0bkNhbmNlbC5BZGRfQ2xpY2soew0KICAgIGlmICgkc2NyaXB0OnBzKSB7IHRyeSB7ICRzY3JpcHQucHMuU3RvcCgpOyAkc2NyaXB0LnBzLkRpc3Bvc2UoKSB9IGNhdGNoIHt9IH0NCiAgICBpZiAoJHNjcmlwdDpydW5zcGFjZSkgeyB0cnkgeyAkc2NyaXB0LnJ1bnNwYWNlLkNsb3NlKCk7ICRzY3JpcHQucnVuc3BhY2UuRGlzcG9zZSgpIH0gY2F0Y2gge30gOyAkc2NyaXB0OnJ1bnNwYWNlID0gJG51bGwgfQ0KICAgICRzY3JpcHQ6c3luYyA9ICRudWxsDQogICAgJHRpbWVyLlN0b3AoKQ0KICAgIEFkZC1Mb2cgKCc9PSAnICsgJEwuU3RvcHBlZCArICcgPT0nKQ0KICAgICRCdG5SdW4uSXNFbmFibGVkID0gJHRydWU7ICRCdG5DYW5jZWwuSXNFbmFibGVkID0gJGZhbHNlDQp9KQ0KDQokQnRuT3Blbi5BZGRfQ2xpY2soew0KICAgIGlmICgtbm90IChUZXN0LVBhdGggJFdvcmtEaXIpKSB7IE5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLVBhdGggJFdvcmtEaXIgfCBPdXQtTnVsbCB9DQogICAgU3RhcnQtUHJvY2VzcyBleHBsb3Jlci5leGUgJFdvcmtEaXINCn0pDQoNCiR3aW4uQWRkX0Nsb3NlZCh7DQogICAgaWYgKCRzY3JpcHQ6cHMpIHsgdHJ5IHsgJHNjcmlwdC5wcy5TdG9wKCk7ICRzY3JpcHQucHMuRGlzcG9zZSgpIH0gY2F0Y2gge30gfQ0KICAgIGlmICgkc2NyaXB0OnJ1bnNwYWNlKSB7IHRyeSB7ICRzY3JpcHQucnVuc3BhY2UuRGlzcG9zZSgpIH0gY2F0Y2gge30gfQ0KfSkNCg0KW3ZvaWRdJHdpbi5TaG93RGlhbG9nKCkNCg==
+#Requires -Version 5.0
+# ============================================================
+# Govecho Builder GUI (ASCII-safe) - mini app with progress bar.
+# Self-reencoding launcher: if this .ps1 was saved WITHOUT UTF-8 BOM,
+# Windows PowerShell 5.1 would read it as ANSI(cp1251) and parsing may
+# break -> on first run the file rewrites itself with BOM and relaunches.
+if ($args[0] -ne '-Relaunched') {
+    $f = $MyInvocation.MyCommand.Path
+    if (-not $f) { $f = (Resolve-Path '.\build_gui.ps1').Path }
+    $bytes = [IO.File]::ReadAllBytes($f)
+    if (-not ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF)) {
+        $text = [Text.Encoding]::UTF8.GetString($bytes)
+        [IO.File]::WriteAllBytes($f, [byte[]](0xEF,0xBB,0xBF) + [Text.Encoding]::UTF8.GetBytes($text))
+        $exe = if (Get-Command pwsh -EA SilentlyContinue) { 'pwsh' } else { 'powershell' }
+        Start-Process -FilePath $exe -ArgumentList @('-NoProfile','-ExecutionPolicy','Bypass','-File', "`"$f`"", '-Relaunched')
+        exit 0
+    }
+}
+<#
+.SYNOPSIS
+    Govecho Builder GUI - shows build progress in a window (WPF).
+.DESCRIPTION
+    Big percent + progress bar, current phase, live log,
+    buttons Run / Cancel / Open ISO folder, base selector ubuntu/debian.
+    Talks to build_windows.ps1 via -GuiProtocol lines "PROGRESS|<0-100>|<phase>".
+    Author: ZHBR-228 | License: MIT | github.com/ZHBR-228/govnechoOS
+.NOTES
+    All UI text is defined below in a language table; Russian strings are
+    decoded from Unicode escapes so this file stays 100% ASCII and can never
+    be broken by encoding issues.
+#>
+param(
+    [string]$Builder = '',
+    [ValidateSet('ubuntu','debian')][string]$Base = 'ubuntu',
+    [switch]$AutoInstall
+)
+$ErrorActionPreference = 'Stop'
+
+# ---- language table: pure ASCII labels (encoding-proof) ----
+$L = @{
+    Title    = 'Govecho Builder'
+    Sub      = 'GovechoOS v2.2 - sborka ISO dlja Windows'
+    Base     = 'Baza:'
+    Auto     = 'Rezhim AutoInstall (bez kontroliya)'
+    Run      = 'SOBRAT'
+    Cancel   = 'OTMENA'
+    Open     = 'OTKRYT'
+    Pct0     = '0%'
+    Idle     = 'Gotov k zapusku'
+    Starting = 'Zapusk...'
+    Running  = 'Idet sborka...'
+    Done     = 'SBORKA Zavershena!'
+    Failed   = 'Oshibka sborki'
+    Stopped  = 'Ostanovleno pol''zovatelem'
+    Help     = 'Nazhmit SOBRAT: skhaet bazovyj ISO, vinaet Govecho-sloj, peresoberet obraz. ISO ne zapisyvaetsya na disk avtomaticheski.'
+    ErrTitle = 'Oshibka Govecho Builder'
+    ErrHint  = 'Zapustite vruchnuyuju iz PowerShell:'
+}
+
+trap {
+    Add-Type -AssemblyName System.Windows.Forms
+    $msg = ($L.ErrTitle + [Environment]::NewLine + $_.Exception.Message + [Environment]::NewLine +
+            [Environment]::NewLine + $L.ErrHint + [Environment]::NewLine +
+            'powershell -NoProfile -ExecutionPolicy Bypass -File "' + $MyInvocation.MyCommand.Path + '"')
+    [void][System.Windows.Forms.MessageBox]::Show($msg, 'Govecho Builder', 'OK', 'Error')
+    exit 1
+}
+
+Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase
+
+if (-not $Builder) { $Builder = Join-Path $PSScriptRoot 'build_windows.ps1' }
+$WorkDir = Join-Path $env:USERPROFILE 'govecho_build'
+
+# ---- XAML built from pure-ASCII string (no Cyrillic at all) ----
+[xml]$xaml = @"
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Govecho Builder" Height="560" Width="760" WindowStartupLocation="CenterScreen">
+  <Grid Margin="14">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0">
+      <TextBlock Text="Govecho Builder" FontSize="24" FontWeight="Bold"/>
+      <TextBlock x:Name="TxtSub" Foreground="Gray" Margin="0,2,0,10"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,8">
+      <TextBlock x:Name="LblBase" VerticalAlignment="Center" Margin="0,0,6,0"/>
+      <ComboBox x:Name="CmbBase" Width="110" SelectedIndex="0">
+        <ComboBoxItem Content="ubuntu"/>
+        <ComboBoxItem Content="debian"/>
+      </ComboBox>
+      <CheckBox x:Name="ChkAuto" Content="" Margin="16,0,0,0" VerticalAlignment="Center"/>
+    </StackPanel>
+    <DockPanel Grid.Row="2" Margin="0,0,0,6">
+      <TextBlock x:Name="TxtPct" DockPanel.Dock="Right" FontSize="30" FontWeight="Bold" Width="110" TextAlignment="Right"/>
+      <ProgressBar x:Name="Bar" Height="26" Minimum="0" Maximum="100" Value="0"/>
+    </DockPanel>
+    <TextBlock x:Name="TxtPhase" Grid.Row="3" FontSize="14" Margin="0,0,0,8" TextWrapping="Wrap"/>
+    <TextBox x:Name="TxtLog" Grid.Row="4" IsReadOnly="True" VerticalScrollBarVisibility="Auto"
+             FontFamily="Consolas" FontSize="12" AcceptsReturn="True" TextWrapping="NoWrap"/>
+    <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,10,0,0">
+      <Button x:Name="BtnRun" Content="" Width="130" Height="34" FontWeight="Bold"/>
+      <Button x:Name="BtnCancel" Content="" Width="110" Height="34" Margin="10,0,0,0" IsEnabled="False"/>
+      <Button x:Name="BtnOpen" Content="" Width="170" Height="34" Margin="10,0,0,0"/>
+    </StackPanel>
+  </Grid>
+</Window>
+"@
+
+$win = [Windows.Markup.XamlReader]::Load((New-Object System.Xml.XmlNodeReader $xaml))
+
+$TxtSub   = $win.FindName('TxtSub');     $TxtPhase = $win.FindName('TxtPhase')
+$TxtPct   = $win.FindName('TxtPct');     $Bar      = $win.FindName('Bar')
+$TxtHint  = $null
+$TxtLog   = $win.FindName('TxtLog');     $BtnRun   = $win.FindName('BtnRun')
+$BtnCancel= $win.FindName('BtnCancel');  $BtnOpen  = $win.FindName('BtnOpen')
+$CmbBase  = $win.FindName('CmbBase');    $ChkAuto  = $win.FindName('ChkAuto')
+$LblBase  = $win.FindName('LblBase')
+
+# apply localized texts
+$TxtSub.Text    = $L.Sub
+$LblBase.Text   = $L.Base
+$ChkAuto.Content= $L.Auto
+$BtnRun.Content = $L.Run
+$BtnCancel.Content = $L.Cancel
+$BtnOpen.Content   = $L.Open
+$TxtPct.Text    = $L.Pct0
+$TxtPhase.Text  = $L.Idle + '  |  ' + $L.Help
+
+function Set-Progress([double]$pct, [string]$phase) {
+    if ($pct -lt 0) { $pct = 0 }; if ($pct -gt 100) { $pct = 100 }
+    $Bar.Value = $pct
+    $TxtPct.Text = ([math]::Round($pct)).ToString() + '%'
+    if ($phase) { $TxtPhase.Text = $phase }
+}
+function Add-Log([string]$s) {
+    if ($null -eq $s -or $s -eq '') { return }
+    $TxtLog.AppendText($s + "`r`n")
+    $TxtLog.ScrollToEnd()
+}
+
+$sync = $null
+$ps = $null
+$runspace = $null
+
+$timer = New-Object System.Windows.Threading.DispatcherTimer
+$timer.Interval = [TimeSpan]::FromMilliseconds(200)
+$timer.Add_Tick({
+    if (-not $script:sync) { return }
+    while ($script:sync.IsCompleted -or $true) {
+        $item = $null
+        if (-not $script:sync.TryTake([ref]$item)) { break }
+        $s = [string]$item
+        if ($s.StartsWith('PROGRESS|')) {
+            $parts = $s.Split('|')
+            $p = 0.0
+            if ([double]::TryParse($parts[1], [ref]$p)) { Set-Progress $p $parts[2] }
+        } elseif ($s.StartsWith('ERRTEXT|')) {
+            Add-Log ('STDERR: ' + $s.Substring(8))
+        } elseif ($s.StartsWith('EXITCODE|')) {
+            $code = [int]($s.Split('|')[1])
+            if ($code -eq 0) { Set-Progress 100 $L.Done; Add-Log ('== ' + $L.Done + ' ==') }
+            else { Set-Progress 0 $L.Failed; Add-Log ('== ' + $L.Failed + ' (code ' + $code + ') ==') }
+            $timer.Stop(); $BtnRun.IsEnabled = $true; $BtnCancel.IsEnabled = $false
+            if ($script:runspace) { $script:runspace.Dispose(); $script:runspace = $null }
+            $script:sync = $null
+        } else {
+            Add-Log $s
+        }
+    }
+})
+
+$BtnRun.Add_Click({
+    if ($script:sync) { return }
+    Add-Log ('== ' + $L.Running + ' ==')
+    Set-Progress 1 $L.Starting
+    $BtnRun.IsEnabled = $false; $BtnCancel.IsEnabled = $true
+    $baseSel = $CmbBase.SelectedItem.Content
+    $bargs = @('-NoProfile','-ExecutionPolicy','Bypass','-File', $Builder, '-GuiProtocol', '-Base', $baseSel)
+    if ($ChkAuto.IsChecked) { $bargs += '-AutoInstall' }
+    # synchronized queue + inline runspace: no background jobs / WinRM needed
+    $script:sync = [System.Collections.Concurrent.ConcurrentQueue[string]]::new()
+    $rs = [RunspaceFactory]::CreateRunspace()
+    $rs.ApartmentState = 'STA'
+    $rs.ThreadOptions = 'ReuseThread'
+    $rs.Open()
+    $ps = [PowerShell]::Create()
+    $ps.Runspace = $rs
+    [void]$ps.AddScript({
+        param($b, $a, $q)
+        try {
+            $exe = if (Get-Command pwsh -EA SilentlyContinue) { 'pwsh' } else { 'powershell' }
+            $psi = New-Object System.Diagnostics.ProcessStartInfo
+            $psi.FileName = $exe
+            $psi.Arguments = (($a | ForEach-Object { if ($_ -match '\s') { '"' + $_ + '"' } else { $_ } }) -join ' ')
+            $psi.RedirectStandardOutput = $true
+            $psi.RedirectStandardError = $true
+            $psi.UseShellExecute = $false
+            $psi.WorkingDirectory = Split-Path $b
+            $proc = [System.Diagnostics.Process]::Start($psi)
+            while ($null -ne ($line = $proc.StandardOutput.ReadLine())) { [void]$q.Enqueue($line) }
+            $errt = $proc.StandardError.ReadToEnd()
+            $proc.WaitForExit()
+            if ($errt) { [void]$q.Enqueue(('ERRTEXT|' + $errt)) }
+            [void]$q.Enqueue(('EXITCODE|' + $proc.ExitCode))
+        } catch {
+            [void]$q.Enqueue(('ERRTEXT|' + $_.Exception.Message))
+            [void]$q.Enqueue('EXITCODE|1')
+        }
+    }).AddArgument($Builder).AddArgument($bargs).AddArgument($script:sync)
+    $asyncResult = $ps.BeginInvoke()
+    $script:runspace = $rs
+    $timer.Start()
+})
+
+$BtnCancel.Add_Click({
+    if ($script:ps) { try { $script.ps.Stop(); $script.ps.Dispose() } catch {} }
+    if ($script:runspace) { try { $script.runspace.Close(); $script.runspace.Dispose() } catch {} ; $script:runspace = $null }
+    $script:sync = $null
+    $timer.Stop()
+    Add-Log ('== ' + $L.Stopped + ' ==')
+    $BtnRun.IsEnabled = $true; $BtnCancel.IsEnabled = $false
+})
+
+$BtnOpen.Add_Click({
+    if (-not (Test-Path $WorkDir)) { New-Item -ItemType Directory -Path $WorkDir | Out-Null }
+    Start-Process explorer.exe $WorkDir
+})
+
+$win.Add_Closed({
+    if ($script:ps) { try { $script.ps.Stop(); $script.ps.Dispose() } catch {} }
+    if ($script:runspace) { try { $script.runspace.Dispose() } catch {} }
+})
+
+[void]$win.ShowDialog()
