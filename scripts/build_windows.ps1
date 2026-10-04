@@ -1,33 +1,33 @@
-﻿?#Requires -Version 5.0
+﻿-#Requires -Version 5.0
 <#
 .SYNOPSIS
-    GovechoOS ? sborka modifitsirovannogo ISO (Ubuntu/Debian) na Windows 10/11.
+    GovechoOS - sborka modifitsirovannogo ISO (Ubuntu/Debian) na Windows 10/11.
 .DESCRIPTION
     Kachaet ofitsialnyy ISO bazy, raspakovyvaet ego, "vedaet" v nego firmennye
     komponenty Govecho (banner vhoda, profil GNOME-chistoty, startovye prilozheniya),
     peresobiraet gibridnyy ISO BIOS+UEFI (xorriso cherez WSL).
 
     REZHIMY USTANOVKI (pereklyuchayutsya parametrom):
-      po umolchaniyu  ? interaktivnaya ustanovka: nikakih preseed/autoinstall,
+      po umolchaniyu  - interaktivnaya ustanovka: nikakih preseed/autoinstall,
                       ustanovschik zadaet vse voprosy sam, polzovatel sledit
                       i nastraivaet kazhdyy shag;
-      -AutoInstall  ? staryy rezhim bez voprosov (preseed), dlya massovyh
+      -AutoInstall  - staryy rezhim bez voprosov (preseed), dlya massovyh
                       razvertyvaniy, kogda kontrol ne nuzhen.
 
-    Skript NIKOGDA ne zapisyvaet ISO na disk/fleshku avtomaticheski ? on tolko
+    Skript NIKOGDA ne zapisyvaet ISO na disk/fleshku avtomaticheski - on tolko
     sobiraet fayl obraza v WorkDir. Zapis ostavlyayte proverennym instrumentam
     (Rufus/Ventoy/balenaEtcher) ili zapuskayte VirtualBox pryamo na ISO.
 
-    Trebovaniya: Windows 10/11 x64 + PowerShell 5+. Esli WSL ne nastroen ? skript
+    Trebovaniya: Windows 10/11 x64 + PowerShell 5+. Esli WSL ne nastroen - skript
     sam predlozhit `wsl --install -d Ubuntu` (odnokratno). Konfiguratsiya bazovyh ISO
-    vynesena v govechoos.build.json ? versii/URL mozhno menyat bez pravki koda.
+    vynesena v govechoos.build.json - versii/URL mozhno menyat bez pravki koda.
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File .\scripts\build_windows.ps1
     powershell -ExecutionPolicy Bypass -File .\scripts\build_windows.ps1 -Base debian
     powershell -ExecutionPolicy Bypass -File .\scripts\build_windows.ps1 -AutoInstall
 .NOTES
-    Avtor: ZHBR-228 ? Litsenziya: MIT ? github.com/ZHBR-228/govnechoOS
+    Avtor: ZHBR-228 - Litsenziya: MIT - github.com/ZHBR-228/govnechoOS
 #>
 [CmdletBinding()]
 param(
@@ -58,7 +58,7 @@ function Report([double]$pct, [string]$phase) {
 
 # ---------- 0. Konfiguratsiya: govechoos.build.json ----------
 $cfgPath = Join-Path $PSScriptRoot '..\govechoos.build.json'
-if (-not (Test-Path $cfgPath)) { throw "Ne nayden $cfgPath ? spisok bazovyh ISO" }
+if (-not (Test-Path $cfgPath)) { throw "Ne nayden $cfgPath - spisok bazovyh ISO" }
 $cfg = Get-Content $cfgPath -Raw | ConvertFrom-Json
 if (-not $Base) { $Base = $cfg.defaultBase }
 $b = $cfg.bases.$Base
@@ -110,7 +110,7 @@ if (-not $SkipDownload -and -not (Test-Path $origIso)) {
         Report 42 "Proveryayu kontrolnuyu summu sha256..."
         $actual = (Get-FileHash "$origIso.part" -Algorithm SHA256).Hash.ToLower()
         if ($actual -ne $b.sha256) { Remove-Item "$origIso.part"; throw "sha256 ne sovpal: zhdali $($b.sha256), poluchili $actual" }
-        Write-Host "sha256 ?" -ForegroundColor Green
+        Write-Host "sha256 -" -ForegroundColor Green
     }
     Move-Item "$origIso.part" $origIso -Force
 }
@@ -139,7 +139,7 @@ Copy-Item (Join-Path $PSScriptRoot '..\Release\govechoos-gnome_2.1.0_amd64.deb')
 gnome-shell gdm3 firefox htop vim gnome-calculator nautilus gnome-terminal
 "@ | Set-Content (Join-Path $gv 'startapps.list') -Encoding ASCII
 
-# 4b. preseed: TOLKO pri -AutoInstall. Po umolchaniyu obraz interaktivnyy ?
+# 4b. preseed: TOLKO pri -AutoInstall. Po umolchaniyu obraz interaktivnyy -
 #     ustanovschik sam zadaet vse voprosy, polzovatel kontroliruet kazhdyy shag.
 if ($AutoInstall) {
     New-Item -ItemType Directory -Force -Path (Join-Path $src 'preseed') | Out-Null
@@ -154,7 +154,7 @@ d-i preseed/late_command string in-target apt-get install -y /cdrom/govecho/*.de
 }
 
 # 4c. Punkty menyu zagruzchikov (BIOS-isolinux i EFI-grub), esli oni est v baze.
-#     Osnovnoy punkt ? INTERAKTIVNYY (bez automatic-ubiquity/quiet splash):
+#     Osnovnoy punkt - INTERAKTIVNYY (bez automatic-ubiquity/quiet splash):
 #     vidno kazhdyy shag ustanovki, mozhno nastroit yazyk, razdely, polzovateley.
 $bootAppend = 'boot=casper ---'                                   # interaktiv
 $autoAppend = 'file=/cdrom/preseed/govechoos.seed boot=casper automatic-ubiquity quiet splash ---'
@@ -214,24 +214,24 @@ wsl -u root -- bash -c "set -e; cd '$wSrc'; xorriso -as mkisofs -r -J -joliet-lo
 if (-not (Test-Path $outIso)) { throw "Ne udalos sobrat ISO" }
 $szMB = [math]::Round((Get-Item $outIso).Length/1MB,1)
 Report 95 "Proveryayu gotovyy obraz..."
-if (-not (Get-Item $outIso).Length) { throw "ISO pustoy?" }
+if (-not (Get-Item $outIso).Length) { throw "ISO pustoy-" }
 Report 100 "DONE: govechoos-$VER-live-$Base.iso ($szMB MB)"
-Write-Host "? DONE: $outIso ($szMB MB)" -ForegroundColor Green
+Write-Host "- DONE: $outIso ($szMB MB)" -ForegroundColor Green
 
 # ---------- 6. DONE ----------
 # VNIMATELNOE RESHENIE: skript NE pishet ISO ni na kakie diski/fleshki.
-# Zapis obraza ? opasnaya operatsiya (stiraet disk), a krome togo mnogim nuzhno
+# Zapis obraza - opasnaya operatsiya (stiraet disk), a krome togo mnogim nuzhno
 # samomu vybirat sposob zagruzki i sledit za ustanovkoy. Poetomu builder
 # ostanavlivaetsya na fayle ISO v WorkDir.
 Write-Host @"
 
-? Sborka zavershena. Fayl obraza: $outIso ($szMB MB)
+- Sborka zavershena. Fayl obraza: $outIso ($szMB MB)
 
 CHto dalshe (zapis obraza vy delaete sami, kak vam udobnee):
-  ? Test bez zapisi: VirtualBox/VMware -> novaya VM -> nositel = etot ISO;
-  ? Fleshka: Rufus / Ventoy / balenaEtcher (vyberite fayl obraza vruchnuyu);
-  ? Pri zagruzke s fleshki otkroetsya menyu GovechoOS ? ustanovka INTERAKTIVNAYA:
+  - Test bez zapisi: VirtualBox/VMware -> novaya VM -> nositel = etot ISO;
+  - Fleshka: Rufus / Ventoy / balenaEtcher (vyberite fayl obraza vruchnuyu);
+  - Pri zagruzke s fleshki otkroetsya menyu GovechoOS - ustanovka INTERAKTIVNAYA:
     ustanovschik zadaet vse voprosy (yazyk, razdely, polzovatel), vy vse
-    vidite i nastraivaete. Rezhim ?bez voprosov? vklyuchaetsya peresborkoy
+    vidite i nastraivaete. Rezhim -bez voprosov- vklyuchaetsya peresborkoy
     s flagom -AutoInstall (v menyu poyavitsya otdelnyy punkt).
 "@ -ForegroundColor Green

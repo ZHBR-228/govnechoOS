@@ -1,13 +1,1 @@
-# Артефакты сборки (временные) — НЕ отслеживать
-build/
-scripts/__pycache__/
-live/build/
-pkgroot/usr/bin/
-pkgroot/usr/sbin/
-*.o
-
-# Release/ — папка релизных артефактов: отслеживается намеренно (исключение из build/)
-!Release/
-Release/*
-!Release/govechoos-gnome_2.1.0_amd64.deb
-!Release/govechoOS-v2.1-source.zip
+(empty)
