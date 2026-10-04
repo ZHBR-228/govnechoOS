@@ -1,1 +1,150 @@
-77u/I1JlcXVpcmVzIC1WZXJzaW9uIDUuMA0KIyBHb3ZlY2hvIEJ1aWxkZXIgLSBXaW5Gb3JtcyBmYWxsYmFjayBHVUkgKG5vIFhBTUwpLiBBdXRob3I6IFpIQlItMjI4IHwgTUlULg0KcGFyYW0oW3N0cmluZ10kQnVpbGRlciA9ICcnKQ0KJEVycm9yQWN0aW9uUHJlZmVyZW5jZSA9ICdTdG9wJw0KQWRkLVR5cGUgLUFzc2VtYmx5TmFtZSBTeXN0ZW0uV2luZG93cy5Gb3Jtcw0KW1N5c3RlbS5XaW5kb3dzLkZvcm1zLkFwcGxpY2F0aW9uXTo6RW5hYmxlVmlzdWFsU3R5bGVzKCkNCmlmICgtbm90ICRCdWlsZGVyKSB7ICRCdWlsZGVyID0gSm9pbi1QYXRoICRQU1NjcmlwdFJvb3QgJ2J1aWxkX3dpbmRvd3MucHMxJyB9DQokV29ya0RpciA9IEpvaW4tUGF0aCAkZW52OlVTRVJQUk9GSUxFICdnb3ZlY2hvX2J1aWxkJw0KDQokZnJtID0gTmV3LU9iamVjdCBXaW5kb3dzLkZvcm1zLkZvcm0NCiRmcm0uVGV4dCA9ICdHb3ZlY2hvIEJ1aWxkZXIgKGNvbXBhdCBtb2RlKScNCiRmcm0uV2lkdGggPSA3ODA7ICRmcm0uSGVpZ2h0ID0gNTYwOyAkZnJtLlN0YXJ0UG9zaXRpb24gPSAnQ2VudGVyU2NyZWVuJw0KDQokcGN0ID0gTmV3LU9iamVjdCBXaW5kb3dzLkZvcm1zLkxhYmVsOyAkcGN0LlRleHQgPSAnMCUnOyAkcGN0LkZvbnQgPSBOZXctT2JqZWN0IERyYXdpbmcuRm9udCgnU2Vnb2UgVUknLCAyMCwgW0RyYXdpbmcuRm9udFN0eWxlXTo6Qm9sZCkNCiRwY3QuTG9jYXRpb24gPSAnNjIwLDE0JzsgJHBjdC5BdXRvU2l6ZSA9ICR0cnVlOyAkZnJtLkNvbnRyb2xzLkFkZCgkcGN0KQ0KJGJhciA9IE5ldy1PYmplY3QgV2luZG93cy5Gb3Jtcy5Qcm9ncmVzc0JhcjsgJGJhci5Mb2NhdGlvbiA9ICcxNCwyMCc7ICRiYXIuU2l6ZSA9ICc1OTAsMjYnOyAkYmFyLk1heGltdW0gPSAxMDA7ICRmcm0uQ29udHJvbHMuQWRkKCRiYXIpDQokcGhhc2UgPSBOZXctT2JqZWN0IFdpbmRvd3MuRm9ybXMuTGFiZWw7ICRwaGFzZS5UZXh0ID0gJ0dvdG92IGsgemFwdXNrdSc7ICRwaGFzZS5Mb2NhdGlvbiA9ICcxNCw1Mic7ICRwaGFzZS5TaXplID0gJzc0MCwyMCc7ICRmcm0uQ29udHJvbHMuQWRkKCRwaGFzZSkNCiRsYmxCYXNlID0gTmV3LU9iamVjdCBXaW5kb3dzLkZvcm1zLkxhYmVsOyAkbGJsQmFzZS5UZXh0ID0gJ0JhemE6JzsgJGxibEJhc2UuTG9jYXRpb24gPSAnMTQsNTgnOyAkbGJsQmFzZS5BdXRvU2l6ZSA9ICR0cnVlDQokY21iQmFzZSA9IE5ldy1PYmplY3QgV2luZG93cy5Gb3Jtcy5Db21ib0JveDsgJGNtYkJhc2UuTG9jYXRpb24gPSAnNzAsNTUnOyAkY21iQmFzZS5XaWR0aCA9IDExMDsgJGNtYkJhc2UuRHJvcERvd25TdHlsZSA9ICdEcm9wRG93bkxpc3QnDQpbdm9pZF0kY21iQmFzZS5JdGVtcy5BZGRSYW5nZShAKCd1YnVudHUnLCdkZWJpYW4nKSk7ICRjbWJCYXNlLlNlbGVjdGVkSW5kZXggPSAwDQokZnJtLkNvbnRyb2xzLkFkZCgkbGJsQmFzZSk7ICRmcm0uQ29udHJvbHMuQWRkKCRjbWJCYXNlKQ0KJGNoa0F1dG8gPSBOZXctT2JqZWN0IFdpbmRvd3MuRm9ybXMuQ2hlY2tCb3g7ICRjaGtBdXRvLlRleHQgPSAnUmV6aGltIEF1dG9JbnN0YWxsJzsgJGNoa0F1dG8uTG9jYXRpb24gPSAnMTk0LDU1JzsgJGNoa0F1dG8uQXV0b1NpemUgPSAkdHJ1ZTsgJGZybS5Db250cm9scy5BZGQoJGNoa0F1dG8pDQokdHh0SXNvID0gTmV3LU9iamVjdCBXaW5kb3dzLkZvcm1zLkxhYmVsOyAkdHh0SXNvLlRleHQgPSAnSVNPOiBuZXQgdnliYXJhIC0gYnVkZW0ga2FjaGF0IG9maXRzaWFsbnl5IG9icmF6JzsgJHR4dElzby5Mb2NhdGlvbiA9ICcxNCw4MCc7ICR0eHRJc28uU2l6ZSA9ICc3NDAsMjAnOyAkZnJtLkNvbnRyb2xzLkFkZCgkdHh0SXNvKQ0KJGxvZyA9IE5ldy1PYmplY3QgV2luZG93cy5Gb3Jtcy5UZXh0Qm94OyAkbG9nLk11bHRpbGluZSA9ICR0cnVlOyAkbG9nLlJlYWRPbmx5ID0gJHRydWU7ICRsb2cuU2Nyb2xsQmFycyA9ICdWZXJ0aWNhbCcNCiRsb2cuTG9jYXRpb24gPSAnMTQsMTA2JzsgJGxvZy5TaXplID0gJzc0MCwzNDAnOyAkbG9nLkZvbnQgPSBOZXctT2JqZWN0IERyYXdpbmcuRm9udCgnQ29uc29sYXMnLCA5KTsgJGZybS5Db250cm9scy5BZGQoJGxvZykNCiRidG5SdW4gPSBOZXctT2JqZWN0IFdpbmRvd3MuRm9ybXMuQnV0dG9uOyAkYnRuUnVuLlRleHQgPSAnU09CUkFUJzsgJGJ0blJ1bi5Mb2NhdGlvbiA9ICcxNCw0NTYnOyAkYnRuUnVuLlNpemUgPSAnMTMwLDM0JzsgJGJ0blJ1bi5Gb250ID0gTmV3LU9iamVjdCBEcmF3aW5nLkZvbnQoJ1NlZ29lIFVJJywgOSwgW0RyYXdpbmcuRm9udFN0eWxlXTo6Qm9sZCk7ICRmcm0uQ29udHJvbHMuQWRkKCRidG5SdW4pDQokYnRuQ2FuY2VsID0gTmV3LU9iamVjdCBXaW5kb3dzLkZvcm1zLkJ1dHRvbjsgJGJ0bkNhbmNlbC5UZXh0ID0gJ09UTUVOQSc7ICRidG5DYW5jZWwuTG9jYXRpb24gPSAnMTU0LDQ1Nic7ICRidG5DYW5jZWwuU2l6ZSA9ICcxMTAsMzQnOyAkYnRuQ2FuY2VsLkVuYWJsZWQgPSAkZmFsc2U7ICRmcm0uQ29udHJvbHMuQWRkKCRidG5DYW5jZWwpDQokYnRuT3BlbiA9IE5ldy1PYmplY3QgV2luZG93cy5Gb3Jtcy5CdXR0b247ICRidG5PcGVuLlRleHQgPSAnT1RLUllUIFBBUEtVJzsgJGJ0bk9wZW4uTG9jYXRpb24gPSAnMjc0LDQ1Nic7ICRidG5PcGVuLlNpemUgPSAnMTcwLDM0JzsgJGZybS5Db250cm9scy5BZGQoJGJ0bk9wZW4pDQokYnRuUGljayA9IE5ldy1PYmplY3QgV2luZG93cy5Gb3Jtcy5CdXR0b247ICRidG5QaWNrLlRleHQgPSAnVllCUkFUIElTTy4uLic7ICRidG5QaWNrLkxvY2F0aW9uID0gJzQ1NCw0NTYnOyAkYnRuUGljay5TaXplID0gJzE1MCwzNCc7ICRmcm0uQ29udHJvbHMuQWRkKCRidG5QaWNrKQ0KDQokc2NyaXB0Oklzb1BhdGggPSAnJw0KJHNjcmlwdDpEZXRlY3RlZEJhc2UgPSAnJw0KDQokYnRuUGljay5BZGRfQ2xpY2soew0KICAgICRkbGcgPSBOZXctT2JqZWN0IFdpbmRvd3MuRm9ybXMuT3BlbkZpbGVEaWFsb2cNCiAgICAkZGxnLkZpbHRlciA9ICdJU08gb2JyYXp5ICgqLmlzbyl8Ki5pc298VnNlIGZheWx5ICgqLiopfCouKicNCiAgICBpZiAoJGRsZy5TaG93RGlhbG9nKCkgLWVxICdPSycpIHsNCiAgICAgICAgJHNjcmlwdDpJc29QYXRoID0gJGRsZy5GaWxlTmFtZQ0KICAgICAgICAkbm0gPSBbSU8uUGF0aF06OkdldEZpbGVOYW1lKCRkbGcuRmlsZU5hbWUpLlRvTG93ZXIoKQ0KICAgICAgICAkZGV0ID0gJ3Vua25vd24nDQogICAgICAgIGlmICgkbm0gLW1hdGNoICdmcmVlYnNkJykgeyAkZGV0ID0gJ2ZyZWVic2QnIH0NCiAgICAgICAgZWxzZWlmICgkbm0gLW1hdGNoICd1YnVudHUnKSB7ICRkZXQgPSAndWJ1bnR1JyB9DQogICAgICAgIGVsc2VpZiAoJG5tIC1tYXRjaCAnZGViaWFuJykgeyAkZGV0ID0gJ2RlYmlhbicgfQ0KICAgICAgICAkc2NyaXB0OkRldGVjdGVkQmFzZSA9IGlmICgkZGV0IC1lcSAndW5rbm93bicpIHsgJycgfSBlbHNlIHsgJGRldCB9DQogICAgICAgIGlmICgkY21iQmFzZSAtYW5kICgkZGV0IC1lcSAndWJ1bnR1JyAtb3IgJGRldCAtZXEgJ2RlYmlhbicpKSB7DQogICAgICAgICAgICAkY21iQmFzZS5TZWxlY3RlZEluZGV4ID0gaWYgKCRkZXQgLWVxICd1YnVudHUnKSB7IDAgfSBlbHNlIHsgMSB9DQogICAgICAgIH0NCiAgICAgICAgJHR4dElzby5UZXh0ID0gJ0lTTzogJyArIFtJTy5QYXRoXTo6R2V0RmlsZU5hbWUoJGRsZy5GaWxlTmFtZSkgKyAnICBbb3ByZWRlbGVubzogJyArICRkZXQgKyAnXScNCiAgICAgICAgJGxvZy5BcHBlbmRUZXh0KCdJU08gdnlicmFuOiAnICsgJGRsZy5GaWxlTmFtZSArICcgPT4gJyArICRkZXQgKyAiYHJgbiIpDQogICAgfQ0KfSkNCg0KJHN5bmMgPSAkbnVsbDsgJHBzSW5zdGFuY2UgPSAkbnVsbDsgJHJ1bnNwYWNlID0gJG51bGwNCiR0aW1lciA9IE5ldy1PYmplY3QgU3lzdGVtLldpbmRvd3MuRm9ybXMuVGltZXI7ICR0aW1lci5JbnRlcnZhbCA9IDIwMA0KJHRpbWVyLkFkZF9UaWNrKHsNCiAgICBpZiAoLW5vdCAkc2NyaXB0OnN5bmMpIHsgcmV0dXJuIH0NCiAgICB3aGlsZSAoJHRydWUpIHsNCiAgICAgICAgJGl0ZW0gPSAkbnVsbA0KICAgICAgICBpZiAoLW5vdCAkc2NyaXB0OnN5bmMuVHJ5VGFrZShbcmVmXSRpdGVtKSkgeyBicmVhayB9DQogICAgICAgICRzID0gW3N0cmluZ10kaXRlbQ0KICAgICAgICAkcGlwZSA9IFtzdHJpbmddW2NoYXJdMTI0DQogICAgICAgIGlmICgkcy5TdGFydHNXaXRoKCdQUk9HUkVTUycgKyAkcGlwZSkpIHsNCiAgICAgICAgICAgICRwYXJ0cyA9ICRzLlNwbGl0KCRwaXBlKQ0KICAgICAgICAgICAgJHAgPSAwLjANCiAgICAgICAgICAgIGlmIChbZG91YmxlXTo6VHJ5UGFyc2UoJHBhcnRzWzFdLCBbcmVmXSRwKSkgew0KICAgICAgICAgICAgICAgIGlmICgkcCAtbHQgMCkgeyAkcCA9IDAgfTsgaWYgKCRwIC1ndCAxMDApIHsgJHAgPSAxMDAgfQ0KICAgICAgICAgICAgICAgICRiYXIuVmFsdWUgPSBbaW50XSRwDQogICAgICAgICAgICAgICAgJHBjdC5UZXh0ID0gKFttYXRoXTo6Um91bmQoJHApKS5Ub1N0cmluZygpICsgJyUnDQogICAgICAgICAgICAgICAgaWYgKCRwYXJ0cy5MZW5ndGggLWd0IDIpIHsgJHBoYXNlLlRleHQgPSAkcGFydHNbMl0gfQ0KICAgICAgICAgICAgfQ0KICAgICAgICB9IGVsc2VpZiAoJHMuU3RhcnRzV2l0aCgnRVJSVEVYVCcgKyAkcGlwZSkpIHsNCiAgICAgICAgICAgICRsb2cuQXBwZW5kVGV4dCgnU1RERVJSOiAnICsgJHMuU3Vic3RyaW5nKDgpICsgImByYG4iKQ0KICAgICAgICB9IGVsc2VpZiAoJHMuU3RhcnRzV2l0aCgnRVhJVENPREUnICsgJHBpcGUpKSB7DQogICAgICAgICAgICAkY29kZSA9IFtpbnRdKCRzLlNwbGl0KCRwaXBlKVsxXSkNCiAgICAgICAgICAgIGlmICgkY29kZSAtZXEgMCkgeyAkYmFyLlZhbHVlID0gMTAwOyAkcGN0LlRleHQgPSAnMTAwJSc7ICRwaGFzZS5UZXh0ID0gJ1NCT1JLQSBaQVZFUlNIRU5BIScgfQ0KICAgICAgICAgICAgZWxzZSB7ICRwaGFzZS5UZXh0ID0gJ09zaGlia2Egc2JvcmtpIChjb2RlICcgKyAkY29kZSArICcpJyB9DQogICAgICAgICAgICAkdGltZXIuU3RvcCgpOyAkYnRuUnVuLkVuYWJsZWQgPSAkdHJ1ZTsgJGJ0bkNhbmNlbC5FbmFibGVkID0gJGZhbHNlDQogICAgICAgICAgICBpZiAoJHNjcmlwdDpydW5zcGFjZSkgeyAkc2NyaXB0OnJ1bnNwYWNlLkRpc3Bvc2UoKTsgJHNjcmlwdDpydW5zcGFjZSA9ICRudWxsIH0NCiAgICAgICAgICAgICRzY3JpcHQ6c3luYyA9ICRudWxsDQogICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICAkbG9nLkFwcGVuZFRleHQoJHMgKyAiYHJgbiIpDQogICAgICAgIH0NCiAgICB9DQp9KQ0KDQokYnRuUnVuLkFkZF9DbGljayh7DQogICAgaWYgKCRzY3JpcHQ6c3luYykgeyByZXR1cm4gfQ0KICAgICRwaGFzZS5UZXh0ID0gJ1phcHVzay4uLicNCiAgICAkYnRuUnVuLkVuYWJsZWQgPSAkZmFsc2U7ICRidG5DYW5jZWwuRW5hYmxlZCA9ICR0cnVlDQogICAgJGJhc2VTZWwgPSBpZiAoJGNtYkJhc2UpIHsgW3N0cmluZ10kY21iQmFzZS5TZWxlY3RlZEl0ZW0gfSBlbHNlIHsgJycgfQ0KICAgICRiYXJncyA9IEAoJy1Ob1Byb2ZpbGUnLCctRXhlY3V0aW9uUG9saWN5JywnQnlwYXNzJywnLUZpbGUnLCAkQnVpbGRlciwgJy1HdWlQcm90b2NvbCcpDQogICAgaWYgKCRzY3JpcHQ6SXNvUGF0aCkgew0KICAgICAgICAkYmFyZ3MgKz0gQCgnLUlzb1BhdGgnLCAkc2NyaXB0Oklzb1BhdGgpDQogICAgICAgIGlmICgtbm90ICRiYXNlU2VsIC1hbmQgJHNjcmlwdDpEZXRlY3RlZEJhc2UpIHsgJGJhc2VTZWwgPSAkc2NyaXB0OkRldGVjdGVkQmFzZSB9DQogICAgfQ0KICAgIGlmICgkYmFzZVNlbCkgeyAkYmFyZ3MgKz0gQCgnLUJhc2UnLCAkYmFzZVNlbCkgfQ0KICAgIGlmICgkY2hrQXV0by5DaGVja2VkKSB7ICRiYXJncyArPSAnLUF1dG9JbnN0YWxsJyB9DQogICAgJHNjcmlwdDpzeW5jID0gW1N5c3RlbS5Db2xsZWN0aW9ucy5Db25jdXJyZW50LkNvbmN1cnJlbnRRdWV1ZVtzdHJpbmddXTo6bmV3KCkNCiAgICAkcnMgPSBbUnVuc3BhY2VGYWN0b3J5XTo6Q3JlYXRlUnVuc3BhY2UoKQ0KICAgICRycy5BcGFydG1lbnRTdGF0ZSA9ICdTVEEnOyAkcnMuVGhyZWFkT3B0aW9ucyA9ICdSZXVzZVRocmVhZCc7ICRycy5PcGVuKCkNCiAgICAkcHNJbnN0YW5jZSA9IFtQb3dlclNoZWxsXTo6Q3JlYXRlKCkNCiAgICAkcHNJbnN0YW5jZS5SdW5zcGFjZSA9ICRycw0KICAgICRzY3JpcHQ6cHNJbnN0YW5jZSA9ICRwc0luc3RhbmNlDQogICAgW3ZvaWRdJHBzSW5zdGFuY2UuQWRkU2NyaXB0KHsNCiAgICAgICAgcGFyYW0oJGIsICRhLCAkcSkNCiAgICAgICAgdHJ5IHsNCiAgICAgICAgICAgICRleGUgPSBpZiAoR2V0LUNvbW1hbmQgcHdzaCAtRUEgU2lsZW50bHlDb250aW51ZSkgeyAncHdzaCcgfSBlbHNlIHsgJ3Bvd2Vyc2hlbGwnIH0NCiAgICAgICAgICAgICRwc2kgPSBOZXctT2JqZWN0IFN5c3RlbS5EaWFnbm9zdGljcy5Qcm9jZXNzU3RhcnRJbmZvDQogICAgICAgICAgICAkcHNpLkZpbGVOYW1lID0gJGV4ZQ0KICAgICAgICAgICAgJHBzaS5Bcmd1bWVudHMgPSAoKCRhIHwgRm9yRWFjaC1PYmplY3QgeyBpZiAoJF8gLW1hdGNoICdccycpIHsgJyInICsgJF8gKyAnIicgfSBlbHNlIHsgJF8gfSB9KSAtam9pbiAnICcpDQogICAgICAgICAgICAkcHNpLlJlZGlyZWN0U3RhbmRhcmRPdXRwdXQgPSAkdHJ1ZQ0KICAgICAgICAgICAgJHBzaS5SZWRpcmVjdFN0YW5kYXJkRXJyb3IgPSAkdHJ1ZQ0KICAgICAgICAgICAgJHBzaS5Vc2VTaGVsbEV4ZWN1dGUgPSAkZmFsc2UNCiAgICAgICAgICAgICRwc2kuV29ya2luZ0RpcmVjdG9yeSA9IFNwbGl0LVBhdGggJGINCiAgICAgICAgICAgICRwcm9jID0gW1N5c3RlbS5EaWFnbm9zdGljcy5Qcm9jZXNzXTo6U3RhcnQoJHBzaSkNCiAgICAgICAgICAgIHdoaWxlICgkbnVsbCAtbmUgKCRsaW5lID0gJHByb2MuU3RhbmRhcmRPdXRwdXQuUmVhZExpbmUoKSkpIHsgW3ZvaWRdJHEuRW5xdWV1ZSgkbGluZSkgfQ0KICAgICAgICAgICAgJGVycnQgPSAkcHJvYy5TdGFuZGFyZEVycm9yLlJlYWRUb0VuZCgpDQogICAgICAgICAgICAkcHJvYy5XYWl0Rm9yRXhpdCgpDQogICAgICAgICAgICBpZiAoJGVycnQpIHsgW3ZvaWRdJHEuRW5xdWV1ZSgoJ0VSUlRFWFQnICsgW2NoYXJdMTI0ICsgJGVycnQpKSB9DQogICAgICAgICAgICBbdm9pZF0kcS5FbnF1ZXVlKCgnRVhJVENPREUnICsgW2NoYXJdMTI0ICsgJHByb2MuRXhpdENvZGUpKQ0KICAgICAgICB9IGNhdGNoIHsNCiAgICAgICAgICAgIFt2b2lkXSRxLkVucXVldWUoKCdFUlJURVhUJyArIFtjaGFyXTEyNCArICRfLkV4Y2VwdGlvbi5NZXNzYWdlKSkNCiAgICAgICAgICAgIFt2b2lkXSRxLkVucXVldWUoJ0VYSVRDT0RFJyArIFtjaGFyXTEyNCArICcxJykNCiAgICAgICAgfQ0KICAgIH0pLkFkZEFyZ3VtZW50KCRCdWlsZGVyKS5BZGRBcmd1bWVudCgkYmFyZ3MpLkFkZEFyZ3VtZW50KCRzY3JpcHQ6c3luYykNCiAgICBbdm9pZF0kcHNJbnN0YW5jZS5CZWdpbkludm9rZSgpDQogICAgJHNjcmlwdDpydW5zcGFjZSA9ICRycw0KICAgICR0aW1lci5TdGFydCgpDQp9KQ0KDQokYnRuQ2FuY2VsLkFkZF9DbGljayh7DQogICAgaWYgKCRzY3JpcHQ6cHNJbnN0YW5jZSkgeyB0cnkgeyAkc2NyaXB0OnBzSW5zdGFuY2UuU3RvcCgpOyAkc2NyaXB0OnBzSW5zdGFuY2UuRGlzcG9zZSgpIH0gY2F0Y2gge30gfQ0KICAgIGlmICgkc2NyaXB0OnJ1bnNwYWNlKSB7IHRyeSB7ICRzY3JpcHQ6cnVuc3BhY2UuQ2xvc2UoKTsgJHNjcmlwdDpydW5zcGFjZS5EaXNwb3NlKCkgfSBjYXRjaCB7fTsgJHNjcmlwdDpydW5zcGFjZSA9ICRudWxsIH0NCiAgICAkc2NyaXB0OnN5bmMgPSAkbnVsbA0KICAgICR0aW1lci5TdG9wKCkNCiAgICAkbG9nLkFwcGVuZFRleHQoJz09IE9zdGFub3ZsZW5vIHBvbCcnem92YXRlbGVtID09JyArICJgcmBuIikNCiAgICAkYnRuUnVuLkVuYWJsZWQgPSAkdHJ1ZTsgJGJ0bkNhbmNlbC5FbmFibGVkID0gJGZhbHNlDQp9KQ0KDQokYnRuT3Blbi5BZGRfQ2xpY2soew0KICAgIGlmICgtbm90IChUZXN0LVBhdGggJFdvcmtEaXIpKSB7IE5ldy1JdGVtIC1JdGVtVHlwZSBEaXJlY3RvcnkgLUZvcmNlIC1QYXRoICRXb3JrRGlyIHwgT3V0LU51bGwgfQ0KICAgIFN0YXJ0LVByb2Nlc3MgZXhwbG9yZXIuZXhlICRXb3JrRGlyDQp9KQ0KDQokZnJtLkFkZF9Gb3JtQ2xvc2VkKHsNCiAgICBpZiAoJHNjcmlwdDpwc0luc3RhbmNlKSB7IHRyeSB7ICRzY3JpcHQ6cHNJbnN0YW5jZS5TdG9wKCk7ICRzY3JpcHQ6cHNJbnN0YW5jZS5EaXNwb3NlKCkgfSBjYXRjaCB7fSB9DQogICAgaWYgKCRzY3JpcHQ6cnVuc3BhY2UpIHsgdHJ5IHsgJHNjcmlwdDpydW5zcGFjZS5EaXNwb3NlKCkgfSBjYXRjaCB7fSB9DQp9KQ0KDQpbdm9pZF0kZnJtLlNob3dEaWFsb2coKQ0K
+﻿#Requires -Version 5.0
+# Govecho Builder - WinForms fallback GUI (no XAML). Author: ZHBR-228 | MIT.
+param([string]$Builder = '')
+$ErrorActionPreference = 'Stop'
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.Application]::EnableVisualStyles()
+if (-not $Builder) { $Builder = Join-Path $PSScriptRoot 'build_windows.ps1' }
+$WorkDir = Join-Path $env:USERPROFILE 'govecho_build'
+
+$frm = New-Object Windows.Forms.Form
+$frm.Text = 'Govecho Builder (compat mode)'
+$frm.Width = 780; $frm.Height = 560; $frm.StartPosition = 'CenterScreen'
+
+$pct = New-Object Windows.Forms.Label; $pct.Text = '0%'; $pct.Font = New-Object Drawing.Font('Segoe UI', 20, [Drawing.FontStyle]::Bold)
+$pct.Location = '620,14'; $pct.AutoSize = $true; $frm.Controls.Add($pct)
+$bar = New-Object Windows.Forms.ProgressBar; $bar.Location = '14,20'; $bar.Size = '590,26'; $bar.Maximum = 100; $frm.Controls.Add($bar)
+$phase = New-Object Windows.Forms.Label; $phase.Text = 'Gotov k zapusku'; $phase.Location = '14,52'; $phase.Size = '740,20'; $frm.Controls.Add($phase)
+$lblBase = New-Object Windows.Forms.Label; $lblBase.Text = 'Baza:'; $lblBase.Location = '14,58'; $lblBase.AutoSize = $true
+$cmbBase = New-Object Windows.Forms.ComboBox; $cmbBase.Location = '70,55'; $cmbBase.Width = 110; $cmbBase.DropDownStyle = 'DropDownList'
+[void]$cmbBase.Items.AddRange(@('ubuntu','debian')); $cmbBase.SelectedIndex = 0
+$frm.Controls.Add($lblBase); $frm.Controls.Add($cmbBase)
+$chkAuto = New-Object Windows.Forms.CheckBox; $chkAuto.Text = 'Rezhim AutoInstall'; $chkAuto.Location = '194,55'; $chkAuto.AutoSize = $true; $frm.Controls.Add($chkAuto)
+$txtIso = New-Object Windows.Forms.Label; $txtIso.Text = 'ISO: net vybara - budem kachat ofitsialnyy obraz'; $txtIso.Location = '14,80'; $txtIso.Size = '740,20'; $frm.Controls.Add($txtIso)
+$log = New-Object Windows.Forms.TextBox; $log.Multiline = $true; $log.ReadOnly = $true; $log.ScrollBars = 'Vertical'
+$log.Location = '14,106'; $log.Size = '740,340'; $log.Font = New-Object Drawing.Font('Consolas', 9); $frm.Controls.Add($log)
+$btnRun = New-Object Windows.Forms.Button; $btnRun.Text = 'SOBRAT'; $btnRun.Location = '14,456'; $btnRun.Size = '130,34'; $btnRun.Font = New-Object Drawing.Font('Segoe UI', 9, [Drawing.FontStyle]::Bold); $frm.Controls.Add($btnRun)
+$btnCancel = New-Object Windows.Forms.Button; $btnCancel.Text = 'OTMENA'; $btnCancel.Location = '154,456'; $btnCancel.Size = '110,34'; $btnCancel.Enabled = $false; $frm.Controls.Add($btnCancel)
+$btnOpen = New-Object Windows.Forms.Button; $btnOpen.Text = 'OTKRYT PAPKU'; $btnOpen.Location = '274,456'; $btnOpen.Size = '170,34'; $frm.Controls.Add($btnOpen)
+$btnPick = New-Object Windows.Forms.Button; $btnPick.Text = 'VYBRAT ISO...'; $btnPick.Location = '454,456'; $btnPick.Size = '150,34'; $frm.Controls.Add($btnPick)
+
+$script:IsoPath = ''
+$script:DetectedBase = ''
+
+$btnPick.Add_Click({
+    $dlg = New-Object Windows.Forms.OpenFileDialog
+    $dlg.Filter = 'ISO obrazy (*.iso)|*.iso|Vse fayly (*.*)|*.*'
+    if ($dlg.ShowDialog() -eq 'OK') {
+        $script:IsoPath = $dlg.FileName
+        $nm = [IO.Path]::GetFileName($dlg.FileName).ToLower()
+        $det = 'unknown'
+        if ($nm -match 'freebsd') { $det = 'freebsd' }
+        elseif ($nm -match 'ubuntu') { $det = 'ubuntu' }
+        elseif ($nm -match 'debian') { $det = 'debian' }
+        $script:DetectedBase = if ($det -eq 'unknown') { '' } else { $det }
+        if ($cmbBase -and ($det -eq 'ubuntu' -or $det -eq 'debian')) {
+            $cmbBase.SelectedIndex = if ($det -eq 'ubuntu') { 0 } else { 1 }
+        }
+        $txtIso.Text = 'ISO: ' + [IO.Path]::GetFileName($dlg.FileName) + '  [opredeleno: ' + $det + ']'
+        $log.AppendText('ISO vybran: ' + $dlg.FileName + ' => ' + $det + "`r`n")
+    }
+})
+
+$sync = $null; $psInstance = $null; $runspace = $null
+$timer = New-Object System.Windows.Forms.Timer; $timer.Interval = 200
+$timer.Add_Tick({
+    if (-not $script:sync) { return }
+    while ($true) {
+        $item = $null
+        if (-not $script:sync.TryTake([ref]$item)) { break }
+        $s = [string]$item
+        $pipe = [string][char]124
+        if ($s.StartsWith('PROGRESS' + $pipe)) {
+            $parts = $s.Split($pipe)
+            $p = 0.0
+            if ([double]::TryParse($parts[1], [ref]$p)) {
+                if ($p -lt 0) { $p = 0 }; if ($p -gt 100) { $p = 100 }
+                $bar.Value = [int]$p
+                $pct.Text = ([math]::Round($p)).ToString() + '%'
+                if ($parts.Length -gt 2) { $phase.Text = $parts[2] }
+            }
+        } elseif ($s.StartsWith('ERRTEXT' + $pipe)) {
+            $log.AppendText('STDERR: ' + $s.Substring(8) + "`r`n")
+        } elseif ($s.StartsWith('EXITCODE' + $pipe)) {
+            $code = [int]($s.Split($pipe)[1])
+            if ($code -eq 0) { $bar.Value = 100; $pct.Text = '100%'; $phase.Text = 'SBORKA ZAVERSHENA!' }
+            else { $phase.Text = 'Oshibka sborki (code ' + $code + ')' }
+            $timer.Stop(); $btnRun.Enabled = $true; $btnCancel.Enabled = $false
+            if ($script:runspace) { $script:runspace.Dispose(); $script:runspace = $null }
+            $script:sync = $null
+        } else {
+            $log.AppendText($s + "`r`n")
+        }
+    }
+})
+
+$btnRun.Add_Click({
+    if ($script:sync) { return }
+    $phase.Text = 'Zapusk...'
+    $btnRun.Enabled = $false; $btnCancel.Enabled = $true
+    $baseSel = if ($cmbBase) { [string]$cmbBase.SelectedItem } else { '' }
+    $bargs = @('-NoProfile','-ExecutionPolicy','Bypass','-File', $Builder, '-GuiProtocol')
+    if ($script:IsoPath) {
+        $bargs += @('-IsoPath', $script:IsoPath)
+        if (-not $baseSel -and $script:DetectedBase) { $baseSel = $script:DetectedBase }
+    }
+    if ($baseSel) { $bargs += @('-Base', $baseSel) }
+    if ($chkAuto.Checked) { $bargs += '-AutoInstall' }
+    $script:sync = [System.Collections.Concurrent.ConcurrentQueue[string]]::new()
+    $rs = [RunspaceFactory]::CreateRunspace()
+    $rs.ApartmentState = 'STA'; $rs.ThreadOptions = 'ReuseThread'; $rs.Open()
+    $psInstance = [PowerShell]::Create()
+    $psInstance.Runspace = $rs
+    $script:psInstance = $psInstance
+    [void]$psInstance.AddScript({
+        param($b, $a, $q)
+        try {
+            $exe = if (Get-Command pwsh -EA SilentlyContinue) { 'pwsh' } else { 'powershell' }
+            $psi = New-Object System.Diagnostics.ProcessStartInfo
+            $psi.FileName = $exe
+            $psi.Arguments = (($a | ForEach-Object { if ($_ -match '\s') { '"' + $_ + '"' } else { $_ } }) -join ' ')
+            $psi.RedirectStandardOutput = $true
+            $psi.RedirectStandardError = $true
+            $psi.UseShellExecute = $false
+            $psi.WorkingDirectory = Split-Path $b
+            $proc = [System.Diagnostics.Process]::Start($psi)
+            while ($null -ne ($line = $proc.StandardOutput.ReadLine())) { [void]$q.Enqueue($line) }
+            $errt = $proc.StandardError.ReadToEnd()
+            $proc.WaitForExit()
+            if ($errt) { [void]$q.Enqueue(('ERRTEXT' + [char]124 + $errt)) }
+            [void]$q.Enqueue(('EXITCODE' + [char]124 + $proc.ExitCode))
+        } catch {
+            [void]$q.Enqueue(('ERRTEXT' + [char]124 + $_.Exception.Message))
+            [void]$q.Enqueue('EXITCODE' + [char]124 + '1')
+        }
+    }).AddArgument($Builder).AddArgument($bargs).AddArgument($script:sync)
+    [void]$psInstance.BeginInvoke()
+    $script:runspace = $rs
+    $timer.Start()
+})
+
+$btnCancel.Add_Click({
+    if ($script:psInstance) { try { $script:psInstance.Stop(); $script:psInstance.Dispose() } catch {} }
+    if ($script:runspace) { try { $script:runspace.Close(); $script:runspace.Dispose() } catch {}; $script:runspace = $null }
+    $script:sync = $null
+    $timer.Stop()
+    $log.AppendText('== Ostanovleno pol''zovatelem ==' + "`r`n")
+    $btnRun.Enabled = $true; $btnCancel.Enabled = $false
+})
+
+$btnOpen.Add_Click({
+    if (-not (Test-Path $WorkDir)) { New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null }
+    Start-Process explorer.exe $WorkDir
+})
+
+$frm.Add_FormClosed({
+    if ($script:psInstance) { try { $script:psInstance.Stop(); $script:psInstance.Dispose() } catch {} }
+    if ($script:runspace) { try { $script:runspace.Dispose() } catch {} }
+})
+
+[void]$frm.ShowDialog()
