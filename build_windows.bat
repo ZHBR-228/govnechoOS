@@ -1,18 +1,1 @@
-@echo off
-chcp 866 >nul 2>nul
-rem GovechoOS Builder - двойной щелчок открывает окно с прогрессом сборки (ZHBR-228, MIT)
-rem Консольный режим без окна: build_windows.bat -Console [...параметры билдера]
-setlocal
-cd /d "%~dp0"
-if "%1"=="-Console" ( shift & goto console )
-where pwsh >nul 2>nul && (pwsh -NoProfile -ExecutionPolicy Bypass -File scripts\build_gui.ps1 %*) || (powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_gui.ps1 %*)
-if errorlevel 1 (
-    echo.
-    echo [govechoOS] Окно не открылось? Запустите вручную из PowerShell:
-    echo     powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_gui.ps1
-    pause
-)
-goto :eof
-:console
-where pwsh >nul 2>nul && (pwsh -NoProfile -ExecutionPolicy Bypass -File scripts\build_windows.ps1 %*) || (powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_windows.ps1 %*)
-endlocal
+QGVjaG8gb2ZmDQpyZW0gR292ZWNob09TIEJ1aWxkZXIgbGF1bmNoZXIgKFpIQlItMjI4LCBNSVQpDQpyZW0gRG91YmxlLWNsaWNrIC0+IEdVSSB3aXRoIHByb2dyZXNzIGJhci4gT3I6IGJ1aWxkX3dpbmRvd3MuYmF0IC1Db25zb2xlIFthcmdzXQ0Kc2V0bG9jYWwNCmNkIC9kICIlfmRwMCINCmlmICIlMSI9PSItQ29uc29sZSIgKCBzaGlmdCAmIGdvdG8gY29uc29sZSApDQp3aGVyZSBwd3NoID5udWwgMj5udWwgJiYgKHB3c2ggLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBzY3JpcHRzXGJ1aWxkX2d1aS5wczEgJSopIHx8IChwb3dlcnNoZWxsIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgc2NyaXB0c1xidWlsZF9ndWkucHMxICUqKQ0KaWYgZXJyb3JsZXZlbCAxICgNCiAgICBlY2hvLg0KICAgIGVjaG8gW2dvdmVjaG9PU10gR1VJIGZhaWxlZCB0byBzdGFydC4gUnVuIG1hbnVhbGx5IGZyb20gUG93ZXJTaGVsbDoNCiAgICBlY2hvICAgICBwb3dlcnNoZWxsIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgc2NyaXB0c1xidWlsZF9ndWkucHMxDQogICAgcGF1c2UNCikNCmdvdG8gOmVvZg0KOmNvbnNvbGUNCndoZXJlIHB3c2ggPm51bCAyPm51bCAmJiAocHdzaCAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIHNjcmlwdHNcYnVpbGRfd2luZG93cy5wczEgJSopIHx8IChwb3dlcnNoZWxsIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgc2NyaXB0c1xidWlsZF93aW5kb3dzLnBzMSAlKikNCmVuZGxvY2FsDQo=
