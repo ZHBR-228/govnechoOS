@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=govechoOS Welcome
+Comment=Приветственный баннер govechoOS
+Exec=/usr/local/bin/govwelcome
+Icon=face-smile
+Type=Application
+Categories=Utility;
+Terminal=true

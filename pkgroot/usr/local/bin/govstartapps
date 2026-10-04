@@ -1,0 +1,66 @@
+#!/bin/sh
+# govstartapps — ряд стартовых программ govechoOS (GNOME Edition)
+# Запускается как приложение автозапуска (XDG Autostart) при входе в сессию.
+# Каждая программа запускается только если установлена; отсутствие — не ошибка.
+set -u
+
+VERSION="1.0"
+LOG="${GOVECHOOS_STARTAPPS_LOG:-$HOME/.config/govechoos/startapps.log}"
+
+if [ "${1:-}" = "-v" ] || [ "${1:-}" = "--version" ]; then
+    echo "govechoOS govstartapps $VERSION"
+    exit 0
+fi
+
+mkdir -p "$(dirname "$LOG")" 2>/dev/null || true
+say() {
+    printf '[govstartapps] %s\n' "$1" | tee -a "$LOG" >/dev/null 2>&1 || true
+}
+
+launch() {
+    # launch <описание> <бинарь> [аргументы...]
+    desc="$1"; bin="$2"; shift 2
+    if command -v "$bin" >/dev/null 2>&1; then
+        # nohup + & — не блокируем сессию; вывод в лог
+        nohup "$bin" "$@" >>"$LOG" 2>&1 &
+        say "запущено: $desc ($bin, pid $!)"
+    else
+        say "пропущено (не установлено): $desc ($bin)"
+    fi
+}
+
+say "=== старт ряда стартовых программ govechoOS ==="
+
+# 1. Файловый менеджер
+launch "Файлы" nautilus
+
+# 2. Терминал
+launch "Терминал" gnome-terminal --title="govechoOS Terminal"
+
+# 3. Текстовый редактор (gnome-text-editor или gedit)
+if command -v gnome-text-editor >/dev/null 2>&1; then
+    launch "Текстовый редактор" gnome-text-editor
+else
+    launch "Текстовый редактор" gedit
+fi
+
+# 4. Калькулятор
+launch "Калькулятор" gnome-calculator
+
+# 5. Просмотр системных ресурсов
+launch "Системный монитор" gnome-system-monitor
+
+# 6. Браузер (firefox или epiphany)
+if command -v firefox-esr >/dev/null 2>&1; then
+    launch "Веб-браузер" firefox-esr
+elif command -v firefox >/dev/null 2>&1; then
+    launch "Веб-браузер" firefox
+else
+    launch "Веб-браузер" epiphany-browser
+fi
+
+# 7. Фирменное приветствие (пишет баннер и ставит метку сессии)
+launch "Приветствие govechoOS" /usr/local/bin/govwelcome
+
+say "=== готово ==="
+exit 0

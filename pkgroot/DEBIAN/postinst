@@ -1,0 +1,88 @@
+#!/bin/sh
+# postinst govechoos-gnome — настройка GNOME-сессии govechoOS
+set -e
+
+GCONF_SCHEMA_DIR=/usr/share/glib-2.0/schemas
+DCONF_LOCAL=/etc/dconf/db/local.d
+
+echo "[govechoOS] postinst: применяю конфигурацию GNOME..."
+
+# 1. Схемы GSettings (если есть новые) — перекомпиляция
+if command -v glib-compile-schemas >/dev/null 2>&1; then
+    glib-compile-schemas "$GCONF_SCHEMA_DIR" 2>/dev/null || true
+fi
+
+# 2. dconf: собрать базу из fragment-ов
+if command -v dconf compile >/dev/null 2>&1 || command -v dconf >/dev/null 2>&1; then
+    if [ -d "$DCONF_LOCAL" ]; then
+        dconf compile /etc/dconf/db/local "$DCONF_LOCAL" 2>/dev/null || \
+            dconf update 2>/dev/null || true
+    fi
+fi
+
+# 3. Разрешить Wayland-сессию govechoOS в GDM
+if [ -f /etc/gdm3/custom.conf ]; then
+    if ! grep -q "^WaylandEnable=true" /etc/gdm3/custom.conf 2>/dev/null; then
+        sed -i 's/^#\?WaylandEnable=.*/WaylandEnable=true/' /etc/gdm3/custom.conf 2>/dev/null || \
+            printf '\n[daemon]\nWaylandEnable=true\n' >> /etc/gdm3/custom.conf
+    fi
+fi
+
+# 4. Включить фирменные юниты сессии (как часть gnome-session-failsafe.target)
+for u in govechoos-gnome-setup.service gnome-session-failsafe.service; do
+    src="/usr/share/gnome/govsession/$u"
+    dst_dir=/usr/lib/systemd/user
+    [ -d /etc/systemd/user ] && dst_dir=/etc/systemd/user
+    if [ -f "$src" ]; then
+        install -D -m 0644 "$src" "$dst_dir/$u" 2>/dev/null || true
+        mkdir -p "$dst_dir/gnome-session-failsafe.target.wants" 2>/dev/null || true
+        ln -sf "$dst_dir/$u" "$dst_dir/gnome-session-failsafe.target.wants/$u" 2>/dev/null || true
+    fi
+done
+systemctl --user daemon-reload 2>/dev/null || true
+
+# 5. Ряд стартовых программ: включить XDG Autostart по умолчанию (skel + конфиги)
+for f in govechoos-welcome govechoos-startapps; do
+    src="/etc/xdg/autostart/$f.desktop"
+    [ -f "$src" ] || continue
+    # симлинк в global autostart, чтобы GNOME Session включил их даже без user-конфига
+    mkdir -p /etc/xdg/autostart 2>/dev/null || true
+    # для каждого существующего пользователя — добавить в ~/.config/autostart
+    for home_dir in /home/* /root; do
+        [ -d "$home_dir" ] || continue
+        ad="$home_dir/.config/autostart"
+        mkdir -p "$ad" 2>/dev/null || true
+        cp -f "$src" "$ad/" 2>/dev/null || true
+        chown -R "$(stat -c '%u:%g' "$home_dir")" "$ad" 2>/dev/null || true
+    done
+done
+# скелет нового пользователя
+if [ -d /etc/skel ]; then
+    mkdir -p /etc/skel/.config/autostart 2>/dev/null || true
+    for f in govechoos-welcome govechoos-startapps; do
+        [ -f "/etc/xdg/autostart/$f.desktop" ] && \
+            cp -f "/etc/xdg/autostart/$f.desktop" /etc/skel/.config/autostart/ 2>/dev/null || true
+    done
+fi
+
+
+# 5b. Чистота GNOME: применить профиль govechoOS для всех пользователей
+if [ -x /usr/local/bin/govclean ]; then
+    for home_dir in /home/* /root; do
+        [ -d "$home_dir" ] || continue
+        su - "$(basename "$home_dir")" -c 'govclean apply >/dev/null 2>&1' 2>/dev/null || true
+    done
+fi
+
+# 6. Обновить кэш приложений
+if command -v update-desktop-database >/dev/null 2>&1; then
+    update-desktop-database /usr/share/applications 2>/dev/null || true
+fi
+if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+    for d in /usr/share/icons/*; do
+        [ -f "$d/index.theme" ] && gtk-update-icon-cache -q "$d" 2>/dev/null || true
+    done
+fi
+
+echo "[govechoOS] Готово. Выберите сеанс \"govechoOS GNOME\" на экране входа GDM."
+exit 0

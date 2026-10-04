@@ -1,0 +1,13 @@
+[Unit]
+Description=govechoOS GNOME Setup — применение фирменных настроек GNOME при входе
+PartOf=gnome-session-failsafe.target
+After=gnome-session-failsafe.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=GOVECHOOS_EDITION=gnome
+ExecStart=/bin/sh -c '/usr/local/bin/govecho "govechoOS GNOME session active" > /dev/null 2>&1 || true'
+
+[Install]
+WantedBy=gnome-session-failsafe.target

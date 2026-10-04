@@ -1,0 +1,35 @@
+#!/bin/sh
+# prerm govechoos-gnome — отключение фирменных юнитов и настроек
+set -e
+
+for u in govechoos-gnome-setup.service gnome-session-failsafe.service; do
+    for d in /etc/systemd/user /usr/lib/systemd/user; do
+        rm -f "$d/gnome-session-failsafe.target.wants/$u" 2>/dev/null || true
+        rm -f "$d/$u" 2>/dev/null || true
+    done
+done
+
+rm -f /etc/dconf/db/local.d/30-govechoos 2>/dev/null || true
+rm -f /usr/share/govechoos/gnome-clean.dconf 2>/dev/null || true
+rm -f /etc/profile.d/govechoos.sh 2>/dev/null || true
+rm -f /usr/share/applications/govctl-terminal.desktop 2>/dev/null || true
+# откатить чистоту GNOME (вернуть значения по умолчанию)
+if [ -x /usr/local/bin/govclean ]; then
+    for home_dir in /home/* /root; do
+        [ -d "$home_dir" ] || continue
+        su - "$(basename "$home_dir")" -c 'govclean revert >/dev/null 2>&1' 2>/dev/null || true
+    done
+fi
+# убрать ярлыки стартовых программ из автозапуска пользователей и skel
+for f in govechoos-welcome govechoos-startapps; do
+    rm -f "/etc/skel/.config/autostart/$f.desktop" 2>/dev/null || true
+    for home_dir in /home/* /root; do
+        rm -f "$home_dir/.config/autostart/$f.desktop" 2>/dev/null || true
+    done
+done
+if command -v dconf >/dev/null 2>&1; then
+    dconf update 2>/dev/null || true
+fi
+
+systemctl --user daemon-reload 2>/dev/null || true
+exit 0

@@ -1,0 +1,12 @@
+[Unit]
+Description=govechoOS — автозапуск приветствия и ряда стартовых программ
+After=graphical-session.target
+PartOf=gnome-session.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/govstartapps --from-autostart
+
+[Install]
+WantedBy=default.target

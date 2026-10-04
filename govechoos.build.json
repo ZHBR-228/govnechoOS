@@ -1,0 +1,18 @@
+{
+  "_comment": "GovechoOS — конфигурация сборки Windows (scripts/build_windows.ps1). Меняйте версии/URL здесь, не трогая скрипт. Автор: ZHBR-228, MIT.",
+  "defaultBase": "ubuntu",
+  "bases": {
+    "ubuntu": {
+      "file": "ubuntu-24.04.2-desktop-amd64.iso",
+      "url": "https://releases.ubuntu.com/24.04/ubuntu-24.04.2-desktop-amd64.iso",
+      "sha256": ""
+    },
+    "debian": {
+      "file": "debian-12.11.0-amd64-netinst.iso",
+      "url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.11.0-amd64-netinst.iso",
+      "sha256": ""
+    }
+  },
+  "startapps": ["gnome-shell","gdm3","firefox","htop","vim","gnome-calculator","nautilus","gnome-terminal"],
+  "output": "govechoos-{version}-live-{base}.iso"
+}

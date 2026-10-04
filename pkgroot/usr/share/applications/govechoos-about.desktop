@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=About govechoOS
+Comment=Information about the govechoOS GNOME Edition (by ZHBR-228, MIT License)
+Exec=/usr/local/bin/govecho -s banner
+Icon=help-about
+Type=Application
+Categories=Utility;
+Terminal=true
