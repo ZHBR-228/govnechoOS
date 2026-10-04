@@ -130,14 +130,14 @@ if (-not (Test-Path $src)) {
 }
 
 # ---------- 4. Firmennyy sloy Govecho ----------
-Report 58 "Naslaivayu firmennyy sloy Govecho (GNOME-fayly, komponenty, menyu)..."
+Report 58 "Naslaivayu firmennyy sloy Govecho (komponenty, menyu zagruzchika)..."
 $gv = Join-Path $src 'govecho'
 New-Item -ItemType Directory -Force -Path $gv | Out-Null
 $deb = Get-ChildItem (Join-Path $PSScriptRoot '..\Release') -Filter '*.deb' -EA SilentlyContinue | Select-Object -First 1
 if ($deb) { Copy-Item $deb.FullName $gv -Force }
 
 # --- GNOME-privyazki: raskladyvaem faily iz gnome/linux po katalogam ISO ---
-# manifest.json: spiskovye pary src->dst; pri otsutstvii manifesta - prostoje kopirovanie
+# manifest.json: pary src->dst; pri otsutstvii manifesta - prostoje kopirovanie v govecho/
 $gdir = Join-Path $PSScriptRoot '..\gnome\linux'
 $mpath = Join-Path $gdir 'manifest.json'
 if (Test-Path $mpath) {
@@ -155,7 +155,6 @@ if (Test-Path $mpath) {
     Get-ChildItem $gdir -File | Where-Object Name -ne 'manifest.json' | ForEach-Object {
         Copy-Item $_.FullName (Join-Path $gv $_.Name) -Force }
 }
-
 @"
 # Ryad startovyh programm GovechoOS
 gnome-shell gdm3 firefox htop vim gnome-calculator nautilus gnome-terminal
