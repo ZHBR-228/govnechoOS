@@ -92,12 +92,12 @@ def xaml_ps(title: str, extra_row: bool) -> str:
         '  </Grid>',
         '</Window>',
     ]
-    parts = []
-    for i, ln in enumerate(lines):
-        esc = ln.replace("'", "''")   # PS single-quote escape
-        sep = "`r`n" if i < len(lines) - 1 else ""
-        parts.append(f"$xaml += '{esc}{sep}'")
-    return "$xaml = ''\n" + "\n".join(parts)
+    # Embed as a literal here-string (@' ... '@): content is transferred
+    # verbatim and cannot be corrupted by quote/backtick mangling during
+    # download or copy. This is the root-cause fix for the 'XAML parse' error.
+    body = "\n".join(lines)
+    assert "@'" not in body and "'@" not in body
+    return "$xaml = @'\n" + body + "\n'@ -replace \"`r`n\", \"`n\""
 
 
 def gui_ps(repo_title: str, sub: str, builder_name: str, iso_kind: str,
@@ -105,26 +105,22 @@ def gui_ps(repo_title: str, sub: str, builder_name: str, iso_kind: str,
     """Full build_gui*.ps1 content. iso_kind: 'live-installer' or 'disc1'.
     base_combo: show ubuntu/debian selector (Linux repo only)."""
     lbl_base_row = '''      <TextBlock x:Name="LblBase" .../>'''  # placeholder, unused
-    xaml_block = xaml_ps(repo_title, base_combo)
-    # If BSD: hide combo rows? Simpler: keep same XAML but set LblBase text to
-    # "Baza:" hidden via Collapsed for BSD. We instead generate variant XAML:
-    if not base_combo:
-        xaml_block = xaml_block.replace(
-            "$xaml += '      <ComboBox x:Name=\"\"CmbBase\" Width=\"110\" SelectedIndex=\"0\">'", "")
-        # cleaner: rebuild without combo lines
-        lines = []
     use = xaml_ps(repo_title, base_combo)
     if not base_combo:
         # drop the whole ComboBox element (open tag + 2 items + close tag)
         out_lines = []
         skip_next = 0
         for ln in use.splitlines():
-            if "'      <ComboBox x:Name=\"CmbBase\"" in ln:
+            if '<ComboBox x:Name="CmbBase"' in ln:
                 skip_next = 3; continue
             if skip_next > 0:
                 skip_next -= 1; continue
             out_lines.append(ln)
         use = "\n".join(out_lines)
+
+    findbase = ("$CmbBase   = $win.FindName('CmbBase');    $LblBase  = $win.FindName('LblBase')"
+                if base_combo else
+                "$CmbBase   = $null;                        $LblBase  = $win.FindName('LblBase')")
 
     run_args = """
     $baseSel = if ($CmbBase) { [string]$CmbBase.SelectedItem.Content } else { '' }
@@ -202,8 +198,8 @@ if (-not (Test-Path $Builder)) {{
 }}
 $WorkDir = Join-Path $env:USERPROFILE 'govecho_build'
 
-# ---- XAML built line-by-line from single-quoted strings (no here-strings,
-#      no way for transfer tools to break quoting; xmlns:x IS declared) ----
+# ---- XAML embedded as a literal here-string (verbatim, quote-proof) and
+#      validated with XmlDocument.LoadXml before XamlReader; xmlns:x declared.
 {use}
 
 try {{
@@ -222,7 +218,7 @@ $TxtLog    = $win.FindName('TxtLog');     $BtnRun   = $win.FindName('BtnRun')
 $BtnCancel = $win.FindName('BtnCancel');  $BtnOpen  = $win.FindName('BtnOpen')
 $BtnPick   = $win.FindName('BtnPick');    $ChkAuto  = $win.FindName('ChkAuto')
 $TxtIso    = $win.FindName('TxtIso')
-$CmbBase   = $win.FindName('CmbBase');    $LblBase  = $win.FindName('LblBase')
+{findbase}
 
 $TxtSub.Text     = $L.Sub
 $ChkAuto.Content = $L.Auto

@@ -48,50 +48,51 @@ if (-not (Test-Path $Builder)) {
 }
 $WorkDir = Join-Path $env:USERPROFILE 'govecho_build'
 
-# ---- XAML built line-by-line from single-quoted strings (no here-strings,
-#      no way for transfer tools to break quoting; xmlns:x IS declared) ----
-$xaml = ''
-$xaml += '<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`r`n'
-$xaml += '        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`r`n'
-$xaml += '        Title="Govecho Builder" Height="580" Width="780" WindowStartupLocation="CenterScreen">`r`n'
-$xaml += '  <Grid Margin="14">`r`n'
-$xaml += '    <Grid.RowDefinitions>`r`n'
-$xaml += '      <RowDefinition Height="Auto"/>`r`n'
-$xaml += '      <RowDefinition Height="Auto"/>`r`n'
-$xaml += '      <RowDefinition Height="Auto"/>`r`n'
-$xaml += '      <RowDefinition Height="Auto"/>`r`n'
-$xaml += '      <RowDefinition Height="Auto"/>`r`n'
-$xaml += '      <RowDefinition Height="*"/>`r`n'
-$xaml += '      <RowDefinition Height="Auto"/>`r`n'
-$xaml += '    </Grid.RowDefinitions>`r`n'
-$xaml += '    <StackPanel Grid.Row="0">`r`n'
-$xaml += '      <TextBlock Text="Govecho Builder" FontSize="24" FontWeight="Bold"/>`r`n'
-$xaml += '      <TextBlock x:Name="TxtSub" Foreground="Gray" Margin="0,2,0,10"/>`r`n'
-$xaml += '    </StackPanel>`r`n'
-$xaml += '    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,8">`r`n'
-$xaml += '      <TextBlock x:Name="LblBase" VerticalAlignment="Center" Margin="0,0,6,0"/>`r`n'
-$xaml += '      <ComboBox x:Name="CmbBase" Width="110" SelectedIndex="0">`r`n'
-$xaml += '        <ComboBoxItem Content="ubuntu"/>`r`n'
-$xaml += '        <ComboBoxItem Content="debian"/>`r`n'
-$xaml += '      </ComboBox>`r`n'
-$xaml += '      <Button x:Name="BtnPick" Margin="14,0,0,0" Padding="10,4"/>`r`n'
-$xaml += '      <CheckBox x:Name="ChkAuto" Margin="16,0,0,0" VerticalAlignment="Center"/>`r`n'
-$xaml += '    </StackPanel>`r`n'
-$xaml += '    <TextBlock x:Name="TxtIso" Grid.Row="2" Foreground="DimGray" Margin="0,0,0,8" TextTrimming="CharacterEllipsis"/>`r`n'
-$xaml += '    <DockPanel Grid.Row="3" Margin="0,0,0,6">`r`n'
-$xaml += '      <TextBlock x:Name="TxtPct" DockPanel.Dock="Right" FontSize="30" FontWeight="Bold" Width="110" TextAlignment="Right"/>`r`n'
-$xaml += '      <ProgressBar x:Name="Bar" Height="26" Minimum="0" Maximum="100" Value="0"/>`r`n'
-$xaml += '    </DockPanel>`r`n'
-$xaml += '    <TextBlock x:Name="TxtPhase" Grid.Row="4" FontSize="14" Margin="0,0,0,8" TextWrapping="Wrap"/>`r`n'
-$xaml += '    <TextBox x:Name="TxtLog" Grid.Row="5" IsReadOnly="True" VerticalScrollBarVisibility="Auto"`r`n'
-$xaml += '             FontFamily="Consolas" FontSize="12" AcceptsReturn="True" TextWrapping="NoWrap"/>`r`n'
-$xaml += '    <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,10,0,0">`r`n'
-$xaml += '      <Button x:Name="BtnRun" Width="130" Height="34" FontWeight="Bold"/>`r`n'
-$xaml += '      <Button x:Name="BtnCancel" Width="110" Height="34" Margin="10,0,0,0" IsEnabled="False"/>`r`n'
-$xaml += '      <Button x:Name="BtnOpen" Width="170" Height="34" Margin="10,0,0,0"/>`r`n'
-$xaml += '    </StackPanel>`r`n'
-$xaml += '  </Grid>`r`n'
-$xaml += '</Window>'
+# ---- XAML embedded as a literal here-string (verbatim, quote-proof) and
+#      validated with XmlDocument.LoadXml before XamlReader; xmlns:x declared.
+$xaml = @'
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Govecho Builder" Height="580" Width="780" WindowStartupLocation="CenterScreen">
+  <Grid Margin="14">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0">
+      <TextBlock Text="Govecho Builder" FontSize="24" FontWeight="Bold"/>
+      <TextBlock x:Name="TxtSub" Foreground="Gray" Margin="0,2,0,10"/>
+    </StackPanel>
+    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,8">
+      <TextBlock x:Name="LblBase" VerticalAlignment="Center" Margin="0,0,6,0"/>
+      <ComboBox x:Name="CmbBase" Width="110" SelectedIndex="0">
+        <ComboBoxItem Content="ubuntu"/>
+        <ComboBoxItem Content="debian"/>
+      </ComboBox>
+      <Button x:Name="BtnPick" Margin="14,0,0,0" Padding="10,4"/>
+      <CheckBox x:Name="ChkAuto" Margin="16,0,0,0" VerticalAlignment="Center"/>
+    </StackPanel>
+    <TextBlock x:Name="TxtIso" Grid.Row="2" Foreground="DimGray" Margin="0,0,0,8" TextTrimming="CharacterEllipsis"/>
+    <DockPanel Grid.Row="3" Margin="0,0,0,6">
+      <TextBlock x:Name="TxtPct" DockPanel.Dock="Right" FontSize="30" FontWeight="Bold" Width="110" TextAlignment="Right"/>
+      <ProgressBar x:Name="Bar" Height="26" Minimum="0" Maximum="100" Value="0"/>
+    </DockPanel>
+    <TextBlock x:Name="TxtPhase" Grid.Row="4" FontSize="14" Margin="0,0,0,8" TextWrapping="Wrap"/>
+    <TextBox x:Name="TxtLog" Grid.Row="5" IsReadOnly="True" VerticalScrollBarVisibility="Auto"
+             FontFamily="Consolas" FontSize="12" AcceptsReturn="True" TextWrapping="NoWrap"/>
+    <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,10,0,0">
+      <Button x:Name="BtnRun" Width="130" Height="34" FontWeight="Bold"/>
+      <Button x:Name="BtnCancel" Width="110" Height="34" Margin="10,0,0,0" IsEnabled="False"/>
+      <Button x:Name="BtnOpen" Width="170" Height="34" Margin="10,0,0,0"/>
+    </StackPanel>
+  </Grid>
+</Window>
+'@ -replace "`r`n", "`n"
 
 try {
     $xd = New-Object System.Xml.XmlDocument
