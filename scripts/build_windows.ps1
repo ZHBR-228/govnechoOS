@@ -5,7 +5,7 @@
 .DESCRIPTION
     Dva rezhima istochnika:
       1) URL iz govechoos.build.json (ofitsialnyy ISO + proverka sha256);
-      2) -IsoPath - UZHE SKHANNYY POL''ZOVATELEM ISO. Distro opredelyaetsya
+      2) -IsoPath <put> - UZHE SKHANNYY POL''ZOVATELEM ISO. Distro opredelyaetsya
          po imeni fayla (ubuntu*/debian*), lichi URL-baza ne ukazan yavno.
     Dalee odin i tot zhe konveyer: raspakovka -> naslayvanie Govecho-sloya ->
     gibridnyy BIOS+UEFI ISO cherez xorriso (WSL).
@@ -135,26 +135,6 @@ $gv = Join-Path $src 'govecho'
 New-Item -ItemType Directory -Force -Path $gv | Out-Null
 $deb = Get-ChildItem (Join-Path $PSScriptRoot '..\Release') -Filter '*.deb' -EA SilentlyContinue | Select-Object -First 1
 if ($deb) { Copy-Item $deb.FullName $gv -Force }
-
-# --- GNOME-privyazki: raskladyvaem faily iz gnome/linux po katalogam ISO ---
-# manifest.json: pary src->dst; pri otsutstvii manifesta - prostoje kopirovanie v govecho/
-$gdir = Join-Path $PSScriptRoot '..\gnome\linux'
-$mpath = Join-Path $gdir 'manifest.json'
-if (Test-Path $mpath) {
-    $man = Get-Content $mpath -Raw | ConvertFrom-Json
-    foreach ($e in $man.files) {
-        $sF = Join-Path $PSScriptRoot ('..' + '\' + ($e.src -replace '/','\'))
-        if (Test-Path $sF) {
-            $dD = Join-Path $src ($e.dst -replace '/','\')
-            New-Item -ItemType Directory -Force -Path (Split-Path $dD) | Out-Null
-            Copy-Item $sF $dD -Force
-        }
-    }
-    Report 60 ("GNOME: razlozheno faizlov: " + @($man.files).Count)
-} elseif (Test-Path $gdir) {
-    Get-ChildItem $gdir -File | Where-Object Name -ne 'manifest.json' | ForEach-Object {
-        Copy-Item $_.FullName (Join-Path $gv $_.Name) -Force }
-}
 @"
 # Ryad startovyh programm GovechoOS
 gnome-shell gdm3 firefox htop vim gnome-calculator nautilus gnome-terminal

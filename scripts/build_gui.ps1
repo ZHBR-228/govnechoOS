@@ -100,7 +100,17 @@ try {
     $win = [System.Windows.Markup.XamlReader]::Load((New-Object System.Xml.XmlNodeReader $xd))
 } catch {
     Add-Type -AssemblyName System.Windows.Forms
-    [void][System.Windows.Forms.MessageBox]::Show(('XAML parse: ' + $_.Exception.Message + [Environment]::NewLine + $L.ErrHint + [Environment]::NewLine + 'powershell -NoProfile -ExecutionPolicy Bypass -File "' + $MyInvocation.MyCommand.Path + '"'), $L.ErrTitle, 'OK', 'Error')
+    $xerr = $_.Exception.Message
+    Write-Host ('[gui] XAML unavailable: ' + $xerr)
+    $fallbackScript = Join-Path $PSScriptRoot 'build_gui_fallback.ps1'
+    if (-not (Test-Path $fallbackScript)) { $fallbackScript = Join-Path $PSScriptRoot 'build_gui_bsd_fallback.ps1' }
+    if (Test-Path $fallbackScript) {
+        $fa = @('-NoProfile','-ExecutionPolicy','Bypass','-File', $fallbackScript)
+        if ($Builder) { $fa += @('-Builder', $Builder) }
+        & powershell.exe @fa
+        exit $LASTEXITCODE
+    }
+    [void][System.Windows.Forms.MessageBox]::Show(('XAML parse: ' + $xerr + [Environment]::NewLine + $L.ErrHint + [Environment]::NewLine + 'powershell -NoProfile -ExecutionPolicy Bypass -File "' + $MyInvocation.MyCommand.Path + '"'), $L.ErrTitle, 'OK', 'Error')
     exit 1
 }
 

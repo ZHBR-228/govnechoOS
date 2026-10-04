@@ -758,16 +758,208 @@ endlocal
 # Emit files
 # ============================================================================
 
-gui_linux = gui_ps('Govecho Builder', 'GovechoOS v2.2 - sborka ISO dlja Windows (Ubuntu/Debian)',
-                   'build_windows.ps1', 'Ubuntu/Debian live-installer', True, False)
-gui_bsd   = gui_ps('GovechoBSD Builder', 'GovechoBSD v1.1 - sborka FreeBSD+GNOME ISO',
-                   'build_bsd_windows.ps1', 'FreeBSD disc1/dvd1', False, True)
+def robust_gui(title: str, sub: str, builder_name: str, iso_kind: str,
+               base_combo: bool, freebsd_detect: bool) -> str:
+    """GUI generator with a bulletproof fallback: if the WPF/XAML path ever
+    fails on a machine (corrupted transfer bytes, missing .NET features),
+    we auto-fall back to a plain WinForms window that cannot break on XAML."""
+    body = gui_ps(title, sub, builder_name, iso_kind, base_combo, freebsd_detect)
+    lines = body.splitlines()
+    out = []
+    injected = False
+    for ln in lines:
+        if not injected and 'XAML parse: ' in ln and 'MessageBox]::Show((' in ln:
+            # replace this MessageBox line with fallback dispatch + original msgbox
+            fbname = title.replace(' ', '')  # unused placeholder
+            out.append("    $xerr = $_.Exception.Message")
+            out.append("    Write-Host ('[gui] XAML unavailable: ' + $xerr)")
+            out.append("    $fallbackScript = Join-Path $PSScriptRoot 'build_gui_fallback.ps1'")
+            out.append("    if (-not (Test-Path $fallbackScript)) { $fallbackScript = Join-Path $PSScriptRoot 'build_gui_bsd_fallback.ps1' }")
+            out.append("    if (Test-Path $fallbackScript) {")
+            out.append("        $fa = @('-NoProfile','-ExecutionPolicy','Bypass','-File', $fallbackScript)")
+            out.append("        if ($Builder) { $fa += @('-Builder', $Builder) }")
+            out.append("        & powershell.exe @fa")
+            out.append("        exit $LASTEXITCODE")
+            out.append("    }")
+            out.append("    [void][System.Windows.Forms.MessageBox]::Show(('XAML parse: ' + $xerr + [Environment]::NewLine + $L.ErrHint + [Environment]::NewLine + 'powershell -NoProfile -ExecutionPolicy Bypass -File \"' + $MyInvocation.MyCommand.Path + '\"'), $L.ErrTitle, 'OK', 'Error')")
+            injected = True
+            continue
+        out.append(ln)
+    assert injected, "catch-block MessageBox line not found"
+    return "\n".join(out) + "\n"
+
+
+def fallback_winforms_ps1(title: str, builder_name: str, base_combo: bool) -> str:
+    """Pure WinForms GUI (no XAML at all) - cannot fail on XML namespaces."""
+    combo_block = ""
+    if base_combo:
+        combo_block = """$lblBase = New-Object Windows.Forms.Label; $lblBase.Text = 'Baza:'; $lblBase.Location = '14,58'; $lblBase.AutoSize = $true
+$cmbBase = New-Object Windows.Forms.ComboBox; $cmbBase.Location = '70,55'; $cmbBase.Width = 110; $cmbBase.DropDownStyle = 'DropDownList'
+[void]$cmbBase.Items.AddRange(@('ubuntu','debian')); $cmbBase.SelectedIndex = 0
+$frm.Controls.Add($lblBase); $frm.Controls.Add($cmbBase)"""
+    else:
+        combo_block = "$cmbBase = $null"
+    return f'''#Requires -Version 5.0
+# {title} - WinForms fallback GUI (no XAML). Author: ZHBR-228 | MIT.
+param([string]$Builder = '')
+$ErrorActionPreference = 'Stop'
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.Application]::EnableVisualStyles()
+if (-not $Builder) {{ $Builder = Join-Path $PSScriptRoot '{builder_name}' }}
+$WorkDir = Join-Path $env:USERPROFILE 'govecho_build'
+
+$frm = New-Object Windows.Forms.Form
+$frm.Text = '{title} (compat mode)'
+$frm.Width = 780; $frm.Height = 560; $frm.StartPosition = 'CenterScreen'
+
+$pct = New-Object Windows.Forms.Label; $pct.Text = '0%'; $pct.Font = New-Object Drawing.Font('Segoe UI', 20, [Drawing.FontStyle]::Bold)
+$pct.Location = '620,14'; $pct.AutoSize = $true; $frm.Controls.Add($pct)
+$bar = New-Object Windows.Forms.ProgressBar; $bar.Location = '14,20'; $bar.Size = '590,26'; $bar.Maximum = 100; $frm.Controls.Add($bar)
+$phase = New-Object Windows.Forms.Label; $phase.Text = 'Gotov k zapusku'; $phase.Location = '14,52'; $phase.Size = '740,20'; $frm.Controls.Add($phase)
+{combo_block}
+$chkAuto = New-Object Windows.Forms.CheckBox; $chkAuto.Text = 'Rezhim AutoInstall'; $chkAuto.Location = '194,55'; $chkAuto.AutoSize = $true; $frm.Controls.Add($chkAuto)
+$txtIso = New-Object Windows.Forms.Label; $txtIso.Text = 'ISO: net vybara - budem kachat ofitsialnyy obraz'; $txtIso.Location = '14,80'; $txtIso.Size = '740,20'; $frm.Controls.Add($txtIso)
+$log = New-Object Windows.Forms.TextBox; $log.Multiline = $true; $log.ReadOnly = $true; $log.ScrollBars = 'Vertical'
+$log.Location = '14,106'; $log.Size = '740,340'; $log.Font = New-Object Drawing.Font('Consolas', 9); $frm.Controls.Add($log)
+$btnRun = New-Object Windows.Forms.Button; $btnRun.Text = 'SOBRAT'; $btnRun.Location = '14,456'; $btnRun.Size = '130,34'; $btnRun.Font = New-Object Drawing.Font('Segoe UI', 9, [Drawing.FontStyle]::Bold); $frm.Controls.Add($btnRun)
+$btnCancel = New-Object Windows.Forms.Button; $btnCancel.Text = 'OTMENA'; $btnCancel.Location = '154,456'; $btnCancel.Size = '110,34'; $btnCancel.Enabled = $false; $frm.Controls.Add($btnCancel)
+$btnOpen = New-Object Windows.Forms.Button; $btnOpen.Text = 'OTKRYT PAPKU'; $btnOpen.Location = '274,456'; $btnOpen.Size = '170,34'; $frm.Controls.Add($btnOpen)
+$btnPick = New-Object Windows.Forms.Button; $btnPick.Text = 'VYBRAT ISO...'; $btnPick.Location = '454,456'; $btnPick.Size = '150,34'; $frm.Controls.Add($btnPick)
+
+$script:IsoPath = ''
+$script:DetectedBase = ''
+
+$btnPick.Add_Click({{
+    $dlg = New-Object Windows.Forms.OpenFileDialog
+    $dlg.Filter = 'ISO obrazy (*.iso)|*.iso|Vse fayly (*.*)|*.*'
+    if ($dlg.ShowDialog() -eq 'OK') {{
+        $script:IsoPath = $dlg.FileName
+        $nm = [IO.Path]::GetFileName($dlg.FileName).ToLower()
+        $det = 'unknown'
+        if ($nm -match 'freebsd') {{ $det = 'freebsd' }}
+        elseif ($nm -match 'ubuntu') {{ $det = 'ubuntu' }}
+        elseif ($nm -match 'debian') {{ $det = 'debian' }}
+        $script:DetectedBase = if ($det -eq 'unknown') {{ '' }} else {{ $det }}
+        if ($cmbBase -and ($det -eq 'ubuntu' -or $det -eq 'debian')) {{
+            $cmbBase.SelectedIndex = if ($det -eq 'ubuntu') {{ 0 }} else {{ 1 }}
+        }}
+        $txtIso.Text = 'ISO: ' + [IO.Path]::GetFileName($dlg.FileName) + '  [opredeleno: ' + $det + ']'
+        $log.AppendText('ISO vybran: ' + $dlg.FileName + ' => ' + $det + "`r`n")
+    }}
+}})
+
+$sync = $null; $psInstance = $null; $runspace = $null
+$timer = New-Object System.Windows.Forms.Timer; $timer.Interval = 200
+$timer.Add_Tick({{
+    if (-not $script:sync) {{ return }}
+    while ($true) {{
+        $item = $null
+        if (-not $script:sync.TryTake([ref]$item)) {{ break }}
+        $s = [string]$item
+        $pipe = [string][char]124
+        if ($s.StartsWith('PROGRESS' + $pipe)) {{
+            $parts = $s.Split($pipe)
+            $p = 0.0
+            if ([double]::TryParse($parts[1], [ref]$p)) {{
+                if ($p -lt 0) {{ $p = 0 }}; if ($p -gt 100) {{ $p = 100 }}
+                $bar.Value = [int]$p
+                $pct.Text = ([math]::Round($p)).ToString() + '%'
+                if ($parts.Length -gt 2) {{ $phase.Text = $parts[2] }}
+            }}
+        }} elseif ($s.StartsWith('ERRTEXT' + $pipe)) {{
+            $log.AppendText('STDERR: ' + $s.Substring(8) + "`r`n")
+        }} elseif ($s.StartsWith('EXITCODE' + $pipe)) {{
+            $code = [int]($s.Split($pipe)[1])
+            if ($code -eq 0) {{ $bar.Value = 100; $pct.Text = '100%'; $phase.Text = 'SBORKA ZAVERSHENA!' }}
+            else {{ $phase.Text = 'Oshibka sborki (code ' + $code + ')' }}
+            $timer.Stop(); $btnRun.Enabled = $true; $btnCancel.Enabled = $false
+            if ($script:runspace) {{ $script:runspace.Dispose(); $script:runspace = $null }}
+            $script:sync = $null
+        }} else {{
+            $log.AppendText($s + "`r`n")
+        }}
+    }}
+}})
+
+$btnRun.Add_Click({{
+    if ($script:sync) {{ return }}
+    $phase.Text = 'Zapusk...'
+    $btnRun.Enabled = $false; $btnCancel.Enabled = $true
+    $baseSel = if ($cmbBase) {{ [string]$cmbBase.SelectedItem }} else {{ '' }}
+    $bargs = @('-NoProfile','-ExecutionPolicy','Bypass','-File', $Builder, '-GuiProtocol')
+    if ($script:IsoPath) {{
+        $bargs += @('-IsoPath', $script:IsoPath)
+        if (-not $baseSel -and $script:DetectedBase) {{ $baseSel = $script:DetectedBase }}
+    }}
+    if ($baseSel) {{ $bargs += @('-Base', $baseSel) }}
+    if ($chkAuto.Checked) {{ $bargs += '-AutoInstall' }}
+    $script:sync = [System.Collections.Concurrent.ConcurrentQueue[string]]::new()
+    $rs = [RunspaceFactory]::CreateRunspace()
+    $rs.ApartmentState = 'STA'; $rs.ThreadOptions = 'ReuseThread'; $rs.Open()
+    $psInstance = [PowerShell]::Create()
+    $psInstance.Runspace = $rs
+    $script:psInstance = $psInstance
+    [void]$psInstance.AddScript({{
+        param($b, $a, $q)
+        try {{
+            $exe = if (Get-Command pwsh -EA SilentlyContinue) {{ 'pwsh' }} else {{ 'powershell' }}
+            $psi = New-Object System.Diagnostics.ProcessStartInfo
+            $psi.FileName = $exe
+            $psi.Arguments = (($a | ForEach-Object {{ if ($_ -match '\\s') {{ '"' + $_ + '"' }} else {{ $_ }} }}) -join ' ')
+            $psi.RedirectStandardOutput = $true
+            $psi.RedirectStandardError = $true
+            $psi.UseShellExecute = $false
+            $psi.WorkingDirectory = Split-Path $b
+            $proc = [System.Diagnostics.Process]::Start($psi)
+            while ($null -ne ($line = $proc.StandardOutput.ReadLine())) {{ [void]$q.Enqueue($line) }}
+            $errt = $proc.StandardError.ReadToEnd()
+            $proc.WaitForExit()
+            if ($errt) {{ [void]$q.Enqueue(('ERRTEXT' + [char]124 + $errt)) }}
+            [void]$q.Enqueue(('EXITCODE' + [char]124 + $proc.ExitCode))
+        }} catch {{
+            [void]$q.Enqueue(('ERRTEXT' + [char]124 + $_.Exception.Message))
+            [void]$q.Enqueue('EXITCODE' + [char]124 + '1')
+        }}
+    }}).AddArgument($Builder).AddArgument($bargs).AddArgument($script:sync)
+    [void]$psInstance.BeginInvoke()
+    $script:runspace = $rs
+    $timer.Start()
+}})
+
+$btnCancel.Add_Click({{
+    if ($script:psInstance) {{ try {{ $script:psInstance.Stop(); $script:psInstance.Dispose() }} catch {{}} }}
+    if ($script:runspace) {{ try {{ $script:runspace.Close(); $script:runspace.Dispose() }} catch {{}}; $script:runspace = $null }}
+    $script:sync = $null
+    $timer.Stop()
+    $log.AppendText('== Ostanovleno pol''zovatelem ==' + "`r`n")
+    $btnRun.Enabled = $true; $btnCancel.Enabled = $false
+}})
+
+$btnOpen.Add_Click({{
+    if (-not (Test-Path $WorkDir)) {{ New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null }}
+    Start-Process explorer.exe $WorkDir
+}})
+
+$frm.Add_FormClosed({{
+    if ($script:psInstance) {{ try {{ $script:psInstance.Stop(); $script:psInstance.Dispose() }} catch {{}} }}
+    if ($script:runspace) {{ try {{ $script:runspace.Dispose() }} catch {{}} }}
+}})
+
+[void]$frm.ShowDialog()
+'''
+
+gui_linux = robust_gui('Govecho Builder', 'GovechoOS v2.2 - sborka ISO dlja Windows (Ubuntu/Debian)',
+                       'build_windows.ps1', 'Ubuntu/Debian live-installer', True, False)
+gui_bsd   = robust_gui('GovechoBSD Builder', 'GovechoBSD v1.1 - sborka FreeBSD+GNOME ISO',
+                       'build_bsd_windows.ps1', 'FreeBSD disc1/dvd1', False, True)
 
 files = [
     (os.path.join(WS, "scripts/build_gui.ps1"), gui_linux, 'ps1'),
+    (os.path.join(WS, "scripts/build_gui_fallback.ps1"), fallback_winforms_ps1('Govecho Builder', 'build_windows.ps1', True), 'ps1'),
     (os.path.join(WS, "scripts/build_windows.ps1"), linux_builder_ps1(), 'ps1'),
     (os.path.join(WS, "build_windows.bat"), BAT_LINUX, 'bat'),
     (os.path.join(WS, "GovechoBSD/scripts/build_gui_bsd.ps1"), gui_bsd, 'ps1'),
+    (os.path.join(WS, "GovechoBSD/scripts/build_gui_bsd_fallback.ps1"), fallback_winforms_ps1('GovechoBSD Builder', 'build_bsd_windows.ps1', False), 'ps1'),
     (os.path.join(WS, "GovechoBSD/scripts/build_bsd_windows.ps1"), bsd_builder_ps1(), 'ps1'),
     (os.path.join(WS, "GovechoBSD/build_bsd_windows.bat"), BAT_BSD, 'bat'),
 ]
