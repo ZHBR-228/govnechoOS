@@ -1,6 +1,6 @@
 @echo off
 rem GovechoOS Builder launcher (ZHBR-228, MIT)
-rem Double-click -> GUI with progress bar. Or: build_windows.bat -Console [args]
+rem Double-click -> GUI window with live progress. Or: build_windows.bat -Console [args]
 setlocal
 cd /d "%~dp0"
 if "%1"=="-Console" ( shift & goto console )

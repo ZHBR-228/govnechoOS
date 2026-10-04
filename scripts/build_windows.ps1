@@ -1,51 +1,33 @@
-﻿-#Requires -Version 5.0
+﻿#Requires -Version 5.0
 <#
 .SYNOPSIS
     GovechoOS - sborka modifitsirovannogo ISO (Ubuntu/Debian) na Windows 10/11.
 .DESCRIPTION
-    Kachaet ofitsialnyy ISO bazy, raspakovyvaet ego, "vedaet" v nego firmennye
-    komponenty Govecho (banner vhoda, profil GNOME-chistoty, startovye prilozheniya),
-    peresobiraet gibridnyy ISO BIOS+UEFI (xorriso cherez WSL).
-
-    REZHIMY USTANOVKI (pereklyuchayutsya parametrom):
-      po umolchaniyu  - interaktivnaya ustanovka: nikakih preseed/autoinstall,
-                      ustanovschik zadaet vse voprosy sam, polzovatel sledit
-                      i nastraivaet kazhdyy shag;
-      -AutoInstall  - staryy rezhim bez voprosov (preseed), dlya massovyh
-                      razvertyvaniy, kogda kontrol ne nuzhen.
-
-    Skript NIKOGDA ne zapisyvaet ISO na disk/fleshku avtomaticheski - on tolko
-    sobiraet fayl obraza v WorkDir. Zapis ostavlyayte proverennym instrumentam
-    (Rufus/Ventoy/balenaEtcher) ili zapuskayte VirtualBox pryamo na ISO.
-
-    Trebovaniya: Windows 10/11 x64 + PowerShell 5+. Esli WSL ne nastroen - skript
-    sam predlozhit `wsl --install -d Ubuntu` (odnokratno). Konfiguratsiya bazovyh ISO
-    vynesena v govechoos.build.json - versii/URL mozhno menyat bez pravki koda.
-
-.EXAMPLE
-    powershell -ExecutionPolicy Bypass -File .\scripts\build_windows.ps1
-    powershell -ExecutionPolicy Bypass -File .\scripts\build_windows.ps1 -Base debian
-    powershell -ExecutionPolicy Bypass -File .\scripts\build_windows.ps1 -AutoInstall
+    Dva rezhima istochnika:
+      1) URL iz govechoos.build.json (ofitsialnyy ISO + proverka sha256);
+      2) -IsoPath <put> - UZHE SKHANNYY POL''ZOVATELEM ISO. Distro opredelyaetsya
+         po imeni fayla (ubuntu*/debian*), lichi URL-baza ne ukazan yavno.
+    Dalee odin i tot zhe konveyer: raspakovka -> naslayvanie Govecho-sloya ->
+    gibridnyy BIOS+UEFI ISO cherez xorriso (WSL).
+    Po umolchaniyu ustanovka INTERAKTIVNAYA (pol''zovatel kontroliruet kazhdyy
+    shag); rezhim bez voprosov - flag -AutoInstall.
+    Skript NIKOGDA ne zapisyvaet ISO na fleshku avtomaticheski.
 .NOTES
-    Avtor: ZHBR-228 - Litsenziya: MIT - github.com/ZHBR-228/govnechoOS
+    Avtor: ZHBR-228 | Litsenziya: MIT | github.com/ZHBR-228/govnechoOS
 #>
 [CmdletBinding()]
 param(
-    [ValidateSet('ubuntu','debian')][string]$Base = '',   # pusto => iz govechoos.build.json
+    [ValidateSet('','ubuntu','debian')][string]$Base = '',
+    [string]$IsoPath = '',          # uzhe skhannyy ISO (novoe!)
     [string]$WorkDir = "$env:USERPROFILE\govecho_build",
     [switch]$SkipDownload,
-    [switch]$AutoInstall,  # vklyuchit preseed-rezhim bez voprosov (po umolchaniyu VYKL:
-                           # ustanovka interaktivnaya, chtoby mozhno bylo vse kontrolirovat)
-    [switch]$GuiProtocol   # rezhim dlya GUI (build_gui.ps1): pishet v stdout stroki
-                           # "PROGRESS|<0-100>|<faza>" vmesto Write-Host-oformleniya
+    [switch]$AutoInstall,
+    [switch]$GuiProtocol
 )
 $ErrorActionPreference = 'Stop'
 $ProgressPreference    = 'SilentlyContinue'
-$VER = '2.1.0'
+$VER = '2.2.0'
 
-# ---------- Protokol progressa ----------
-# V GUI-rezhime kazhdaya faza dubliruetsya mashinochitaemoy strokoy PROGRESS|pct|phase,
-# kotoruyu perehvatyvaet mini-prilozhenie build_gui.ps1 i pokazyvaet protsent/etap.
 function Report([double]$pct, [string]$phase) {
     if ($GuiProtocol) {
         [Console]::Out.WriteLine(("PROGRESS|{0}|{1}" -f [math]::Round($pct), $phase))
@@ -56,47 +38,67 @@ function Report([double]$pct, [string]$phase) {
     }
 }
 
-# ---------- 0. Konfiguratsiya: govechoos.build.json ----------
+# ---------- 0. Konfiguratsiya ----------
 $cfgPath = Join-Path $PSScriptRoot '..\govechoos.build.json'
-if (-not (Test-Path $cfgPath)) { throw "Ne nayden $cfgPath - spisok bazovyh ISO" }
-$cfg = Get-Content $cfgPath -Raw | ConvertFrom-Json
-if (-not $Base) { $Base = $cfg.defaultBase }
-$b = $cfg.bases.$Base
-if (-not $b) { throw "Baza '$Base' ne opisana v govechoos.build.json" }
-
-$outIso  = Join-Path $WorkDir "govechoos-$VER-live-$Base.iso"
-$origIso = Join-Path $WorkDir $b.file
+$b = $null
+if (Test-Path $cfgPath) {
+    $cfg = Get-Content $cfgPath -Raw | ConvertFrom-Json
+    if (-not $Base) { $Base = $cfg.defaultBase }
+    $b = $cfg.bases.$Base
+}
 New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null
 
-Report 2 "Konfiguratsiya zagruzhena (baza: $Base)"
-Write-Host "== GovechoOS Windows Builder v$VER ($Base) ==" -ForegroundColor Cyan
+# ---------- 0b. Istochnik ISO: lokalnyy fayl ili URL ----------
+$origIso = ''
+if ($IsoPath) {
+    if (-not (Test-Path $IsoPath)) { throw "Ukazannyj ISO ne nayden: $IsoPath" }
+    $origIso = (Resolve-Path $IsoPath).Path
+    $nm = [IO.Path]::GetFileName($origIso).ToLower()
+    # AVTOOPREDELENIE distribyuta po imeni fayla:
+    $detected = ''
+    if ($nm -match 'ubuntu')                          { $detected = 'ubuntu' }
+    elseif ($nm -match 'debian')                      { $detected = 'debian' }
+    elseif ($nm -match 'linuxmint|mint-')             { $detected = 'ubuntu' }  # Mint = baza Ubuntu
+    elseif ($nm -match 'pop-os|pop_os|zorin|elementary') { $detected = 'ubuntu' }
+    elseif ($nm -match 'linux')                       { $detected = 'debian' }
+    if ($Base -and $detected -and ($Base -ne $detected)) {
+        Write-Host "! Imya ISO goworit pro '$detected', perekluchayu bazu" -ForegroundColor Yellow
+    }
+    if ($detected) { $Base = $detected }
+    if (-not $Base -or -not $b) { $Base = 'ubuntu' }
+    Report 5 ("Istochnik: lokalnyy ISO [" + $Base + "]: " + $origIso)
+    Write-Host "== GovechoOS Windows Builder v$VER (baza: $Base, lokalnyy ISO) ==" -ForegroundColor Cyan
+} else {
+    if (-not $b) { throw "Net ni lokalnogo ISO, ni opisanija bazy v govechoos.build.json" }
+    $origIso = Join-Path $WorkDir $b.file
+    Report 5 "Konfiguratsiya zagruzhena (baza: $Base)"
+    Write-Host "== GovechoOS Windows Builder v$VER ($Base) ==" -ForegroundColor Cyan
+}
+$outIso = Join-Path $WorkDir "govechoos-$VER-live-$Base.iso"
 
-# ---------- 1. WSL s instrumentami upakovki (nuzhen dlya squashfs/xorriso) ----------
+# ---------- 1. WSL instrumenty upakovki ----------
 $wslOk = $false
 try { wsl -l -q | Out-Null; $wslOk = $true } catch {}
 if (-not $wslOk) {
     Write-Host @"
 WSL ne ustanovlen. Vypolnite ODNOKRATNO v admin-PowerShell:
     wsl --install -d Ubuntu
-zatem perezagruzite PK i zapustite etot skript snova.
+perezagruzite PK i zapustite etot skript snova.
 "@ -ForegroundColor Yellow
     Read-Host "Nazhmite Enter posle ustanovki WSL (ili Ctrl+C dlya vyhoda)"
 }
-# instrumenty sborki vnutri WSL-distributiva
 Report 8 "Podgotovka instrumentov sborki (xorriso/squashfs v WSL)..."
 wsl -u root -- bash -c "command -v xorriso >/dev/null || (apt-get update -qq && apt-get install -y -qq xorriso squashfs-tools isolinux syslinux-common)"
 
-# ---------- 2. Skachivanie bazovogo ISO + proverka sha256 ----------
-if (-not $SkipDownload -and -not (Test-Path $origIso)) {
+# ---------- 2. Zagruzka ISO (tolko esli net lokalnogo) ----------
+if (-not $IsoPath -and -not $SkipDownload -and -not (Test-Path $origIso)) {
     Report 10 "Skachivayu bazovyy ISO: $($b.url)"
-    Write-Host "Skachivayu: $($b.url)" -ForegroundColor Cyan
-    # kachaem cherez WebClient s sobytiynym progressom => GUI vidit realnye % skachivaniya
     $wc = New-Object System.Net.WebClient
     $sw = [System.Diagnostics.Stopwatch]::StartNew()
     $dlArgs = {
         param($s, $e)
         if ($e.ProgressPercentage -ge 0) {
-            $overall = 10 + ($e.ProgressPercentage * 0.30)   # skachivanie = koridor 10..40%
+            $overall = 10 + ($e.ProgressPercentage * 0.30)
             $mbps = if ($sw.Elapsed.TotalSeconds -gt 1) { [math]::Round($e.BytesReceived/1MB/$sw.Elapsed.TotalSeconds,1) } else { 0 }
             [Console]::Out.WriteLine(("PROGRESS|{0}|Download ISO... {1} MB/s" -f [math]::Round($overall), $mbps))
             [Console]::Out.Flush()
@@ -106,41 +108,38 @@ if (-not $SkipDownload -and -not (Test-Path $origIso)) {
     $wc.DownloadFile($b.url, "$origIso.part")
     Unregister-Event -SourceIdentifier dlprog -EA SilentlyContinue
     $wc.Dispose()
-    if ($b.sha256) {
-        Report 42 "Proveryayu kontrolnuyu summu sha256..."
-        $actual = (Get-FileHash "$origIso.part" -Algorithm SHA256).Hash.ToLower()
-        if ($actual -ne $b.sha256) { Remove-Item "$origIso.part"; throw "sha256 ne sovpal: zhdali $($b.sha256), poluchili $actual" }
-        Write-Host "sha256 -" -ForegroundColor Green
-    }
     Move-Item "$origIso.part" $origIso -Force
+}
+if ($b -and $b.sha256 -and (Test-Path $origIso)) {
+    Report 42 "Proveryayu kontrolnuyu summu sha256..."
+    $actual = (Get-FileHash $origIso -Algorithm SHA256).Hash.ToLower()
+    if ($actual -ne $b.sha256.ToLower()) { throw "sha256 ne sovpal: zhdali $($b.sha256), poluchili $actual" }
+    Write-Host "sha256 OK" -ForegroundColor Green
 }
 if (-not (Test-Path $origIso)) { throw "Bazovyy ISO ne nayden: $origIso" }
 
 # ---------- 3. Raspakovka ISO sredstvami Windows ----------
-$src = Join-Path $WorkDir 'extracted'
+$safeName = ($origIso -replace '[^\w\.]', '_')
+$src = Join-Path $WorkDir ("extracted_" + [IO.Path]::GetFileNameWithoutExtension($safeName))
 if (-not (Test-Path $src)) {
     Report 46 "Raspakovyvayu soderzhimoe ISO na disk sborki..."
-    Write-Host "Montiruyu ISO -> robocopy..." -ForegroundColor Cyan
     $img = Mount-DiskImage -ImagePath $origIso -PassThru
     $drv = ($img | Get-Volume).DriveLetter
     robocopy "${drv}:\" $src /E /NFL /NDL /NJH /NJS | Out-Null
     Dismount-DiskImage -ImagePath $origIso | Out-Null
 }
 
-# ---------- 4. Firmennyy sloy Govecho poverh dereva ISO ----------
+# ---------- 4. Firmennyy sloy Govecho ----------
 Report 58 "Naslaivayu firmennyy sloy Govecho (komponenty, menyu zagruzchika)..."
-Write-Host "Naslaivayu firmennye komponenty Govecho..." -ForegroundColor Cyan
-# 4a. katalog /govecho s nashim DEB-paketom i spiskom startovyh prilozheniy
 $gv = Join-Path $src 'govecho'
 New-Item -ItemType Directory -Force -Path $gv | Out-Null
-Copy-Item (Join-Path $PSScriptRoot '..\Release\govechoos-gnome_2.1.0_amd64.deb') $gv -Force -EA SilentlyContinue
+$deb = Get-ChildItem (Join-Path $PSScriptRoot '..\Release') -Filter '*.deb' -EA SilentlyContinue | Select-Object -First 1
+if ($deb) { Copy-Item $deb.FullName $gv -Force }
 @"
-# Ryad startovyh programm GovechoOS (stavyatsya pri avtoustanovke)
+# Ryad startovyh programm GovechoOS
 gnome-shell gdm3 firefox htop vim gnome-calculator nautilus gnome-terminal
 "@ | Set-Content (Join-Path $gv 'startapps.list') -Encoding ASCII
 
-# 4b. preseed: TOLKO pri -AutoInstall. Po umolchaniyu obraz interaktivnyy -
-#     ustanovschik sam zadaet vse voprosy, polzovatel kontroliruet kazhdyy shag.
 if ($AutoInstall) {
     New-Item -ItemType Directory -Force -Path (Join-Path $src 'preseed') | Out-Null
 @"
@@ -153,10 +152,7 @@ d-i preseed/late_command string in-target apt-get install -y /cdrom/govecho/*.de
 "@ | Set-Content (Join-Path $src 'preseed\govechoos.seed') -Encoding ASCII
 }
 
-# 4c. Punkty menyu zagruzchikov (BIOS-isolinux i EFI-grub), esli oni est v baze.
-#     Osnovnoy punkt - INTERAKTIVNYY (bez automatic-ubiquity/quiet splash):
-#     vidno kazhdyy shag ustanovki, mozhno nastroit yazyk, razdely, polzovateley.
-$bootAppend = 'boot=casper ---'                                   # interaktiv
+$bootAppend = 'boot=casper ---'
 $autoAppend = 'file=/cdrom/preseed/govechoos.seed boot=casper automatic-ubiquity quiet splash ---'
 $txt = Join-Path $src 'isolinux\txt.cfg'
 if (Test-Path $txt) {
@@ -201,37 +197,22 @@ menuentry 'GovechoOS $VER (Auto-install, no questions)' {
 }
 
 # ---------- 5. Peresborka hybrid-ISO (xorriso v WSL) ----------
-Report 72 "Peresobirayu gibridnyy ISO (BIOS + UEFI)... eto samyy dolgiy shag"
-Write-Host "Peresobirayu gibridnyy ISO (BIOS + UEFI)..." -ForegroundColor Cyan
+Report 72 "Peresobirayu gibridnyy ISO (BIOS + UEFI)... samyy dolgiy shag"
 function ToWslPath([string]$p) { ($p -replace '^([A-Za-z]):', '/mnt/$1').ToLower().Replace('\','/') }
 $wSrc = ToWslPath $src; $wOut = ToWslPath $outIso
-# berem zagruzochnye artefakty togo, chto dala baza (ubuntu: casper+EFI; debian: install.amd+EFI)
 $bootArgs = '-isohybrid-mbr isohdpfx.bin -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e boot/grub/efi.img -no-emul-boot -isohybrid-gpt-basdat'
 if ($Base -eq 'debian') { $bootArgs = '-isohybrid-mbr isohdpfx.bin -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efi/boot.img -no-emul-boot -isohybrid-gpt-basdat' }
-# isolinux hybrid MBR template kladem v koren dereva
 Copy-Item (Join-Path $src 'isolinux\isohdpfx.bin') (Join-Path $src 'isohdpfx.bin') -Force -EA SilentlyContinue
 wsl -u root -- bash -c "set -e; cd '$wSrc'; xorriso -as mkisofs -r -J -joliet-long -cache-inodes -V 'GOVECHOOS_$($Base.ToUpper())' $bootArgs -o '$wOut' ."
 if (-not (Test-Path $outIso)) { throw "Ne udalos sobrat ISO" }
 $szMB = [math]::Round((Get-Item $outIso).Length/1MB,1)
 Report 95 "Proveryayu gotovyy obraz..."
-if (-not (Get-Item $outIso).Length) { throw "ISO pustoy-" }
+if (-not (Get-Item $outIso).Length) { throw "ISO pustoy" }
 Report 100 "DONE: govechoos-$VER-live-$Base.iso ($szMB MB)"
 Write-Host "- DONE: $outIso ($szMB MB)" -ForegroundColor Green
-
-# ---------- 6. DONE ----------
-# VNIMATELNOE RESHENIE: skript NE pishet ISO ni na kakie diski/fleshki.
-# Zapis obraza - opasnaya operatsiya (stiraet disk), a krome togo mnogim nuzhno
-# samomu vybirat sposob zagruzki i sledit za ustanovkoy. Poetomu builder
-# ostanavlivaetsya na fayle ISO v WorkDir.
 Write-Host @"
 
 - Sborka zavershena. Fayl obraza: $outIso ($szMB MB)
-
-CHto dalshe (zapis obraza vy delaete sami, kak vam udobnee):
-  - Test bez zapisi: VirtualBox/VMware -> novaya VM -> nositel = etot ISO;
-  - Fleshka: Rufus / Ventoy / balenaEtcher (vyberite fayl obraza vruchnuyu);
-  - Pri zagruzke s fleshki otkroetsya menyu GovechoOS - ustanovka INTERAKTIVNAYA:
-    ustanovschik zadaet vse voprosy (yazyk, razdely, polzovatel), vy vse
-    vidite i nastraivaete. Rezhim -bez voprosov- vklyuchaetsya peresborkoy
-    s flagom -AutoInstall (v menyu poyavitsya otdelnyy punkt).
+  Zapis na fleshku - tolko vruchnuyu (Rufus/Ventoy/balenaEtcher) ili test v VirtualBox.
+  Ustanovka v obraze INTERAKTIVNAYA: vy kontroliruete kazhdyy shag.
 "@ -ForegroundColor Green
