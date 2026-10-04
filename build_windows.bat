@@ -1,1 +1,6 @@
-QGVjaG8gb2ZmCnJlbSBHb3ZlY2hvT1MgV2luZG93cyBCdWlsZGVyIC0g0LfQsNC/0YPRgdC6INGH0LXRgNC10LcgUG93ZXJTaGVsbCAoWkhCUi0yMjgsIE1JVCkKc2V0bG9jYWwKY2QgL2QgIiV+ZHAwIgp3aGVyZSBwd3NoID5udWwgMj5udWwgJiYgKHB3c2ggLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBzY3JpcHRzXGJ1aWxkX3dpbmRvd3MucHMxICUqKSB8fCAocG93ZXJzaGVsbCAtTm9Qcm9maWxlIC1FeGVjdXRpb25Qb2xpY3kgQnlwYXNzIC1GaWxlIHNjcmlwdHNcYnVpbGRfd2luZG93cy5wczEgJSopCmVuZGxvY2FsCg==
+@echo off
+rem GovechoOS Windows Builder - запуск через PowerShell (ZHBR-228, MIT)
+setlocal
+cd /d "%~dp0"
+where pwsh >nul 2>nul && (pwsh -NoProfile -ExecutionPolicy Bypass -File scripts\build_windows.ps1 %*) || (powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_windows.ps1 %*)
+endlocal

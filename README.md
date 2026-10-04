@@ -1,1 +1,223 @@
-IyBnb3ZlY2hvT1MKCj4gKirQkNCy0YLQvtGAOioqIFpIQlItMjI4IMK3ICoq0JvQuNGG0LXQvdC30LjRjzoqKiBNSVQKCioqZ292ZWNob09TKiog4oCUINGD0YfQtdCx0L3Ri9C5IExpbnV4LdC00LjRgdGC0YDQuNCx0YPRgtC40LIg0YEg0L7QsdC+0LvQvtGH0LrQvtC5IEdOT01FLiDQlNCy0LAg0LLQsNGA0LjQsNC90YLQsCDQv9C+0YHRgtCw0LLQutC4OgoKMS4gKipMaXZlIElTTyAodjIuMCkqKiDigJQg0L/QvtC70L3QvtGG0LXQvdC90LDRjyDQt9Cw0LPRgNGD0LfQvtGH0L3QsNGPINGB0LjRgdGC0LXQvNCwINC90LAg0LHQsNC30LUgKipEZWJpYW4gMTIg0LjQu9C4IFVidW50dSAyNC4wNCoqCiAgINGBIEdOT01FLCDRhNC40YDQvNC10L3QvdGL0LzQuCDQutC+0LzQv9C+0L3QtdC90YLQsNC80Lgg0Lgg0YPRgdGC0LDQvdC+0LLRidC40LrQvtC8INC90LAg0LTQuNGB0LogKGBsaXZlL2ApLgoyLiAqKkdOT01FIEVkaXRpb24gREVCICsg0LzQuNC90LjQvNCw0LvRjNC90YvQuSByb290ZnMgKHYxLjApKiog4oCUINC90LDQtNGB0YLRgNC+0LnQutCwINC90LDQtCDRgdGD0YnQtdGB0YLQstGD0Y7RidC10LkKICAgRGViaWFuL1VidW50dSDQuCBMRlMt0L/QvtC00L7QsdC90LDRjyDRgdCx0L7RgNC60LAg0YEg0YHQvtCx0YHRgtCy0LXQvdC90YvQvCBpbml0LgoK0KTQuNGA0LzQtdC90L3Ri9C1INC60L7QvNC/0L7QvdC10L3RgtGLOiDRgdC+0LHRgdGC0LLQtdC90L3Ri9C5IGluaXQgYC9zYmluL2dvdmluaXRgIChQSUQgMSksINGD0YLQuNC70LjRgtCwIGBnb3ZlY2hvYAoo0YTQuNGA0LzQtdC90L3Ri9C5IGVjaG8g4oCUINC+0YLRgdGO0LTQsCDQuNC80Y8g0LTQuNGB0YLRgNC40LHRg9GC0LjQstCwKSwg0L/RgNC40LLQtdGC0YHRgtCy0LjQtSBgZ292d2VsY29tZWAg0Lgg0YDRj9C0INGB0YLQsNGA0YLQvtCy0YvRhQrQv9GA0L7Qs9GA0LDQvNC8IGBnb3ZzdGFydGFwcHNgLgoKIyMg0KHRgtGA0YPQutGC0YPRgNCwINGA0LXQv9C+0LfQuNGC0L7RgNC40Y8KCmBgYApnb3ZlY2hvT1MvCuKUnOKUgOKUgCBSRUFETUUubWQgLyBMSUNFTlNFIC8gVkVSU0lPTiAvIE1ha2VmaWxlCuKUnOKUgOKUgCBzcmMvICAgICAgICAgICAgICAgICAgICAg0LjRgdGF0L7QtNC90LjQutC4IEM6IGdvdmluaXQuYywgZ292ZWNoby5jLCBnb3Z3ZWxjb21lLmMsIGdvdmN0bC5jCuKUnOKUgOKUgCBjb25maWcvYnVpbGQuY29uZiAgICAgICAg0L/QsNGA0LDQvNC10YLRgNGLINGB0LHQvtGA0LrQuCByb290ZnMK4pSc4pSA4pSAIHNjcmlwdHMvICAgICAgICAgICAgICAgICBidWlsZF9kZWIuc2gsIGJ1aWxkX3Jvb3Rmcy5zaCwgaW5zdGFsbF9nbm9tZS5zaCwK4pSCICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJ1bl9xZW11LnNoLCBnZW5fc2Vzc2lvbi5weSwgYnVpbGRfd2luZG93cy5wczEgKNGB0LHQvtGA0LrQsCBJU08g0L3QsCBXaW5kb3dzKQrilJzilIDilIAgcGtncm9vdC8gICAgICAgICAgICAgICAgINGB0L7QtNC10YDQttC40LzQvtC1IERFQi3Qv9Cw0LrQtdGC0LAgKNGE0LDQudC70Ysg0YHQtdGB0YHQuNC4IEdOT01FLCBkY29uZiwK4pSCICAgICAgICAgICAgICAgICAgICAgICAgICAgINCw0LLRgtC+0LfQsNC/0YPRgdC6LCDRgdC+0LHRgNCw0L3QvdGL0LUg0LHQuNC90LDRgNC90LjQutC4KQrilJzilIDilIAgb3ZlcmxheS8gICAgICAgICAgICAgICAgINGE0LDQudC70Ysg0LzQuNC90LjQvNCw0LvRjNC90L7Qs9C+IHJvb3RmcyAoZXRjL3Bhc3N3ZCwgaXNzdWUgLi4uKQrilJTilIDilIAgbGl2ZS8gICAgICAgICAgICAgICAgICAgIExJVkUt0KHQmNCh0KLQldCc0JAgdjIuMCAo0L/QvtC70L3QvtGG0LXQvdC90YvQuSDQtNC40YHRgtGA0LjQsdGD0YLQuNCyKToKICAgIOKUnOKUgOKUgCBjb25maWcvICAgICAgICAgICAgICBzb3VyY2VzLmxpc3QuZGViaWFuLCBzb3VyY2VzLmxpc3QudWJ1bnR1LAogICAg4pSCICAgICAgICAgICAgICAgICAgICAgICAgcGFja2FnZXMubGlzdCAo0YHQvtGB0YLQsNCyINGB0LjRgdGC0LXQvNGLKSwgYXB0LmNvbmYKICAgIOKUnOKUgOKUgCBvdmVybGF5LyAgICAgICAgICAgICBvcy1yZWxlYXNlLCDQsdCw0L3QvdC10YAsIGdkbTMt0LrQvtC90YTQuNCzLCBzeXN0ZW1kLXVzZXIg0Y7QvdC40YIsCiAgICDilIIgICAgICAgICAgICAgICAgICAgICAgICBza2VsINGBIFhERyBhdXRvc3RhcnQKICAgIOKUlOKUgOKUgCBzY3JpcHRzLwogICAgICAgIOKUnOKUgOKUgCBidWlsZF9saXZlLnNoICAgINGB0LHQvtGA0LrQsCBoeWJyaWQgSVNPIChCSU9TK0VGSSk6IGRlYm9vdHN0cmFwIOKGkgogICAgICAgIOKUgiAgICAgICAgICAgICAgICAgICAg0L/QsNC60LXRgtGLIOKGkiBzcXVhc2hmcyh6c3RkKSDihpIgZ3J1Yi9pc29saW51eAogICAgICAgIOKUnOKUgOKUgCBnb3ZlY2hvLWluc3RhbGxlci5zaCAg0YPRgdGC0LDQvdC+0LLQutCwINC90LAg0LTQuNGB0LogKEdQVCwgRUZJLCBncnViLCDQv9C+0LvRjNC30L7QstCw0YLQtdC70YwpCiAgICAgICAg4pSU4pSA4pSAIHRlc3RfbGl2ZV9idWlsZC5zaCAgICBzbW9rZS3RgtC10YHRgiDRgdCx0L7RgNC60LgKYGBgCgojIyBMaXZlIElTTyDigJQg0YHQsdC+0YDQutCwINC4INGD0YHRgtCw0L3QvtCy0LrQsCAodjIuMCkKCtCi0YDQtdCx0L7QstCw0L3QuNGPOiBEZWJpYW4vVWJ1bnR1LCByb290LCBgZGVib290c3RyYXAgeG9ycmlzbyBzcXVhc2hmcy10b29scyBncnViLSogaXNvbGludXhgLgoKYGBgYmFzaAojINCh0LHQvtGA0LrQsCBJU08g0L3QsCDQsdCw0LfQtSBEZWJpYW4gMTIgKGJvb2t3b3JtKSDQuNC70LggVWJ1bnR1IDI0LjA0IChub2JsZSk6CnN1ZG8gLi9saXZlL3NjcmlwdHMvYnVpbGRfbGl2ZS5zaCAtLWJhc2UgZGViaWFuCnN1ZG8gLi9saXZlL3NjcmlwdHMvYnVpbGRfbGl2ZS5zaCAtLWJhc2UgdWJ1bnR1CiMg0KDQtdC30YPQu9GM0YLQsNGCOiBidWlsZC9leHBvcnQvZ292ZWNob09TLTEuMC4wLWxpdmUte2RlYmlhbnx1YnVudHV9LmlzbwoKIyDQl9Cw0L/QuNGB0Ywg0L3QsCDRhNC70LXRiNC60YM6CnN1ZG8gZGQgaWY9Z292ZWNob09TLTEuMC4wLWxpdmUtZGViaWFuLmlzbyBvZj0vZGV2L3NkWCBicz00TSBzdGF0dXM9cHJvZ3Jlc3MKCiMg0KPRgdGC0LDQvdC+0LLQutCwINC90LAg0LTQuNGB0Log4oCUINC40LcgbGl2ZS3RgdC10YHRgdC40Lgg0Y/RgNC70YvQuiDCq9Cj0YHRgtCw0L3QvtCy0LjRgtGMIGdvdmVjaG9PU8K7INCyINC80LXQvdGOIEdOT01FLAojINC70LjQsdC+INCy0YDRg9GH0L3Rg9GOOgpzdWRvIC4vZ292ZWNoby1pbnN0YWxsZXIuc2ggL2Rldi9zZFgKYGBgCgrQkiDRgdC40YHRgtC10LzQtSDQtNC+0YHRgtGD0L/QvdGLINGB0LXQsNC90YEgKirCq2dvdmVjaG9PUyBHTk9NRcK7KiogKEdETSksINGE0LjRgNC80LXQvdC90YvQuSDQsdCw0L3QvdC10YAg0LLRhdC+0LTQsCwK0YDRj9C0INGB0YLQsNGA0YLQvtCy0YvRhSDQv9GA0LjQu9C+0LbQtdC90LjQuSAo0YTQsNC50LvRiywg0YLQtdGA0LzQuNC90LDQuywg0YDQtdC00LDQutGC0L7RgCwg0LrQsNC70YzQutGD0LvRj9GC0L7RgCwg0YHQuNGB0YLQtdC80L3Ri9C5CtC80L7QvdC40YLQvtGALCDQsdGA0LDRg9C30LXRgCkg0Lgg0YPRgtC40LvQuNGC0YsgYGdvdmVjaG9gIC8gYGdvdndlbGNvbWVgLgoKCiMjIEdOT01FIEVkaXRpb24g4oCUINGN0LrRgdC/0L7RgNGCINC4INGD0YHRgtCw0L3QvtCy0LrQsAoKZ292ZWNob09TINC/0L7RgdGC0LDQstC70Y/QtdGC0YHRjyDRgSAqKkdOT01FIEVkaXRpb24qKjogREVCLdC/0LDQutC10YIgYGdvdmVjaG9vcy1nbm9tZWAsCtC60L7RgtC+0YDRi9C5INC80L7QttC90L4g0Y3QutGB0L/QvtGA0YLQuNGA0L7QstCw0YLRjCDQvdCwINC70Y7QsdGD0Y4gRGViaWFuL1VidW50dS3RgdC40YHRgtC10LzRgyAo0LjQu9C4INCyIHJvb3Rmcwpnb3ZlY2hvT1MpINC4INGD0YHRgtCw0L3QvtCy0LjRgtGMINC60LDQuiDQvtCx0YvRh9C90YvQuSDQv9Cw0LrQtdGCLgoKIyMjINCn0YLQviDQtNC10LvQsNC10YIg0L/QsNC60LXRggotINC00L7QsdCw0LLQu9GP0LXRgiDRgdC10LDQvdGBINCy0YXQvtC00LAgKioiZ292ZWNob09TIEdOT01FIioqINCyIEdETSAoV2F5bGFuZCArIFgxMSk7Ci0g0YPRgdGC0LDQvdCw0LLQu9C40LLQsNC10YIg0YTQuNGA0LzQtdC90L3Ri9C1INC60L7QvNC/0L7QvdC10L3RgtGLOiBgL3NiaW4vZ292aW5pdGAsIGAvdXNyL2xvY2FsL2Jpbi9nb3ZlY2hvYDsKLSDQv9GA0LjQvNC10L3Rj9C10YIg0LrQvtC90YTQuNCz0YPRgNCw0YbQuNGOIEdOT01FINGH0LXRgNC10LcgZGNvbmYgKGAvZXRjL2Rjb25mL2RiL2xvY2FsLmQvMzAtZ292ZWNob29zYCk6CiAg0LHQsNC90L3QtdGAINGN0LrRgNCw0L3QsCDQstGF0L7QtNCwLCDRgtGR0LzQvdCw0Y8g0YLQtdC80LAgQWR3YWl0YS1kYXJrLCDRhNC+0L0g0YDQsNCx0L7Rh9C10LPQviDRgdGC0L7Qu9CwOwotINGA0LXQs9C40YHRgtGA0LjRgNGD0LXRgiDQv9C+0LvRjNC30L7QstCw0YLQtdC70YzRgdC60LjQtSBzeXN0ZW1kLdGO0L3QuNGC0Ysg0YHQtdGB0YHQuNC4CiAgKGAvdXNyL3NoYXJlL2dub21lL2dvdnNlc3Npb24vKi5zZXJ2aWNlYCk7Ci0g0LTQvtCx0LDQstC70Y/QtdGCINC/0YDQuNC70L7QttC10L3QuNC1ICJBYm91dCBnb3ZlY2hvT1MiOwotICoq0YDRj9C0INGB0YLQsNGA0YLQvtCy0YvRhSDQv9GA0L7Qs9GA0LDQvNC8KiogKFhERyBBdXRvc3RhcnQpOiDQv9GA0Lgg0LLRhdC+0LTQtSDQsiDRgdC10YHRgdC40Y4g0LDQstGC0L7QvNCw0YLQuNGH0LXRgdC60LgKICDQt9Cw0L/Rg9GB0LrQsNGO0YLRgdGPINC/0YDQuNCy0LXRgtGB0YLQstC40LUgYGdvdndlbGNvbWVgINC4IGBnb3ZzdGFydGFwcHNgLCDQutC+0YLQvtGA0YvQuSDQvtGC0LrRgNGL0LLQsNC10YIKICDQpNCw0LnQu9GLIChuYXV0aWx1cyksINCi0LXRgNC80LjQvdCw0LssINCi0LXQutGB0YLQvtCy0YvQuSDRgNC10LTQsNC60YLQvtGALCDQmtCw0LvRjNC60YPQu9GP0YLQvtGALCDQodC40YHRgtC10LzQvdGL0LkKICDQvNC+0L3QuNGC0L7RgCDQuCDQsdGA0LDRg9C30LXRgCAoZmlyZWZveC1lc3IvZmlyZWZveC9lcGlwaGFueSkuINCa0LDQttC00LDRjyDQv9GA0L7Qs9GA0LDQvNC80LAKICDQv9GA0L7Qv9GD0YHQutCw0LXRgtGB0Y8sINC10YHQu9C4INC90LUg0YPRgdGC0LDQvdC+0LLQu9C10L3QsCDigJQg0YHQtdGB0YHQuNGPINC90LUg0LvQvtC80LDQtdGC0YHRjy4g0K/RgNC70YvQutC4INCw0LLRgtC+0LfQsNC/0YPRgdC60LAKICDQv9GA0L7Qv9C40YHRi9Cy0LDRjtGC0YHRjyDQsiBgL2V0Yy94ZGcvYXV0b3N0YXJ0YCwg0LLRgdC10Lwg0YHRg9GJ0LXRgdGC0LLRg9GO0YnQuNC8INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRj9C8INC4CiAg0LIgYC9ldGMvc2tlbGA7INC/0YPQvdC60YLRiyDQvNC10L3RjjogImdvdmVjaG9PUyBTdGFydGVyIEFwcHMiLCAiZ292ZWNob09TIFdlbGNvbWUiLgoKIyMjINCa0L7QvNCw0L3QtNGLIGdvdmVjaG9PUyAoYGdvdmN0bGApINC4INGH0LjRgdGC0L7RgtCwIEdOT01FIChgZ292Y2xlYW5gKQoKKipgZ292Y3RsYCoqIOKAlCDRhtC10L3RgtGA0LDQu9GM0L3QsNGPINC60L7QvdGB0L7Qu9GMINGD0L/RgNCw0LLQu9C10L3QuNGPINC00LjRgdGC0YDQuNCx0YPRgtC40LLQvtC8ICjQuNGB0YXQvtC00L3QuNC6IGBzcmMvZ292Y3RsLmNgKToKCnwg0JrQvtC80LDQvdC00LAgfCDQlNC10LnRgdGC0LLQuNC1IHwKfC0tLXwtLS18CnwgYGdvdmN0bCBzdGF0dXNgIHwg0YHQvtGB0YLQvtGP0L3QuNC1INGB0LjRgdGC0LXQvNGLOiDQstC10YDRgdC40Y8sINCx0LDQt9CwIChkZWJpYW4vdWJ1bnR1KSwg0LLRgdC1INC60L7QvNC/0L7QvdC10L3RgtGLIFsrXSB8CnwgYGdvdmN0bCBpbmZvYCB8INC+INCy0YvQv9GD0YHQutC1LCDQsNCy0YLQvtGA0LUgKFpIQlItMjI4KSwg0L7RgtC70LjRh9C40Y/RhSDQvtGCIERlYmlhbi9VYnVudHUgfAp8IGBnb3ZjdGwgZ25vbWUgdGlkeWAgfCDQv9GA0LjQvNC10L3QuNGC0Ywg0L/RgNC+0YTQuNC70YwgwqvRh9C40YHRgtC+0YLRiyBHTk9NRcK7ICjQtNC10LvQsNC10YIgZ292Y2xlYW4gYXBwbHkpIHwKfCBgZ292Y3RsIGFwcHMgbGlzdGAgfCDQv9C+0LrQsNC30LDRgtGMINGA0Y/QtCDRgdGC0LDRgNGC0L7QstGL0YUg0L/RgNC+0LPRgNCw0LzQvCDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8gfAp8IGBnb3ZjdGwgYXBwcyBhZGQgPGFwcD5gIC8gYHJlbW92ZSA8YXBwPmAgfCDQtNC+0LHQsNCy0LjRgtGML9GD0LHRgNCw0YLRjCDQv9GA0LjQu9C+0LbQtdC90LjQtSDQuNC3INGA0Y/QtNCwINCw0LLRgtC+0LfQsNC/0YPRgdC60LAgfAp8IGBnb3ZjdGwgbGljZW5zZWAgLyBgYXV0aG9yYCB8IE1JVC3Qu9C40YbQtdC90LfQuNGPINC4INC00LDQvdC90YvQtSDQsNCy0YLQvtGA0LAgfAp8IGBnb3ZjdGwgZWNobyDigKZgIHwg0LHRi9GB0YLRgNGL0Lkg0LTQvtGB0YLRg9C/INC6INGE0LjRgNC80LXQvdC90L7QvNGDIGBnb3ZlY2hvYCB8CnwgYGdvdmN0bCB2ZXJzaW9uYCB8INCy0LXRgNGB0LjRjyDQuCDQsdCw0LfQsCDRgdC40YHRgtC10LzRiyB8CgrQkNC70LjQsNGB0Ysg0LjQtyBgL2V0Yy9wcm9maWxlLmQvZ292ZWNob29zLnNoYDogYGdvdmAsIGBnc3RhdGAsIGBnYXBwc2AsIGBndGlkeWAsIGBnZWNob2AuCtCf0YPQvdC60YIg0LzQtdC90Y4gKirCq2dvdmN0bCDigJQg0LrQvtC90YHQvtC70YwgZ292ZWNob09TwrsqKiDQvtGC0LrRgNGL0LLQsNC10YIg0YHRgtCw0YLRg9GBINCyINGC0LXRgNC80LjQvdCw0LvQtS4KCioqYGdvdmNsZWFuYCoqIOKAlCDRg9GC0LjQu9C40YLQsCDRh9C40YHRgtC+0YLRiyDRgNCw0LHQvtGH0LXQs9C+INGB0YLQvtC70LAgR05PTUUgKGBzY3JpcHRzL2dvdmNsZWFuLnNoYCk6CmBgYGJhc2gKZ292Y2xlYW4gYXBwbHkgICAgIyDQv9GD0YHRgtC+0Lkg0LTQtdGB0LrRgtC+0L8g0LHQtdC3INC40LrQvtC90L7Quiwg0L/QsNC90LXQu9GMINGC0L7Qu9GM0LrQviBBY3Rpdml0aWVzK9GH0LDRgdGLLAogICAgICAgICAgICAgICAgICAjINGC0LXQvNCwIEFkd2FpdGEtZGFyaywg0YLRkdC80L3Ri9C5INGB0YLQuNC70YwsINCw0L3QuNC80LDRhtC40Lgg0LLRi9C60LvRjtGH0LXQvdGLLAogICAgICAgICAgICAgICAgICAjIG5hdXRpbHVzOiDRgdC/0LjRgdC+0Log0LHQtdC3INGB0LrRgNGL0YLRi9GFINGE0LDQudC70L7Qsiwg0LHQu9C+0LrQuNGA0L7QstC60LAg0Y3QutGA0LDQvdCwLAogICAgICAgICAgICAgICAgICAjINC70LjRiNC90LjQtSDRgNCw0YHRiNC40YDQtdC90LjRjyBnbm9tZS1zaGVsbCDQvtGC0LrQu9GO0YfQsNGO0YLRgdGPCmdvdmNsZWFuIHJldmVydCAgICMg0LLQtdGA0L3Rg9GC0Ywg0LLRgdGRINC6INC30L3QsNGH0LXQvdC40Y/QvCDQv9C+INGD0LzQvtC70YfQsNC90LjRjiBHTk9NRQpnb3ZjbGVhbiBzaG93ICAgICAjINC/0LXRgNC10YfQtdC90Ywg0L/RgNC40LzQtdC90Y/QtdC80YvRhSDQutC70Y7Rh9C10LkgZ3NldHRpbmdzCmdvdmNsZWFuIGV4cG9ydCBmIC8gaW1wb3J0IGYgICAjINGA0LXQt9C10YDQstC90LDRjyDQutC+0L/QuNGPIC8g0LLQvtGB0YHRgtCw0L3QvtCy0LvQtdC90LjQtSDQv9GA0L7RhNC40LvRjwpgYGAK0JrQsNC90L7QvdC40YfQtdGB0LrQuNC5IGRjb25mLdC/0YDQvtGE0LjQu9GMINGF0YDQsNC90LjRgtGB0Y8g0LIgYC91c3Ivc2hhcmUvZ292ZWNob29zL2dub21lLWNsZWFuLmRjb25mYDsK0L/RgNC4INGD0YHRgtCw0L3QvtCy0LrQtSDQv9Cw0LrQtdGC0LAgYC5kZWJgINC/0YDQvtGE0LjQu9GMINCw0LLRgtC+0LzQsNGC0LjRh9C10YHQutC4INC/0YDQuNC80LXQvdGP0LXRgtGB0Y8g0LrQviDQstGB0LXQvArQv9C+0LvRjNC30L7QstCw0YLQtdC70Y/QvCAocG9zdGluc3QpLCDQv9GA0Lgg0YPQtNCw0LvQtdC90LjQuCDigJQg0L7RgtC60LDRgtGL0LLQsNC10YLRgdGPIChwcmVybSkuCgojIyMg0KHQsdC+0YDQutCwINC4INGN0LrRgdC/0L7RgNGCINC/0LDQutC10YLQsApgYGBiYXNoCm1ha2UgZGViICAgICAgICAgICAgIyDQuNC70LggLi9zY3JpcHRzL2J1aWxkX2RlYi5zaAojINCw0YDRgtC10YTQsNC60YI6IGJ1aWxkL2V4cG9ydC9nb3ZlY2hvb3MtZ25vbWVfMS4wLjBfYW1kNjQuZGViCmxzIC1saCBidWlsZC9leHBvcnQvKi5kZWIgICAjINCz0L7RgtC+0LLQviDQuiDRjdC60YHQv9C+0YDRgtGDIChzY3Av0YTQu9C10YjQutCwL9GA0LXQv9C+0LfQuNGC0L7RgNC40LkpCmBgYAoKIyMjINCj0YHRgtCw0L3QvtCy0LrQsCDQvdCwINGG0LXQu9C10LLRg9GOINGB0LjRgdGC0LXQvNGDCmBgYGJhc2gKc3VkbyBkcGtnIC1pIGdvdmVjaG9vcy1nbm9tZV8xLjAuMF9hbWQ2NC5kZWIKc3VkbyBhcHQtZ2V0IC1mIGluc3RhbGwgLXkgICAgICAjINC/0L7QtNGC0Y/QvdC10YIgZ25vbWUtc2hlbGwsIGdkbTMsIG11dHRlciDQuCDRgi7QtC4KIyDQuNC70Lgg0L7QtNC90L7QuSDQutC+0LzQsNC90LTQvtC5INC40Lcg0LjRgdGF0L7QtNC90L7Qs9C+INC00LXRgNC10LLQsDoKLi9zY3JpcHRzL2luc3RhbGxfZ25vbWUuc2gKYGBgCtCf0L7RgdC70LUg0YPRgdGC0LDQvdC+0LLQutC4OiDQv9C10YDQtdC30LDQs9GA0YPQt9C40YLQtdGB0Ywg4oaSINC90LAg0Y3QutGA0LDQvdC1IEdETSDQvdCw0LbQvNC40YLQtSDQvdCwINC30L3QsNGH0L7QuiDQv9C+0LvRjNC30L7QstCw0YLQtdC70Y8g4oaSCtCy0YvQsdC10YDQuNGC0LUg0YHQtdCw0L3RgSAqKiJnb3ZlY2hvT1MgR05PTUUiKiog4oaSINCy0L7QudC00LjRgtC1LgoKIyMjINCj0LTQsNC70LXQvdC40LUKYGBgYmFzaApzdWRvIGFwdCByZW1vdmUgZ292ZWNob29zLWdub21lCmBgYAoocHJlcm0g0YHQvdC40LzQtdGCINGE0LjRgNC80LXQvdC90YvQtSDRjtC90LjRgtGLINGB0LXRgdGB0LjQuCDQuCBmcmFnbWVudCBkY29uZi4pCgojIyMg0JrQsNC6INGN0YLQviDRg9GB0YLRgNC+0LXQvdC+IChwa2dyb290LykKYGBgCnBrZ3Jvb3QvCuKUnOKUgOKUgCBERUJJQU4vY29udHJvbCwgcG9zdGluc3QsIHByZXJtICAgICDigJQgbWV0YS3RhNCw0LnQu9GLINC/0LDQutC10YLQsArilJzilIDilIAgc2Jpbi9nb3Zpbml0ICAgICAgICAgICAgICAgICAgICAgICAg4oCUIGluaXQgKNGB0L7QsdC40YDQsNC10YLRgdGPINC40Lcgc3JjLykK4pSc4pSA4pSAIHVzci9sb2NhbC9iaW4vZ292ZWNobyAgICAgICAgICAgICAgIOKAlCDRhNC40YDQvNC10L3QvdGL0LkgZWNobyAo0YHQvtCx0LjRgNCw0LXRgtGB0Y8g0LjQtyBzcmMvKQrilJzilIDilIAgZXRjL2Rjb25mL2RiL2xvY2FsLmQvMzAtZ292ZWNob29zICAg4oCUINC90LDRgdGC0YDQvtC50LrQuCBHTk9NRSAo0LHQsNC90L3QtdGAINC70L7Qs9C40L3QsCwg0YLQtdC80YspCuKUnOKUgOKUgCBldGMvZGNvbmYvcHJvZmlsZS91c2VyICAgICAgICAgICAgICDigJQg0L/QvtC00LrQu9GO0YfQtdC90LjQtSBsb2NhbC3QsdCw0LfRiyBkY29uZgrilJzilIDilIAgdXNyL3NoYXJlL2dub21lL2dvdnNlc3Npb24vKi5zZXJ2aWNl4oCUINGO0L3QuNGC0Ysg0YHQtdGB0YHQuNC4IGdvdmVjaG9PUwrilJzilIDilIAgdXNyL3NoYXJlL2dub21lL3Nlc3Npb24vZ25vbWUuc2Vzc2lvbi5kLzUwX2dvdmVjaG9vcy5jb25mIOKAlCDQuNC80Y8g0YHQtdGB0YHQuNC4CuKUnOKUgOKUgCB1c3Ivc2hhcmUvd2F5bGFuZC1zZXNzaW9ucy9nb3ZlY2hvb3Mtd2F5bGFuZC5kZXNrdG9wICAgICAg4oCUINC30LDQv9C40YHRjCDQtNC70Y8gR0RNCuKUlOKUgOKUgCB1c3Ivc2hhcmUvYXBwbGljYXRpb25zL2dvdmVjaG9vcy1hYm91dC5kZXNrdG9wICAgICAgICAgICAg4oCUINC/0YPQvdC60YIg0LzQtdC90Y4KYGBgCtCh0LrRgNC40L/RgiBgc2NyaXB0cy9nZW5fc2Vzc2lvbi5weWAg0L/RgNC4INGB0LHQvtGA0LrQtSDQtNC+0L/QvtC70L3QuNGC0LXQu9GM0L3QviDQv9C10YDQtdCz0LXQvdC10YDQuNGA0YPQtdGCINGE0LDQudC70YsK0YHQtdGB0YHQuNC4INGH0LXRgNC10LcgR0xpYiBgR2lvLktleWZpbGVgICjRgtC+0YIg0LbQtSDQv9Cw0YDRgdC10YAsINGH0YLQviDQuNGB0L/QvtC70YzQt9GD0LXRgiBnbm9tZS1zZXNzaW9uKSwK0LXRgdC70Lgg0L3QsCDRhdC+0YHRgtC1INC00L7RgdGC0YPQv9C90Ysg0LHQsNC30L7QstGL0LUg0YTQsNC50LvRiyBHTk9NRTsg0LjQvdCw0YfQtSDQuNGB0L/QvtC70YzQt9GD0Y7RgtGB0Y8g0YHRgtCw0YLQuNGH0LXRgdC60LjQtQrRiNCw0LHQu9C+0L3RiyDQuNC3IGBwa2dyb290YC4KCiMjINCi0YDQtdCx0L7QstCw0L3QuNGPINC00LvRjyDRgdCx0L7RgNC60LgKCtCd0LAg0YXQvtGB0YIt0YHQuNGB0YLQtdC80LUgKERlYmlhbi9VYnVudHUpOgoKYGBgYmFzaApzdWRvIGFwdCBpbnN0YWxsIGdjYyBtYWtlIGN1cmwgd2dldCB0YXIgbTQgYmlzb24gZmxleCBcCiAgICB1dGlsLWxpbnV4IGUyZnNwcm9ncyBxZW11LXN5c3RlbS14ODYgbGludXgtaW1hZ2UtYW1kNjQKYGBgCgrQodCx0L7RgNC60LAgKirQv9C+0LvQvdC+0YHRgtGM0Y4g0LDQstGC0L7QvdC+0LzQvdCwKiogKNCx0LXQtyDQuNC90YLQtdGA0L3QtdGC0LApINC40YHQv9C+0LvRjNC30YPQtdGCIHN0YWdlMSDigJQK0YHRgtCw0YLQuNGH0LXRgdC60LjQuSBidXN5Ym94ICsgZ2NjLiDQlNC70Y8gwqvQvdCw0YHRgtC+0Y/RidC10LnCuyBMRlMt0YHQsdC+0YDQutC4INGA0LDRgdC60L7QvNC80LXQvdGC0LjRgNGD0LnRgtC1CtGN0YLQsNC/0Ysg0LIgYHNjcmlwdHMvYnVpbGRfcm9vdGZzLnNoYC4KCiMjINCh0LHQvtGA0LrQsAoKYGBgYmFzaApjZCBnb3ZlY2hvT1MKLi9zY3JpcHRzL2J1aWxkX3Jvb3Rmcy5zaCAgICAgICAgICAjIC0+IGJ1aWxkL2dvdmVjaG9vcy1yb290ZnMuaW1nCi4vc2NyaXB0cy9ydW5fcWVtdS5zaCAgICAgICAgICAgICAgIyDQt9Cw0LPRgNGD0LfQutCwINCyIFFFTVUg0YEgaW5pdD0vc2Jpbi9nb3Zpbml0CmBgYAoKIyMg0JfQsNC/0YPRgdC6INCx0LXQtyBRRU1VICjRh9C10YDQtdC3INGC0LXQutGD0YnQtdC1INGP0LTRgNC+KQoKYGBgYmFzaApzdWRvIG1vdW50IC1vIGxvb3AgYnVpbGQvZ292ZWNob29zLXJvb3Rmcy5pbWcgL21udC9nb3ZlY2hvCnN1ZG8gY2hyb290IC9tbnQvZ292ZWNobyAvc2Jpbi9nb3Zpbml0ICAgIyDQuNC70Lgg0L/RgNC+0YHRgtC+IC9iaW4vc2gKYGBgCgojIyDQnNCw0L3QuNGE0LXRgdGCINC00LjRgdGC0YDQuNCx0YPRgtC40LLQsAoKfCDQmtC+0LzQv9C+0L3QtdC90YIgICB8INCf0L7RgdGC0LDQstGJ0LjQuiAgICAgICAgICAgICAgICAgfCDQktC10YDRgdC40Y8gfAp8LS0tLS0tLS0tLS0tLXwtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS18LS0tLS0tLS18Cnwg0K/QtNGA0L4gICAgICAgIHwg0L/QsNC60LXRgiDQtNC40YHRgtGA0LjQsdGD0YLQuNCy0LAgLyBRRU1VLWtlcm5lbCB8IOKJpSA2LjEgfAp8IGxpYmMgICAgICAgIHwgZ2xpYmMgKNC40LvQuCBtdXNsINCyIHNsaW0t0YDQtdC20LjQvNC1KXwgMi4zOSAgIHwKfCBDb3JldXRpbHMgICB8IGJ1c3lib3ggKG11bHRpLWNhbGwpICAgICAgIHwgMS4zNyAgIHwKfCBJbml0ICAgICAgICB8IGdvdmluaXQgKNGB0L7QsdGB0YLQstC10L3QvdGL0LkpICAgICAgfCAxLjAgICAgfAp8IFNoZWxsICAgICAgIHwgYnVzeWJveCBzaCAoYXNoKSAgICAgICAgICAgfCAxLjM3ICAgfAp8IGVjaG8gICAgICAgIHwgZ292ZWNobyAo0YHQvtCx0YHRgtCy0LXQvdC90LDRjykgICAgICB8IDEuMCAgICB8CgojIyDQm9C40YbQtdC90LfQuNGPINC4INCw0LLRgtC+0YAKCi0gKirQkNCy0YLQvtGAOioqIFpIQlItMjI4Ci0gKirQm9C40YbQtdC90LfQuNGPOioqIE1JVCAo0L/QvtC70L3Ri9C5INGC0LXQutGB0YIg4oCUINCyINGE0LDQudC70LUgW0xJQ0VOU0VdKExJQ0VOU0UpKQotINCk0L7RgNC80LDRgiDQsNCy0YLQvtGA0YHQutC40YUg0L/RgNCw0LIg0LTQu9GPIERlYmlhbi3Qv9Cw0LrQtdGC0LA6IGBERUJJQU4vY29weXJpZ2h0YCAobWFjaGluZS1yZWFkYWJsZSwgREVQLTUpCgrCqSAyMDI2IFpIQlItMjI4LiDQm9C40YbQtdC90LfQuNGPOiBNSVQuCgoKIyMg8J+qnyDQodCx0L7RgNC60LAgSVNPINC/0YDRj9C80L4g0LjQtyBXaW5kb3dzICh2Mi4xKykKCtCU0LLQvtC50L3QvtC5INGJ0LXQu9GH0L7QuiDQv9C+ICoqYGJ1aWxkX3dpbmRvd3MuYmF0YCoqICjQuNC70LggYHBvd2Vyc2hlbGwgLUZpbGUgc2NyaXB0cy9idWlsZF93aW5kb3dzLnBzMWApIOKAlArRgdC60YDQuNC/0YIg0YHQsNC8INGB0LrQsNGH0LDQtdGCINC+0YTQuNGG0LjQsNC70YzQvdGL0LkgSVNPIFVidW50dSAyNC4wNCDQuNC70LggRGViaWFuIDEyIChVUkwv0LLQtdGA0YHQuNC4IOKAlCDQsiBgZ292ZWNob29zLmJ1aWxkLmpzb25gKSwK0YDQsNGB0L/QsNC60YPQtdGCINC10LPQviDRgdGA0LXQtNGB0YLQstCw0LzQuCBXaW5kb3dzLCDCq9Cy0YrQtdGB0YLCuyDRhNC40YDQvNC10L3QvdGL0Lkg0YHQu9C+0LkgR292ZWNobyAoREVCLdC/0LDQutC10YIsINGA0Y/QtCDRgdGC0LDRgNGC0L7QstGL0YUK0L/RgNC40LvQvtC20LXQvdC40LksIEdOT01FLdGH0LjRgdGC0L7RgtCwIGBnb3ZjbGVhbmAsINC/0YPQvdC60YLRiyDQvNC10L3RjiBpc29saW51eC9HUlVCKSDQuCDQv9C10YDQtdGB0L7QsdC10YDRkdGCINCz0LjQsdGA0LjQtNC90YvQuQpCSU9TK1VFRkkg0L7QsdGA0LDQtyDRh9C10YDQtdC3IHhvcnJpc28gKFdTTCDQvtC00L3QvtC60YDQsNGC0L3QvjogYHdzbCAtLWluc3RhbGwgLWQgVWJ1bnR1YCkuCgrimqDvuI8gKirQktCw0LbQvdC+INC/0YDQviDRg9GB0YLQsNC90L7QstC60YM6Kiog0YHQutGA0LjQv9GCICoq0L3QuNC60L7Qs9C00LAg0L3QtSDQt9Cw0L/QuNGB0YvQstCw0LXRgiBJU08g0L3QsCDQtNC40YHQutC4L9GE0LvQtdGI0LrQuCoqIOKAlCDQvtC9INGC0L7Qu9GM0LrQvgrRgdC+0LHQuNGA0LDQtdGCINGE0LDQudC7INC+0LHRgNCw0LfQsCDQsiDQv9Cw0L/QutC1INGB0LHQvtGA0LrQuC4g0JfQsNCz0YDRg9C30L7Rh9C90YvQuSDQv9GD0L3QutGCINC80LXQvdGOINC/0L4g0YPQvNC+0LvRh9Cw0L3QuNGOINC30LDQv9GD0YHQutCw0LXRggoqKtC40L3RgtC10YDQsNC60YLQuNCy0L3Rg9GOINGD0YHRgtCw0L3QvtCy0LrRgyoqOiDRg9GB0YLQsNC90L7QstGJ0LjQuiDQt9Cw0LTQsNGR0YIg0LLRgdC1INCy0L7Qv9GA0L7RgdGLICjRj9C30YvQuiwg0YDQsNC30LTQtdC70YssINC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjCksCtCy0Ysg0LLQuNC00LjRgtC1INC4INC90LDRgdGC0YDQsNC40LLQsNC10YLQtSDQutCw0LbQtNGL0Lkg0YjQsNCzLiDQoNC10LbQuNC8IMKr0LHQtdC3INCy0L7Qv9GA0L7RgdC+0LLCuyDQstC60LvRjtGH0LDQtdGC0YHRjyDRj9Cy0L3QvjoKYGJ1aWxkX3dpbmRvd3MucHMxIC1BdXRvSW5zdGFsbGAgKNCyINC80LXQvdGOINC/0L7Rj9Cy0LjRgtGB0Y8g0L7RgtC00LXQu9GM0L3Ri9C5INC/0YPQvdC60YIpLiDQlNC70Y8g0YLQtdGB0YLQsCDQvtCx0YDQsNC30LAK0YDQtdC60L7QvNC10L3QtNGD0LXRgtGB0Y8gVmlydHVhbEJveCDQvdCw0L/RgNGP0LzRg9GOINC/0L4gSVNPOyDQtNC70Y8g0YTQu9C10YjQutC4IOKAlCBSdWZ1cy9WZW50b3kvYmFsZW5hRXRjaGVyINCy0YDRg9GH0L3Rg9GOLgoK0JTQu9GPIEJTRC3RgNC10LTQsNC60YbQuNC4IOKAlCDQsNC90LDQu9C+0LMgYEdvdmVjaG9CU0Qvc2NyaXB0cy9idWlsZF9ic2Rfd2luZG93cy5wczFgOiDRgtCw0Lwg0Y/QtNGA0L4g0YPQttC1INCy0L3Rg9GC0YDQuApGcmVlQlNEIElTTywg0YHQutGA0LjQv9GCINGC0L7Qu9GM0LrQviDQvdCw0YHQu9Cw0LjQstCw0LXRgiDQutC+0L3RhNC40LPRg9GA0LDRhtC40Y4gKFpGUyByb290ICsgR05PTUUpINC4INC/0LXRgNC10YHQvtCx0LjRgNCw0LXRgiDQvtCx0YDQsNC3LArQvdC1INGC0YDQvtCz0LDRjyDQvdC+0YHQuNGC0LXQu9C4Lgo=
+# govechoOS
+
+> **Автор:** ZHBR-228 · **Лицензия:** MIT
+
+**govechoOS** — учебный Linux-дистрибутив с оболочкой GNOME. Два варианта поставки:
+
+1. **Live ISO (v2.0)** — полноценная загрузочная система на базе **Debian 12 или Ubuntu 24.04**
+   с GNOME, фирменными компонентами и установщиком на диск (`live/`).
+2. **GNOME Edition DEB + минимальный rootfs (v1.0)** — надстройка над существующей
+   Debian/Ubuntu и LFS-подобная сборка с собственным init.
+
+Фирменные компоненты: собственный init `/sbin/govinit` (PID 1), утилита `govecho`
+(фирменный echo — отсюда имя дистрибутива), приветствие `govwelcome` и ряд стартовых
+программ `govstartapps`.
+
+## Структура репозитория
+
+```
+govechoOS/
+├── README.md / LICENSE / VERSION / Makefile
+├── src/                     исходники C: govinit.c, govecho.c, govwelcome.c, govctl.c
+├── config/build.conf        параметры сборки rootfs
+├── scripts/                 build_deb.sh, build_rootfs.sh, install_gnome.sh,
+│                            run_qemu.sh, gen_session.py, build_windows.ps1 (сборка ISO на Windows)
+├── pkgroot/                 содержимое DEB-пакета (файлы сессии GNOME, dconf,
+│                            автозапуск, собранные бинарники)
+├── overlay/                 файлы минимального rootfs (etc/passwd, issue ...)
+└── live/                    LIVE-СИСТЕМА v2.0 (полноценный дистрибутив):
+    ├── config/              sources.list.debian, sources.list.ubuntu,
+    │                        packages.list (состав системы), apt.conf
+    ├── overlay/             os-release, баннер, gdm3-конфиг, systemd-user юнит,
+    │                        skel с XDG autostart
+    └── scripts/
+        ├── build_live.sh    сборка hybrid ISO (BIOS+EFI): debootstrap →
+        │                    пакеты → squashfs(zstd) → grub/isolinux
+        ├── govecho-installer.sh  установка на диск (GPT, EFI, grub, пользователь)
+        └── test_live_build.sh    smoke-тест сборки
+```
+
+## Live ISO — сборка и установка (v2.0)
+
+Требования: Debian/Ubuntu, root, `debootstrap xorriso squashfs-tools grub-* isolinux`.
+
+```bash
+# Сборка ISO на базе Debian 12 (bookworm) или Ubuntu 24.04 (noble):
+sudo ./live/scripts/build_live.sh --base debian
+sudo ./live/scripts/build_live.sh --base ubuntu
+# Результат: build/export/govechoOS-1.0.0-live-{debian|ubuntu}.iso
+
+# Запись на флешку:
+sudo dd if=govechoOS-1.0.0-live-debian.iso of=/dev/sdX bs=4M status=progress
+
+# Установка на диск — из live-сессии ярлык «Установить govechoOS» в меню GNOME,
+# либо вручную:
+sudo ./govecho-installer.sh /dev/sdX
+```
+
+В системе доступны сеанс **«govechoOS GNOME»** (GDM), фирменный баннер входа,
+ряд стартовых приложений (файлы, терминал, редактор, калькулятор, системный
+монитор, браузер) и утилиты `govecho` / `govwelcome`.
+
+
+## GNOME Edition — экспорт и установка
+
+govechoOS поставляется с **GNOME Edition**: DEB-пакет `govechoos-gnome`,
+который можно экспортировать на любую Debian/Ubuntu-систему (или в rootfs
+govechoOS) и установить как обычный пакет.
+
+### Что делает пакет
+- добавляет сеанс входа **"govechoOS GNOME"** в GDM (Wayland + X11);
+- устанавливает фирменные компоненты: `/sbin/govinit`, `/usr/local/bin/govecho`;
+- применяет конфигурацию GNOME через dconf (`/etc/dconf/db/local.d/30-govechoos`):
+  баннер экрана входа, тёмная тема Adwaita-dark, фон рабочего стола;
+- регистрирует пользовательские systemd-юниты сессии
+  (`/usr/share/gnome/govsession/*.service`);
+- добавляет приложение "About govechoOS";
+- **ряд стартовых программ** (XDG Autostart): при входе в сессию автоматически
+  запускаются приветствие `govwelcome` и `govstartapps`, который открывает
+  Файлы (nautilus), Терминал, Текстовый редактор, Калькулятор, Системный
+  монитор и браузер (firefox-esr/firefox/epiphany). Каждая программа
+  пропускается, если не установлена — сессия не ломается. Ярлыки автозапуска
+  прописываются в `/etc/xdg/autostart`, всем существующим пользователям и
+  в `/etc/skel`; пункты меню: "govechoOS Starter Apps", "govechoOS Welcome".
+
+### Команды govechoOS (`govctl`) и чистота GNOME (`govclean`)
+
+**`govctl`** — центральная консоль управления дистрибутивом (исходник `src/govctl.c`):
+
+| Команда | Действие |
+|---|---|
+| `govctl status` | состояние системы: версия, база (debian/ubuntu), все компоненты [+] |
+| `govctl info` | о выпуске, авторе (ZHBR-228), отличиях от Debian/Ubuntu |
+| `govctl gnome tidy` | применить профиль «чистоты GNOME» (делает govclean apply) |
+| `govctl apps list` | показать ряд стартовых программ пользователя |
+| `govctl apps add <app>` / `remove <app>` | добавить/убрать приложение из ряда автозапуска |
+| `govctl license` / `author` | MIT-лицензия и данные автора |
+| `govctl echo …` | быстрый доступ к фирменному `govecho` |
+| `govctl version` | версия и база системы |
+
+Алиасы из `/etc/profile.d/govechoos.sh`: `gov`, `gstat`, `gapps`, `gtidy`, `gecho`.
+Пункт меню **«govctl — консоль govechoOS»** открывает статус в терминале.
+
+**`govclean`** — утилита чистоты рабочего стола GNOME (`scripts/govclean.sh`):
+```bash
+govclean apply    # пустой десктоп без иконок, панель только Activities+часы,
+                  # тема Adwaita-dark, тёмный стиль, анимации выключены,
+                  # nautilus: список без скрытых файлов, блокировка экрана,
+                  # лишние расширения gnome-shell отключаются
+govclean revert   # вернуть всё к значениям по умолчанию GNOME
+govclean show     # перечень применяемых ключей gsettings
+govclean export f / import f   # резервная копия / восстановление профиля
+```
+Канонический dconf-профиль хранится в `/usr/share/govechoos/gnome-clean.dconf`;
+при установке пакета `.deb` профиль автоматически применяется ко всем
+пользователям (postinst), при удалении — откатывается (prerm).
+
+### Сборка и экспорт пакета
+```bash
+make deb            # или ./scripts/build_deb.sh
+# артефакт: build/export/govechoos-gnome_1.0.0_amd64.deb
+ls -lh build/export/*.deb   # готово к экспорту (scp/флешка/репозиторий)
+```
+
+### Установка на целевую систему
+```bash
+sudo dpkg -i govechoos-gnome_1.0.0_amd64.deb
+sudo apt-get -f install -y      # подтянет gnome-shell, gdm3, mutter и т.д.
+# или одной командой из исходного дерева:
+./scripts/install_gnome.sh
+```
+После установки: перезагрузитесь → на экране GDM нажмите на значок пользователя →
+выберите сеанс **"govechoOS GNOME"** → войдите.
+
+### Удаление
+```bash
+sudo apt remove govechoos-gnome
+```
+(prerm снимет фирменные юниты сессии и fragment dconf.)
+
+### Как это устроено (pkgroot/)
+```
+pkgroot/
+├── DEBIAN/control, postinst, prerm     — meta-файлы пакета
+├── sbin/govinit                        — init (собирается из src/)
+├── usr/local/bin/govecho               — фирменный echo (собирается из src/)
+├── etc/dconf/db/local.d/30-govechoos   — настройки GNOME (баннер логина, темы)
+├── etc/dconf/profile/user              — подключение local-базы dconf
+├── usr/share/gnome/govsession/*.service— юниты сессии govechoOS
+├── usr/share/gnome/session/gnome.session.d/50_govechoos.conf — имя сессии
+├── usr/share/wayland-sessions/govechoos-wayland.desktop      — запись для GDM
+└── usr/share/applications/govechoos-about.desktop            — пункт меню
+```
+Скрипт `scripts/gen_session.py` при сборке дополнительно перегенерирует файлы
+сессии через GLib `Gio.Keyfile` (тот же парсер, что использует gnome-session),
+если на хосте доступны базовые файлы GNOME; иначе используются статические
+шаблоны из `pkgroot`.
+
+## Требования для сборки
+
+На хост-системе (Debian/Ubuntu):
+
+```bash
+sudo apt install gcc make curl wget tar m4 bison flex \
+    util-linux e2fsprogs qemu-system-x86 linux-image-amd64
+```
+
+Сборка **полностью автономна** (без интернета) использует stage1 —
+статический busybox + gcc. Для «настоящей» LFS-сборки раскомментируйте
+этапы в `scripts/build_rootfs.sh`.
+
+## Сборка
+
+```bash
+cd govechoOS
+./scripts/build_rootfs.sh          # -> build/govechoos-rootfs.img
+./scripts/run_qemu.sh              # загрузка в QEMU с init=/sbin/govinit
+```
+
+## Запуск без QEMU (через текущее ядро)
+
+```bash
+sudo mount -o loop build/govechoos-rootfs.img /mnt/govecho
+sudo chroot /mnt/govecho /sbin/govinit   # или просто /bin/sh
+```
+
+## Манифест дистрибутива
+
+| Компонент   | Поставщик                 | Версия |
+|-------------|---------------------------|--------|
+| Ядро        | пакет дистрибутива / QEMU-kernel | ≥ 6.1 |
+| libc        | glibc (или musl в slim-режиме)| 2.39   |
+| Coreutils   | busybox (multi-call)       | 1.37   |
+| Init        | govinit (собственный)      | 1.0    |
+| Shell       | busybox sh (ash)           | 1.37   |
+| echo        | govecho (собственная)      | 1.0    |
+
+## Лицензия и автор
+
+- **Автор:** ZHBR-228
+- **Лицензия:** MIT (полный текст — в файле [LICENSE](LICENSE))
+- Формат авторских прав для Debian-пакета: `DEBIAN/copyright` (machine-readable, DEP-5)
+
+© 2026 ZHBR-228. Лицензия: MIT.
+
+
+## 🪟 Сборка ISO прямо из Windows (v2.1+)
+
+Двойной щелчок по **`build_windows.bat`** (или `powershell -File scripts/build_windows.ps1`) —
+скрипт сам скачает официальный ISO Ubuntu 24.04 или Debian 12 (URL/версии — в `govechoos.build.json`),
+распакует его средствами Windows, «въест» фирменный слой Govecho (DEB-пакет, ряд стартовых
+приложений, GNOME-чистота `govclean`, пункты меню isolinux/GRUB) и пересоберёт гибридный
+BIOS+UEFI образ через xorriso (WSL однократно: `wsl --install -d Ubuntu`).
+
+⚠️ **Важно про установку:** скрипт **никогда не записывает ISO на диски/флешки** — он только
+собирает файл образа в папке сборки. Загрузочный пункт меню по умолчанию запускает
+**интерактивную установку**: установщик задаёт все вопросы (язык, разделы, пользователь),
+вы видите и настраиваете каждый шаг. Режим «без вопросов» включается явно:
+`build_windows.ps1 -AutoInstall` (в меню появится отдельный пункт). Для теста образа
+рекомендуется VirtualBox напрямую по ISO; для флешки — Rufus/Ventoy/balenaEtcher вручную.
+
+Для BSD-редакции — аналог `GovechoBSD/scripts/build_bsd_windows.ps1`: там ядро уже внутри
+FreeBSD ISO, скрипт только наслаивает конфигурацию (ZFS root + GNOME) и пересобирает образ,
+не трогая носители.
