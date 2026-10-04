@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=govechoOS Starter Apps
+Comment=Zapusk ryada startovyh programm govechoOS
+Exec=/usr/local/bin/govstartapps
+Icon=system-run
+Type=Application
+Categories=Utility;
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-Enabled=true

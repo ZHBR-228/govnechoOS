@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=govechoOS GNOME (Xorg)
+Comment=This session logs you into govechoOS with GNOME Shell on Xorg
+Exec=/usr/bin/gnome-session --session=ubuntu
+TryExec=/usr/bin/gnome-shell
+Icon=
+Type=Application
+DesktopNames=GNOME

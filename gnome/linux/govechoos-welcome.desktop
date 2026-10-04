@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=govechoOS Welcome
+Comment=Privetstvie i pervyy zapusk govechoOS
+Exec=/usr/local/bin/govwelcome
+Icon=system-run
+Type=Application
+Categories=Utility;
+Terminal=false
+NoDisplay=false
+X-GNOME-Autostart-Enabled=true

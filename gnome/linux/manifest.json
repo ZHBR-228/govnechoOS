@@ -1,0 +1,37 @@
+{
+ "version": "2.2.0",
+ "files": [
+  {
+   "src": "gnome/linux/50_govechoos.conf",
+   "dst": "govecho/gnome-session/50_govechoos.conf"
+  },
+  {
+   "src": "gnome/linux/govechoos-wayland.desktop",
+   "dst": "govecho/sessions/govechoos-wayland.desktop"
+  },
+  {
+   "src": "gnome/linux/govechoos-xorg.desktop",
+   "dst": "govecho/sessions/govechoos-xorg.desktop"
+  },
+  {
+   "src": "gnome/linux/govechoos-welcome.desktop",
+   "dst": "govecho/autostart/govechoos-welcome.desktop"
+  },
+  {
+   "src": "gnome/linux/govechoos-startapps.desktop",
+   "dst": "govecho/autostart/govechoos-startapps.desktop"
+  },
+  {
+   "src": "gnome/linux/govechoos-about.desktop",
+   "dst": "govecho/applications/govechoos-about.desktop"
+  },
+  {
+   "src": "gnome/linux/govctl-terminal.desktop",
+   "dst": "govecho/applications/govctl-terminal.desktop"
+  },
+  {
+   "src": "gnome/linux/30-govechoos",
+   "dst": "govecho/dconf/30-govechoos"
+  }
+ ]
+}

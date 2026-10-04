@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=About govechoOS
+Comment=Informatsiya o distributive govechoOS GNOME Edition
+Exec=/usr/local/bin/govctl info
+Icon=help-about
+Type=Application
+Categories=GNOME;Utility;
+Terminal=false

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=govctl Console
+Comment=Tsentralnaya konsol' komand govechoOS
+Exec=xterm -e /usr/local/bin/govctl status
+Icon=utilities-terminal
+Type=Application
+Categories=System;Utility;
+Terminal=false
