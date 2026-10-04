@@ -1,0 +1,58 @@
+# govechoOS — состав системы (общий для Debian/Ubuntu; скрипт сборки
+# пропускает недоступные в конкретном базовом дистрибутиве пакеты)
+# Автор: ZHBR-228 | Лицензия: MIT
+
+# --- ядро / база live-системы ---
+linux-image-amd64
+live-boot
+live-config
+live-config-systemd
+systemd-sysv
+sudo
+dbus
+locales
+man-db
+vim-tiny|nano
+apt-utils
+ca-certificates
+initramfs-tools
+cryptsetup-bin
+
+# --- графическая оболочка GNOME ---
+gnome-shell
+gnome-session
+gdm3
+mutter
+gnome-control-center
+gnome-settings-daemon
+nautilus
+gnome-terminal
+gedit|gnome-text-editor
+gnome-calculator
+gnome-system-monitor
+gnome-disk-utility
+gnome-backgrounds
+yaru-theme-gtk|adwaita-icon-theme
+adwaita-icon-theme
+hicolor-icon-theme
+desktop-base
+xdg-user-dirs
+dconf-cli
+libglib2.0-bin
+
+# --- стартовые приложения ряда по умолчанию ---
+firefox-esr|firefox
+thunar
+pcmanfm|thunar
+
+# --- утилиты ---
+network-manager
+network-manager-gnome
+wpasupplicant
+openssh-client
+curl
+wget
+git
+htop
+tree
+jq

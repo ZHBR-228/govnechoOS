@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=govctl — консоль govechoOS
+Comment=Центральная команда управления системой (status, gnome tidy, apps)
+Exec=x-terminal-emulator -e govctl status
+TryExec=govctl
+Icon=utilities-terminal
+Terminal=true
+NoDisplay=false
+Categories=System;Utility;
+Keywords=govctl;system;console;govechoos;

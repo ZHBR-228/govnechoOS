@@ -1,0 +1,13 @@
+PRETTY_NAME="govechoOS 1.0 \"Echo\" (Debian base)"
+NAME="govechoOS"
+VERSION_ID="1.0"
+VERSION="1.0 Echo (GNOME Edition)"
+ID=govechoos
+ID_LIKE=debian
+HOME_URL="https://github.com/ZHBR-228/govnechoOS"
+SUPPORT_URL="https://github.com/ZHBR-228/govnechoOS/issues"
+BUG_REPORT_URL="https://github.com/ZHBR-228/govnechoOS/issues"
+PRIVACY_POLICY_URL="https://github.com/ZHBR-228/govnechoOS"
+VERSION_CODENAME=echo
+LOGO=govechoos
+ANSI_COLOR="1;34"

@@ -1,0 +1,17 @@
+[Unit]
+Description=govechoOS GNOME Session (failsafe core с фирменными компонентами govechoOS)
+Documentation=https://govechoos.org/docs/gnome
+Requires=dbus.session.service
+After=dbus.session.service
+PartOf=gnome-session-failsafe.target
+Before=gnome-shell-wayland.service
+
+[Service]
+Type=simple
+Environment=GOVECHOOS_EDITION=gnome
+ExecStartPre=/bin/sh -c '/usr/local/bin/govecho -s banner > /dev/null || true'
+ExecStart=/usr/bin/gnome-session-quit --logout
+Restart=no
+
+[Install]
+WantedBy=gnome-session-failsafe.target

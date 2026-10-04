@@ -1,0 +1,8 @@
+NAME="govechoOS"
+ID=govechoos
+VERSION="2.1.0 (Echo)"
+PRETTY_NAME="govechoOS 2.1.0 (Echo)"
+HOME_URL="https://govechoos.org"
+SUPPORT_URL="https://govechoos.org/support"
+ANSI_COLOR="1;36"
+LOGO=govechoos-logo
