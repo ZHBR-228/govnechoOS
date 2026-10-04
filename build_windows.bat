@@ -1,1 +1,18 @@
-QGVjaG8gb2ZmDQpyZW0gR292ZWNob09TIEJ1aWxkZXIg4oCUINC00LLQvtC50L3QvtC5INGJ0LXQu9GH0L7QuiDQvtGC0LrRgNGL0LLQsNC10YIg0L7QutC90L4g0YEg0L/RgNC+0LPRgNC10YHRgdC+0Lwg0YHQsdC+0YDQutC4IChaSEJSLTIyOCwgTUlUKQ0KcmVtINCa0L7QvdGB0L7Qu9GM0L3Ri9C5INGA0LXQttC40Lwg0LHQtdC3INC+0LrQvdCwOiBidWlsZF93aW5kb3dzLmJhdCAtQ29uc29sZSBbLi4u0L/QsNGA0LDQvNC10YLRgNGLINCx0LjQu9C00LXRgNCwXQ0Kc2V0bG9jYWwNCmNkIC9kICIlfmRwMCINCmlmICIlMSI9PSItQ29uc29sZSIgKCBzaGlmdCAmIGdvdG8gY29uc29sZSApDQp3aGVyZSBwd3NoID5udWwgMj5udWwgJiYgKHB3c2ggLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBzY3JpcHRzXGJ1aWxkX2d1aS5wczEgJSopIHx8IChwb3dlcnNoZWxsIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgc2NyaXB0c1xidWlsZF9ndWkucHMxICUqKQ0KZ290byA6ZW9mDQo6Y29uc29sZQ0Kd2hlcmUgcHdzaCA+bnVsIDI+bnVsICYmIChwd3NoIC1Ob1Byb2ZpbGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUZpbGUgc2NyaXB0c1xidWlsZF93aW5kb3dzLnBzMSAlKikgfHwgKHBvd2Vyc2hlbGwgLU5vUHJvZmlsZSAtRXhlY3V0aW9uUG9saWN5IEJ5cGFzcyAtRmlsZSBzY3JpcHRzXGJ1aWxkX3dpbmRvd3MucHMxICUqKQ0KZW5kbG9jYWwNCg==
+@echo off
+chcp 866 >nul 2>nul
+rem GovechoOS Builder - двойной щелчок открывает окно с прогрессом сборки (ZHBR-228, MIT)
+rem Консольный режим без окна: build_windows.bat -Console [...параметры билдера]
+setlocal
+cd /d "%~dp0"
+if "%1"=="-Console" ( shift & goto console )
+where pwsh >nul 2>nul && (pwsh -NoProfile -ExecutionPolicy Bypass -File scripts\build_gui.ps1 %*) || (powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_gui.ps1 %*)
+if errorlevel 1 (
+    echo.
+    echo [govechoOS] Окно не открылось? Запустите вручную из PowerShell:
+    echo     powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_gui.ps1
+    pause
+)
+goto :eof
+:console
+where pwsh >nul 2>nul && (pwsh -NoProfile -ExecutionPolicy Bypass -File scripts\build_windows.ps1 %*) || (powershell -NoProfile -ExecutionPolicy Bypass -File scripts\build_windows.ps1 %*)
+endlocal
