@@ -1,21 +1,6 @@
 ﻿#Requires -Version 5.0
 # ============================================================
 # Govecho Builder GUI (ASCII-safe) - mini app with progress bar.
-# Self-reencoding launcher: if this .ps1 was saved WITHOUT UTF-8 BOM,
-# Windows PowerShell 5.1 would read it as ANSI(cp1251) and parsing may
-# break -> on first run the file rewrites itself with BOM and relaunches.
-if ($args[0] -ne '-Relaunched') {
-    $f = $MyInvocation.MyCommand.Path
-    if (-not $f) { $f = (Resolve-Path '.\build_gui.ps1').Path }
-    $bytes = [IO.File]::ReadAllBytes($f)
-    if (-not ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF)) {
-        $text = [Text.Encoding]::UTF8.GetString($bytes)
-        [IO.File]::WriteAllBytes($f, [byte[]](0xEF,0xBB,0xBF) + [Text.Encoding]::UTF8.GetBytes($text))
-        $exe = if (Get-Command pwsh -EA SilentlyContinue) { 'pwsh' } else { 'powershell' }
-        Start-Process -FilePath $exe -ArgumentList @('-NoProfile','-ExecutionPolicy','Bypass','-File', "`"$f`"", '-Relaunched')
-        exit 0
-    }
-}
 <#
 .SYNOPSIS
     Govecho Builder GUI - shows build progress in a window (WPF).
